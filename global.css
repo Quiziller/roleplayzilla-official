@@ -1,13 +1,6 @@
 /*
-Quizilla 2.0
-By Will Moore, Paul Farning and Christoph Saxe @  ISITE Design
 
---------- Notes -----------
-* html {anything} addresses IE < 6 browser bugs
-*+html {anything} addresses IE 7 browser bugs
-*/
-
-@import url("/web/20100105001526cs_/http://quizilla.teennick.com/templates/QZ2/css/site_structure.css");
+@import url("https://github.com/Quiziller/roleplayzilla-official/blob/master/site_structure.css");
 
 /* Basic browser reset  */
 body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd, dt, blockquote, button, fieldset, legend, label, input, textarea, form, strong, addr {
@@ -19,7 +12,7 @@ input, textarea {border: 1px solid #242323;!important}
 --=.._/(        Type, Links and Lists      )\_..=--
     	  */
 body {
-	background: #8F2A24 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/page_bg.gif)!important;
+	background: #8F2A24 url(https://github.com/Quiziller/roleplayzilla-official/blob/master/page_bg.gif)!important;
 	font: 78%/120% "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
 	margin-bottom: 14px!important;
 	}
@@ -41,7 +34,7 @@ a:hover { color: #990000}
 
 /* stretchable arrow button  */
 .continue span, .morebutton span {
-	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_continue_main.gif) 0 0 no-repeat;
+	background:transparent url(https://github.com/Quiziller/roleplayzilla-official/blob/master/bg_continue_main.gif) 0 0 no-repeat;
 	color: #007681;
 	cursor:pointer;
 	display:block;
@@ -52,7 +45,7 @@ a:hover { color: #990000}
 	padding:0 0 0 22px;
 	}
 a.continue, a.morebutton {
-	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_continue_right.gif) 100% 0 no-repeat;
+	background: url(https://github.com/Quiziller/roleplayzilla-official/blob/master/bg_continue_right.gif) 100% 0 no-repeat;
 	border: none;
   	float:left;
 	font-size: 1.1em;
@@ -63,7 +56,7 @@ a.continue, a.morebutton {
 	text-transform: uppercase;
 	}
 span.morebutton {
-	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_continue_right.gif) 100% 0 no-repeat;
+	background:transparent url(https://github.com/Quiziller/roleplayzilla-official/blob/master/bg_continue_right.gif) 100% 0 no-repeat;
 	display:block;
 	float:left;
 	margin: .5em 0;
@@ -71,7 +64,7 @@ span.morebutton {
 	padding:0 24px 0 0;
 	}
 button.continue, button.morebutton {
-	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_continue_main.gif) 0 0 no-repeat;
+	background: url(https://github.com/Quiziller/roleplayzilla-official/blob/master/bg_continue_main.gif) 0 0 no-repeat;
 	border: none;
 	color: #007681;
  	float:left;
@@ -160,7 +153,7 @@ a.newmessages {
 	they should get the same graphic treatment.
 	*/
 h2 {
-	background: #000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/628_header_bg_top.jpg) 0 0 no-repeat;
+	background: #000 url(https://github.com/Quiziller/roleplayzilla-official/blob/master/628_header_bg_top.jpg) 0 0 no-repeat;
 	color: #fff;
 	font-size: 130%!important;
    	line-height: 1.1;
@@ -169,9 +162,9 @@ h2 {
 	text-transform: uppercase;
 	text-shadow: 0 0 0 #000;
 }
-.profiledisplay h2 { background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/620_header_bg_top.jpg); }
+.profiledisplay h2 { background-image: url(https://github.com/Quiziller/roleplayzilla-official/blob/master/628_header_bg_top.jpg); }
 h2 span {
-	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/628_header_bg_bottom.gif) left bottom no-repeat;
+	background:transparent url(https://github.com/Quiziller/roleplayzilla-official/blob/master/628_header_bg_top.jpg) left bottom no-repeat;
 	display:block;
 	padding: 0 4px 8px 14px; /* updated right padding from 0 to wrap a little earlier */
 	}
