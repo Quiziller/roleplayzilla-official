@@ -1,6 +1,6 @@
 /*
 
-@import url("https://github.com/Quiziller/roleplayzilla-official/blob/master/site_structure.css");
+@import url("/ce/github/get/roleplayzilla-official/master/site_structure.csss");
 
 /* Basic browser reset  */
 body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd, dt, blockquote, button, fieldset, legend, label, input, textarea, form, strong, addr {
@@ -12,7 +12,7 @@ input, textarea {border: 1px solid #242323;!important}
 --=.._/(        Type, Links and Lists      )\_..=--
     	  */
 body {
-	background: #8F2A24 url(https://github.com/Quiziller/roleplayzilla-official/blob/master/page_bg.gif)!important;
+	background: #8F2A24 url(/ce/github/get/roleplayzilla-official/master/spage_bg.gif)!important;
 	font: 78%/120% "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
 	margin-bottom: 14px!important;
 	}
@@ -1123,26 +1123,6 @@ ol.searchresults {
 #secondary .tagcloud, #secondary .beacon { background-color: transparent; }
 .tabbedlisting img { float: left; margin: 0 .7em 1em 0; }
 
-/* the sidebar promo */
-#secondary .promo100 {
-	/*background:#fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_promo100.jpg) 0 0 no-repeat;*/
-	background:#FFF;
-	padding: 5px .5em 5px 0px;  /* left used to be 160 (for bg img??) */
-}
-.promo {
-	border: 2px solid #111111;
-}
-	#secondary .promo h2 {
-		background:none;
-		color:#cc3333;
-		line-height:100%;
-	}
-	#secondary .promo h2 span {
-		background:none;
-		padding:0;
-	}
-	.promo p { margin-left:0; }
-
 /* top area quizilla alerts */
 .alertbox { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_big_container_bottom.gif) bottom left no-repeat;	}
 .alertbox h3 {
@@ -1830,61 +1810,6 @@ li .tagselect {
 dl.tags 				{ margin: .7em; }/* inline tags for content items */
 dl.tags dt, dl.tags dd 	{ display: inline; }
 
-/*
-form removed for now
-.quiz.sponsored form { float: left;   width: 65%}
-.quiz.sponsored .footer { clear: both; float: left; width: 65%;}
-.quiz.sponsored button {    clear: left; float: left;}
-.sponsored label{
-	font-weight: bold;
-	width: 95%;
-	}
-.sponsored .checkradiowrap label{
-    clear: left;
-	font-weight: normal;
-	display: block;
-	text-align: left;
-	width: 95%;
-	}
-.sponsored .checkradiowrap{width: 90%}
-*/
-
-/* generic sponsored container*/
-.sponsored .sponsoredcontent{
-    float: left;
-	margin-top: .25em;
-	width: 65%;
-	_width: 64%
-	}
-	* html .sponsoredcontent		{ width: 64%; }	
-.tabbedlisting .sponsoredcontent 	{ width: 360px; }
-.column  .sponsoredcontent 			{ width: 170px; }
-.sponsored .sponsoredcontent .checkradiowrap{
-    float: left;
-	width: 99%;
-	}
-.sponsored .sponsoredcontent .checkradiowrap label { width: 85%; }
-.sponsored .sponsoredby {
-    float: left;
-	margin-left: 3%;
-	text-align: center;
-	width: 29%;
-	}
-.tabbedlisting .sponsoredby 	{ width: 234px; }
-.column .sponsoredby 			{ width: 120px; }
-* html .sponsored .sponsoredby 	{ margin-left: 1%; }
-.sponsoredby h3 {
-	color: #cc3333;
-	font-weight: normal;
-	font-size: 90%;
-	}
-.sponsored label { padding: 0 3px; text-align: left;}
-.sponsored .sponsoredby img {
-	cursor:pointer;
-	float: none;
-	margin: 0;
-}
-* html .tabs-container .sponsored {	height: 1%; }
 
 /* list tables (ultimate list style) */
 .listtable {
@@ -2085,34 +2010,6 @@ div.rating div.voted a { background: transparent url(/web/20100105001526im_/http
 * html #createitform input { display: inline; margin-left: -9px; }
 *+html #createitform input { margin-left: -9px; }
 
-/* partners list*/
-#partners {
-	/*border: 2px solid #111;*/
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bigger_box.gif) left top no-repeat;
-	margin: 1em 0;
-	overflow: auto;
-    /*padding: 0 14px;*/
-	width: 628px;
-	}
-#partners h4 {
-    float: left;
-	font-size: 110%;
-	display:inline; /* defeat ie6 double margin bug */
-	margin: 1.1em .3em 0 1em;
-	padding: 0 20px 0 0;
-	text-transform: uppercase;
-	}
-#partners ul {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bigger_box.gif) bottom right no-repeat;
-	float: none;
-   	font-size: 120%;
-	text-align:center;
-	}
-/* temp */
-#beacon img {
-	float: left;
-	border: 5px solid #0e7680;
-	margin: 5px 14px 10px 10px;
 }
 /* .........Content Display  */
 
@@ -2138,30 +2035,6 @@ div.rating div.voted a { background: transparent url(/web/20100105001526im_/http
 	}
 	.addquestion a.icon { margin: -14px 0 0 8px; float: right; }
 	.gethelp .icon { float: none; position: absolute; right: 0; top: 3px; }
-
-/* games hub */
-.gameslisting .gamethumb{
-    float: left;
-	width: 30%;
-	margin: -1.5em 0 1.4em;
-}
-.gameslisting .gamethumb a span {text-indent: -9998em; display: block;}
-.gameslisting dt {
-    clear: left;
-	color: #187682;
-	font-size: 1.4em;
-	margin: 2em 0 .3em 30%;
-}
-#gamearea {width:610px;text-align:center;margin:auto;}
-
-.gamepage .colwrap{
-    clear: left;
-	float: left;
-}
-#returntogames {
-    float: right;
-    overflow: hidden;
-}
 
 /* topical hub */
 .topical h1 {
@@ -2339,53 +2212,6 @@ fieldset#changepassword input {margin-top:-17px;}
 .watcheduser .buttonwrap 			{ margin: 3px auto 1em 19px; }
 * html .watcheduser .buttonwrap		{ margin-left: 10px; }
 
-/* horoscope */
-.horoscope 			{ margin-top:5px;clear: left; }/*position: relative; removed to fix ie6 h2 border MTV-172*/  /*clear is for profile page.  can be specified. */
-.profiledisplay .horoscope h3		{ margin: .8em 0 .3em 106px;}
-.horoscope .nav 	{ float: right; margin: .5em 0;} /*yesterday,today,tommorrow*/
-.horoscope .nav li {    display: inline;cursor:pointer;border-right:1px solid #000;padding-right:5px;padding-left:5px;} /*yesterday,today,tommorrow*/
-.horoscope p 		{ margin-left: 106px; } /*leave room for the sign logo*/
-.horoscope a.fullhoroscope, .horoscopelogo {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/pisces.gif) 0 0 no-repeat;
-    display: block;
-	float:left;
-	height: 78px;
-	margin: 1em 0 .4em 6px;
-	/*position: absolute; top: 60px; right: 30px;*/
-	width: 78px;
-	text-indent: -9999em;
-}
-	.fullhoroscopewindow .horoscopelogo { margin-top: 0; position: relative; }
-/* wrapper container div.horoscope has this class added. changes the bg image on the lightbox link.  one for each month*/
-.pisces a.fullhoroscope, .pisces .horoscopelogo 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/pisces.gif); }
-.aries a.fullhoroscope, .aries .horoscopelogo 				{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/aries.gif); }
-.taurus a.fullhoroscope, .taurus .horoscopelogo 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/taurus.gif); }
-.gemini a.fullhoroscope, .gemini .horoscopelogo 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/gemini.gif); }
-.cancer a.fullhoroscope, .cancer .horoscopelogo 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/cancer.gif); }
-.leo a.fullhoroscope, .leo .horoscopelogo 					{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/leo.gif); }
-.virgo a.fullhoroscope, .virgo .horoscopelogo 				{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/virgo.gif); }
-.libra a.fullhoroscope, .libra .horoscopelogo 				{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/libra.gif); }
-.scorpio a.fullhoroscope, .scorpio .horoscopelogo 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/scorpio.gif); }
-.sagittarius a.fullhoroscope, .sagittarius .horoscopelogo	{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/sagittarius.gif); }
-.capricorn a.fullhoroscope, .capricorn .horoscopelogo 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/capricorn.gif); }
-.aquarius a.fullhoroscope, .aquarius .horoscopelogo 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/aquarius.gif); }
-/* style the detail modal a bit */
-.fullhoroscopewindow h4 { clear: none; font-size: 110%; margin: 3em 0 .3em 106px; text-transform: uppercase; }
-.fullhoroscopewindow #togglehoroscope { display: block; margin: 0 0 0 106px; }
-
-.fullhoroscopewindow .buttonwrap { float: right; margin-right: 0; }
-
-#completehoroscope, #horoscopelist {
-	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left top no-repeat;
-	clear: left;
-	display: none;
-	padding-top: 10px;
-}
-#horoscopelist {display:block;}
-	.horoscopecontent, .horoscopelistcontent { 
-		height: 300px;
-		overflow: auto;
-	}
 
 /* "stuff" list on mystuff landing page */
 .stuff dd {padding:1px 12px;}
@@ -2477,39 +2303,6 @@ fieldset#changepassword input {margin-top:-17px;}
 
 
 /* 
-
-
-	moods 
-	class element with mood (provides padding and background positioning) + mood (sets proper icon)
-*/
-.angel 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/angel.gif); }
-.birthday 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/birthday.gif); }
-.blush			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/blush.gif); }
-.brightidea		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/brightidea.gif); }
-.cheerful		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/cheerful.gif); }
-.clown			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/clown.gif); }
-.confused 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/confused.gif); }
-.cool 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/cool.gif); }
-.crying			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/crying.gif); }
-.evilgrin		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/evilgrin.gif); }
-.excited		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/excited.gif); }
-.furious		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/furious.gif); }
-.heart			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/heart.gif); }
-.hungry 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/hungry.gif); }
-.indifferent 	{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/indifferent.gif); }
-.love	 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/love.gif); }
-.mad			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/mad.gif); }
-.sad	 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/sad.gif); }
-.scared			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/scared.gif); }
-.scaredtodeath 	{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/scaredtodeath.gif); }
-.shocked		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/shocked.gif); }
-.sick 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/sick.gif); }
-.sleepy			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/sleepy.gif); }
-.spin 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/spin.gif); }
-.tongue			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/tongue.gif); }
-.upset 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/upset.gif); }
-.whistling		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/whistling.gif); }
-.winking 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/winking.gif); }
 
 .journalentry h3.none			{ margin-left: -12px; padding-top:4px;padding-bottom:4px;}
 .journalentry h3.angel			{ padding-left: 24px; }
@@ -3009,19 +2802,6 @@ padding-bottom:1em;
 /* entire list link (new) */
 .entirelist {margin:15px;}
 
-/* YAHOO AD STYLES */
-#yahooads {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;border:2px solid #E1EBED!important;;width:620px!important;;padding-top:6px!important;;padding-left:8px!important;;}
-#sponsoredlinks {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;text-align:right!important;;width:615px!important;;font-size:11px!important;;}
-.searchyahooads {width:620px!important!important;!important;padding-top:6px!important;padding-left:8px}
-.searchyahooads h3 {width:600px!important;text-align:right!important;color:#117b84!important;}
-.searchyahooright {width:298px!important;border:2px solid #E1EBED!important;margin-bottom:10px!important;}
-.searchyahooright h3 {width:280px!important;text-align:right!important;color:#117b84!important;}
-.searchyahooright .yblock {padding-left:12px!important;width:280px!important;}
-.ylink {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;width:190px!important;float:left!important;padding-right:11px!important;}
-a.ylinkdesc:link {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;color:#000!important;font-size:12px!important;}
-a.ylinktitle {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;color:#0E7680!important;font-weight:bold!important;font-size:15px!important;}
-a.ylinkspottitle {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;color:#0E7680!important;font-weight:bold!important;font-size:11px!important;}
-a.ysitelink {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;}
 /* Poll Results */
 .fp_pollresults {
     overflow: hidden;
@@ -3263,22 +3043,11 @@ td.tdcnt {text-align:center;width:85px;}
 /* SEARCH PAGE STYLES */
 #searchselect {display:inline;margin-bottom:0px;}
 
-/* HOROSCOPE */
-#currentday {margin-left:97px;padding:10px;}
-
 /* SITE MAP */
 #sitemaplist p.header {font-weight:bold;padding:10px;margin-top:10px;}
 #sitemaplist ul {margin-left:20px;margin-top:-10px;}
 #sitemaplist ul.sublist {margin-top:0px;}
 #sitemaplist ul li {margin-left:30px;}
-
-/* SELECT FOR N PARTNER */
-#nselect {height:0px;width:43px;}
-select#nq {position:relative;top:3px;left:600px;font-size:9px;}
-
-span#qzpartlinks{text-align:left;padding-right:590px;}
-span#qzpartlinks a:link, span#qzpartlinks a:active, span#qzpartlinks a:visited {font-weight:bold;color:#B7B6B6;}
-span#qzpartlinks a:hover {color:#fff;}
 
 /* NO SCRIPT? */
 div.ns_error {border:1px solid #FF0040;color:#FF0040;background:#FFE1E8;padding:5px;margin-bottom:10px;}
@@ -3328,43 +3097,6 @@ a.wl_remove{font-size:80%;}
 /* VIEW POLL RESULTS */
 #vpollr {width:500px; margin-left: 100px; text-align:right; padding-top:20px; }
 * html #vpollr {width:500px; margin-left: 100px; padding-top:20px; text-align:right; }
-
-
-
-/* GAMEPONY HEADER UPDATE */
-#partofthen {margin:0em auto;padding:0px;font:12px normal "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;background:#000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_n_header.gif) 0 0 repeat-y;color:#fff;margin: 0em auto;text-align: right;width: 996px;}
-#greybar {position:relative;margin:0em auto;height:4px;background: #d1d2d4;width:983px;margin-left:7px;}
-#gamesnav {width:540px;text-align:left;float:left;padding-top:2px;padding-left:23px;height:23px;}
-
-#g_logo {display:inline;float:left;vertical-align:center;padding-right:5px;height:20px;}
-#g_logo img {display:in-line;margin-top:-2px;float:left;padding-right:2px;}
-* html #g_logo img {height:25px;margin-top:0px;}
-* html #gamesnav {padding-top:0px;padding-left:20px;width:550px;border-bottom: 0px solid #d1d2d4;}
-
-#gamesnav a:link, #gamesnav a:visited, #gamesnav a:active {text-transform:uppercase;color:#fff!important;font-size:.9em!important;font-weight:normal!important;letter-spacing:.1em;padding:1px 7px;}  
-#gamesnav a:hover {color:#000!important;background:yellow;text-decoration:none;}
-#g_logo a:link, #g_logo a:visited, #g_logo a:active {text-transform:lowercase;color:#fff!important;letter-spacing:.1em;padding:0px;}  
-#g_logo a:hover {text-transform:lowercase;color:#fff!important;letter-spacing:.1em;padding:0px;background:#000!important;}
-
-#gamesnav a.g_on:link, #gamesnav a.g_on:active, #gamesnav a.g_on:visited {color:#000!important;background:yellow;text-decoration:none;}
-#gamesnav a.g_on:hover {color:#000!important;background:yellow;text-decoration:none;}
-
-* html #partofthen {padding:0px;height:21px;}
-
-#partofthen p {
-       background: #000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/n_logo_header.gif) 880px center no-repeat  ;
-        margin: 0 6px 0 7px;
-        padding: 0 12px 0 9px;
-        height:25px;
-}
-
-* html #partofthen p {background:#000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/n_logo_header.gif) 305px -2px no-repeat;}
-*+html #partofthen p {background:#000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/n_logo_header.gif) 320px -2px no-repeat;}
-
-#partofthen a:link, #partofthen a:active, #partofthen a:visited {font-weight:bold;color:#B7B6B6;line-height: 2em;}
-#partofthen a:hover {color:#fff;}
-
-.lpad60 {padding-left:60px;}
 
 /* CONTENT HUBS */
 #contentHubDescription p.hasimg {float:left;width:475px;}
@@ -3472,142 +3204,3 @@ li.brand-mamabar-more-link div.brand-mamabar-more-wrapper li {
 	float: none;
 	display: block;
 }
-/* Nick Footer */
-div#nick-footer {
-	background: #e4e5e7 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/nick_footer_top.gif) no-repeat top left;
-	margin: 15px auto;
-	margin-left:-20px;
-	width: 983px;
-}
-
-div#nick-footer-bottom {
-	padding: 0px 6px 10px 6px;
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/nick_footer_bottom.gif) no-repeat bottom left;
-}
-
-div#nick-footer h4 {
-	line-height: 32px;
-	font-size: 12px;
-	color: #000;
-	text-transform: uppercase;
-	padding-left: 8px;
-}
-
-div#nick-footer-container {
-	background-color: #fff;
-	width: 946px;
-	margin-top: 4px;
-	padding: 15px 10px 10px 15px;
-}
-
-div#nick-footer-container div.nick-footer-siteblock {
-	float: left;
-	width: 157px;
-	margin-bottom: 20px;
-}
-
-div#nick-footer-container div.nick-footer-siteblock h5,
-div#nick-footer-container div.nick-footer-siteblock h5 a {
-	font-size: 11px;
-	color: #ff7f00;
-	letter-spacing: 1px;
-	text-decoration: none;
-}
-
-div#nick-footer-container div.nick-footer-siteblock h5 a:hover { 
-	color: #c1272d;
-	text-decoration: underline;
-}
-
-div#nick-footer-container div.nick-footer-siteblock ul li {	line-height: 18px; list-style:none;}
-
-div#nick-footer-container div.nick-footer-siteblock ul li a {
-	font-size: 10px;
-	text-decoration: none;
-	color: #555;
-	padding-left: 10px;
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_footer_bullet.gif) no-repeat center left;
-}
-
-div#nick-footer-container div.nick-footer-siteblock ul li a:hover { text-decoration: underline; }
-
-div#nick-footer-text {
-	clear: both;
-	padding-top: 20px;
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/footer_divider.gif) no-repeat top center;
-}
-
-div#nick-footer-text h3 { margin-bottom: 10px; }
-
-div#nick-footer-text p {
-	margin: 0 0 10px 0;
-	font-size: 10px;
-	color: #555;
-}
-
-ul#nick-footer-menu { padding-bottom: 10px; }
-
-ul#nick-footer-menu li {
-		list-style:none;
-	float: left;
-	border-right: 1px solid #555;
-}
-
-ul#nick-footer-menu li a {
-	padding: 0 5px;
-	color: #555;
-	font-weight: bold;
-	font-size: 11px;
-	text-decoration: none;
-	text-transform: uppercase;
-
-}
-
-ul#nick-footer-menu li a:hover { text-decoration: underline; }
-
-ul#nick-footer-menu li.last { border-right: 0; }
-ul#nick-footer-menu li.first a { padding-left: 0; }
-
-span#nick-footer-copyright {
-	clear: both;
-	float: left;
-	display: block;
-	font-size: 10px;
-	line-height: 32px;
-	color: #555;
-}
-
-img#comscore-logo {
-	float: right;
-}
-#footer_footer {clear:both;height:50px;}
-#nick-footer-wrap {
-background:#FFFFFF url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_wrapper.gif) repeat-y scroll 0pt;
-margin:auto;
-padding:0pt 25px;
-position:relative;
-width:946px;
-}
-/* End Nick Footer */
-
-/*
-     FILE ARCHIVED ON 00:15:26 Jan 05, 2010 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 21:11:03 Oct 04, 2018.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  LoadShardBlock: 45.021 (3)
-  esindex: 0.008
-  captures_list: 132.893
-  CDXLines.iter: 18.863 (3)
-  PetaboxLoader3.datanode: 47.179 (4)
-  exclusion.robots: 0.18
-  exclusion.robots.policy: 0.166
-  RedisCDXSource: 1.225
-  PetaboxLoader3.resolve: 4515.926
-  load_resource: 4536.025
-*/
