@@ -1,0 +1,91 @@
+
+          /*
+--=.._/(        Site Structure      )\_..=--
+    	  */
+
+#wrapper {
+	background: #fff url(/web/20100105005407im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_wrapper.gif) 0 0 repeat-y;
+	margin: auto;
+	position: relative;
+    width: 946px;
+	padding: 0 25px;
+	}
+#footer{
+	background-color: #fff;
+    clear: both;
+    padding-top:20px;
+	/*overflow: auto;*/
+	}
+#header{
+    height: 11em;
+	margin-bottom: 62px; /* make room for absolutley position nav originally was: 4em */
+	position: relative;
+	}
+
+#content{float: left; border:none; z-index: 1;}
+
+
+#primary {
+	background-color: #fff;
+	float: left;
+	margin: 0 10px 0 0; /* changed for IE6 PC from 14 */
+    width: 628px;
+
+}
+#secondary {
+	background-color: #fff;
+	float: left;
+	margin-left: 0px;
+	width: 302px;
+
+}
+
+
+/* slightly different for theme creator.  a little more room for sidebar form. */
+
+body.createtheme #primary	{
+	width: 568px;
+	}
+body.createtheme #secondary {
+	border-left: 1px solid #ccc;
+	padding-left: 20px;
+	width: 340px;
+	}
+
+
+/* three col, secondary on left, terciary on right
+
+
+.interior #primary {
+    width: 400px;
+}
+.interior #secondary {
+	margin-left: -620px;
+}
+  */
+
+	#siteutilities {
+		overflow:hidden;
+	}
+
+/*
+     FILE ARCHIVED ON 00:54:07 Jan 05, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:11:07 Oct 04, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 7767.24 (3)
+  esindex: 0.01
+  captures_list: 7917.1
+  CDXLines.iter: 32.192 (3)
+  PetaboxLoader3.datanode: 116.593 (4)
+  exclusion.robots: 0.187
+  exclusion.robots.policy: 0.176
+  RedisCDXSource: 2.964
+  PetaboxLoader3.resolve: 8620.279 (3)
+  load_resource: 1004.549
+*/
