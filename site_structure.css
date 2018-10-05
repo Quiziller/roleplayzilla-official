@@ -4,7 +4,7 @@
     	  */
 
 #wrapper {
-	background: #fff url(https://github.com/Quiziller/roleplayzilla-official/blob/master/bg_wrapper.gif) 0 0 repeat-y;
+	background: #fff url(/ce/github/get/roleplayzilla-official/master/bg_wrapper.gif) 0 0 repeat-y;
 	margin: auto;
 	position: relative;
     width: 946px;
