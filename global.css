@@ -34,7 +34,7 @@ a:hover { color: #990000}
 
 /* stretchable arrow button  */
 .continue span, .morebutton span {
-	background:transparent url(https://github.com/Quiziller/roleplayzilla-official/blob/master/bg_continue_main.gif) 0 0 no-repeat;
+	background:transparent url(/ce/github/get/roleplayzilla-official/master/bg_continue_main.gif) 0 0 no-repeat;
 	color: #007681;
 	cursor:pointer;
 	display:block;
@@ -45,7 +45,7 @@ a:hover { color: #990000}
 	padding:0 0 0 22px;
 	}
 a.continue, a.morebutton {
-	background: url(https://github.com/Quiziller/roleplayzilla-official/blob/master/bg_continue_right.gif) 100% 0 no-repeat;
+	background: url(/ce/github/get/roleplayzilla-official/master/bg_continue_right.gif) 100% 0 no-repeat;
 	border: none;
   	float:left;
 	font-size: 1.1em;
@@ -56,7 +56,7 @@ a.continue, a.morebutton {
 	text-transform: uppercase;
 	}
 span.morebutton {
-	background:transparent url(https://github.com/Quiziller/roleplayzilla-official/blob/master/bg_continue_right.gif) 100% 0 no-repeat;
+	background:transparent url(/ce/github/get/roleplayzilla-official/master/bg_continue_right.gif) 100% 0 no-repeat;
 	display:block;
 	float:left;
 	margin: .5em 0;
@@ -64,7 +64,7 @@ span.morebutton {
 	padding:0 24px 0 0;
 	}
 button.continue, button.morebutton {
-	background: url(https://github.com/Quiziller/roleplayzilla-official/blob/master/bg_continue_main.gif) 0 0 no-repeat;
+	background: url(/ce/github/get/roleplayzilla-official/master/bg_continue_main.gif) 0 0 no-repeat;
 	border: none;
 	color: #007681;
  	float:left;
@@ -82,7 +82,7 @@ button.continue, button.morebutton {
 eg. <a class="more" href="">Read More<span>about our quizzes</span></a> */
 a.more span{ display: block; left: -9999em;    position: absolute;}
 a.rsslink{
-	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/feed-icon-14x14.png) 0 0 no-repeat;
+	background: url(/ce/github/get/roleplayzilla-official/master/feed-icon-14x14.png) 0 0 no-repeat;
     display: block;
 	float: left;
 	height: 14px;
@@ -117,11 +117,11 @@ a.viewall{
 }
 #messagerecipientselect .viewall { display: none; }
 a.newmessages {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_messages.gif) right center no-repeat;
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/icon_messages.gif) right center no-repeat;
 	padding-right: 20px;
 }
 .random_button, .shareitbutton {
-	background: #fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/big_box.gif) 0px 0 no-repeat;
+	background: #fff url(/ce/github/get/roleplayzilla-official/master/big_box.gif) 0px 0 no-repeat;
 	display: block;
    	float: right;
 	font-size: 1.3em;
@@ -138,7 +138,7 @@ a.newmessages {
 * html .quizpage .random_button { margin-top: .3em; }
 *+html .quizpage .random_button { margin-top: .3em; }
 .random_button a, .shareitbutton a{
-	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/big_box.gif) bottom right no-repeat;
+	background: url(/ce/github/get/roleplayzilla-official/master/big_box.gif) bottom right no-repeat;
     color: #187682;
 	display: block;
 	line-height: 1.9em;
@@ -153,7 +153,7 @@ a.newmessages {
 	they should get the same graphic treatment.
 	*/
 h2 {
-	background: #000 url(https://github.com/Quiziller/roleplayzilla-official/blob/master/628_header_bg_top.jpg) 0 0 no-repeat;
+	background: #000 url(/ce/github/get/roleplayzilla-official/master/628_header_bg_top.jpg) 0 0 no-repeat;
 	color: #fff;
 	font-size: 130%!important;
    	line-height: 1.1;
@@ -162,20 +162,20 @@ h2 {
 	text-transform: uppercase;
 	text-shadow: 0 0 0 #000;
 }
-.profiledisplay h2 { background-image: url(https://github.com/Quiziller/roleplayzilla-official/blob/master/628_header_bg_top.jpg); }
+.profiledisplay h2 { background-image: url(/ce/github/get/roleplayzilla-official/master/628_header_bg_top.jpg); }
 h2 span {
-	background:transparent url(https://github.com/Quiziller/roleplayzilla-official/blob/master/628_header_bg_top.jpg) left bottom no-repeat;
+	background:transparent url(/ce/github/get/roleplayzilla-official/master/628_header_bg_top.jpg) left bottom no-repeat;
 	display:block;
 	padding: 0 4px 8px 14px; /* updated right padding from 0 to wrap a little earlier */
 	}
 	.toptagsbytype h2 span { padding: 2px 0 6px 14px; }
 	* html .toptagsbytype h2 span { padding: 0 0 6px 14px; }
 	*+html .toptagsbytype h2 span { padding: 0 0 6px 14px; }
-	.profiledisplay h2 span { background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/620_header_bg_bottom.gif); }
-#secondary h2, #primary .column h2 {  background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/302_header_bg_top.jpg) 0 0 no-repeat;	}
-#secondary h2 span, #primary .column h2 span {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/302_header_bg_bottom.gif) left bottom no-repeat; }
-#profilemaincontent h2 		{ background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/429_header_bg_top.jpg); }
-#profilemaincontent h2 span { background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/429_header_bg_bottom.gif); }
+	.profiledisplay h2 span { background-image: url(/ce/github/get/roleplayzilla-official/master/620_header_bg_bottom.gif); }
+#secondary h2, #primary .column h2 {  background:transparent url(/ce/github/get/roleplayzilla-official/master/302_header_bg_top.jpg) 0 0 no-repeat;	}
+#secondary h2 span, #primary .column h2 span {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;background:transparent url(/ce/github/get/roleplayzilla-official/master/302_header_bg_bottom.gif) left bottom no-repeat; }
+#profilemaincontent h2 		{ background-image:url(/ce/github/get/roleplayzilla-official/master/429_header_bg_top.jpg); }
+#profilemaincontent h2 span { background-image:url(/ce/github/get/roleplayzilla-official/master/429_header_bg_bottom.gif); }
 h2.clean, .searchresults #primary h2, h2.alert, .hentry h2, .hentry #profilemaincontent h2  {
     background: none;
 	border: none;
@@ -255,7 +255,7 @@ ul.links, ul.links ul, ul.links ul ul, #content ul.links li, #nav, #subnav, .met
    	position: absolute; top: 10px; left: 5px;
 	}
 #brand{
-	background: #fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/qz_logo_sketchy.gif) left bottom no-repeat;
+	background: #fff url(/ce/github/get/roleplayzilla-official/master/qz_logo_sketchy.gif) left bottom no-repeat;
 	display: block;
 	overflow: hidden;
 	padding-top: 5px;
@@ -265,7 +265,7 @@ ul.links, ul.links ul, ul.links ul ul, #content ul.links li, #nav, #subnav, .met
 	}
 .logo_area {font-size:13px;text-transform:none;font-weight:bold;cursor:default;text-align:center;background:#fff;color:#006c74;line-height:30px;} /* style for tagline */
 #header .banner a {
-	/*background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/728x90_placeholder.jpg);*/
+	/*background: url(/ce/github/get/roleplayzilla-official/master/728x90_placeholder.jpg);*/
 	display: block;
 	float: right;
 	height: 90px;
@@ -278,7 +278,7 @@ ul.links, ul.links ul, ul.links ul ul, #content ul.links li, #nav, #subnav, .met
 
 /* closing block for wrapper, provides grey bar for bottom of white box */
 .close_wrapper {
-	background: #000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_n_header.gif) 0 0 repeat-y;
+	background: #000 url(/ce/github/get/roleplayzilla-official/master/bg_n_header.gif) 0 0 repeat-y;
 	color:#fff;
 	margin: 0em auto;
 	padding: 0;
@@ -315,7 +315,7 @@ ul.links, ul.links ul, ul.links ul ul, #content ul.links li, #nav, #subnav, .met
 	text-decoration: none;
 	}
 #nav a {
-	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/nav_3state2.gif) 0 0 no-repeat;
+	background:transparent url(/ce/github/get/roleplayzilla-official/master/nav_3state2.gif) 0 0 no-repeat;
 	overflow: hidden; /*keep firefox from showing the silly line to the end of the page. */
    /*	padding-right: 20px;*/
 	text-indent:-999em;
@@ -327,10 +327,10 @@ ul.links, ul.links ul, ul.links ul ul, #content ul.links li, #nav, #subnav, .met
 	width: 85% !important; /* the actual width is based on the top menu item plus padding.  this brings it in some so the arrow doesn't get cut off. */
 	}
 #wrapper #nav li ul a:hover {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_nav_hover_arrow.gif) right center no-repeat !important; /* not a hack ;-) increased specificity below overrides background position here and hides arrow.  !important prevents override */
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/bg_nav_hover_arrow.gif) right center no-repeat !important; /* not a hack ;-) increased specificity below overrides background position here and hides arrow.  !important prevents override */
 	}
 * html #wrapper #nav li ul a:hover {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_nav_hover_arrow.gif) right center no-repeat; /* same effect as above, but for ie6, for which !important does not work.  so this IS a hack. */
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/bg_nav_hover_arrow.gif) right center no-repeat; /* same effect as above, but for ie6, for which !important does not work.  so this IS a hack. */
 	}
 
 
@@ -386,7 +386,7 @@ body.whavevs plus:hover a is to make sure the bordered version wins when on that
 	}
 	* html #nav li{width: auto;  }
 #nav li ul {
-	background:#dfe8ea url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_menu.gif) 0 0 repeat-x;
+	background:#dfe8ea url(/ce/github/get/roleplayzilla-official/master/bg_menu.gif) 0 0 repeat-x;
 	border:1px solid #7f8082;
 	border-width:0px 3px 4px 3px;
   	display: block;
@@ -407,7 +407,7 @@ body.whavevs plus:hover a is to make sure the bordered version wins when on that
 
 
 #nav li li {
-	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_nav_li.gif) left top repeat-x;
+	background:transparent url(/ce/github/get/roleplayzilla-official/master/bg_nav_li.gif) left top repeat-x;
 	float:none;
 	font-size:.9em;
 	height:auto;
@@ -454,7 +454,7 @@ body.whavevs plus:hover a is to make sure the bordered version wins when on that
 
 /*-----------------------------------tabby stuff-------------------------*/
 .tabs-nav li{
-	background:#000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_tabs_li.gif) 0 0 no-repeat;
+	background:#000 url(/ce/github/get/roleplayzilla-official/master/bg_tabs_li.gif) 0 0 no-repeat;
 	float: left;
 	font-size:1.25em;
 	font-weight:bold;
@@ -464,7 +464,7 @@ body.whavevs plus:hover a is to make sure the bordered version wins when on that
 	}
 .tabs-nav li a:link,
 .tabs-nav li a:visited {
-	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_tabs_a.gif) 100% 0 no-repeat;
+	background:transparent url(/ce/github/get/roleplayzilla-official/master/bg_tabs_a.gif) 100% 0 no-repeat;
 	color:#fff;
   float:left;
 	height:36px;
