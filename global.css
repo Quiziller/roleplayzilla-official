@@ -1,0 +1,3620 @@
+/*
+Quizilla 2.0
+By Will Moore, Paul Farning and Christoph Saxe @  ISITE Design
+
+--------- Notes -----------
+* html {anything} addresses IE < 6 browser bugs
+*+html {anything} addresses IE 7 browser bugs
+*/
+
+@import url("/web/20100105001526cs_/http://quizilla.teennick.com/templates/QZ2/css/site_structure.css");
+
+/* Basic browser reset  */
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dd, dt, blockquote, button, fieldset, legend, label, input, textarea, form, strong, addr {
+    margin: 0; padding: 0; border: 0;
+}
+input, textarea {border: 1px solid #242323;!important}
+
+          /*
+--=.._/(        Type, Links and Lists      )\_..=--
+    	  */
+body {
+	background: #8F2A24 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/page_bg.gif)!important;
+	font: 78%/120% "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
+	margin-bottom: 14px!important;
+	}
+	
+
+
+h1, h2, h3, h4, h5, h6 { font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;   margin: .2em 0 .4em 0;}
+h1{color:#187682; font-size: 2.4em; line-height: 100%;}
+h1.cl {clear:both;}
+h2{font-size: 170%; margin-top: 0;}
+#secondary h2 {font-size:130%!important;margin-top:0px!important;font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;}
+h3{font-size: 120%; color: #0e7680 ;}
+h4{font-size: 100%; margin: 1em 0 0 0; clear: left;} /*clear for categories.  might break others.*/
+h5{font-size: 90%;}
+h6{font-size: 90%; }
+p{margin: 0 0 1em 0;}
+a, a:visited{  color: #cc3333; text-decoration: none;}
+a:hover { color: #990000}
+
+/* stretchable arrow button  */
+.continue span, .morebutton span {
+	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_continue_main.gif) 0 0 no-repeat;
+	color: #007681;
+	cursor:pointer;
+	display:block;
+	float:left;
+	height: 29px;
+	line-height: 30px;
+	overflow:hidden;
+	padding:0 0 0 22px;
+	}
+a.continue, a.morebutton {
+	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_continue_right.gif) 100% 0 no-repeat;
+	border: none;
+  	float:left;
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: .5em 0;
+	padding:0 24px 0 0;
+	position: relative;
+	text-transform: uppercase;
+	}
+span.morebutton {
+	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_continue_right.gif) 100% 0 no-repeat;
+	display:block;
+	float:left;
+	margin: .5em 0;
+	overflow:hidden;
+	padding:0 24px 0 0;
+	}
+button.continue, button.morebutton {
+	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_continue_main.gif) 0 0 no-repeat;
+	border: none;
+	color: #007681;
+ 	float:left;
+	font-size: 1.1em;
+	font-weight: bold;
+	height: 29px;
+	line-height: 29px;
+	margin: 0;
+	padding:0 0 0 22px;
+	text-transform: uppercase;
+	}
+.continue + * {clear:left;} /* ie6 is assigned same style programatically in global.js */
+
+/* can insert span in to 'read more' links with more relevant link text for accessibility. the span is hidden.
+eg. <a class="more" href="">Read More<span>about our quizzes</span></a> */
+a.more span{ display: block; left: -9999em;    position: absolute;}
+a.rsslink{
+	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/feed-icon-14x14.png) 0 0 no-repeat;
+    display: block;
+	float: left;
+	height: 14px;
+	margin: 8px 3px 10px 0;;
+	text-indent: -2345em;
+	width: 14px;
+}
+
+a img 	{ border: none; }
+div.rss { float: right; margin: -1.2em 12px 0 0; }
+	div.rss a.rsslink { margin-top: 1px; }
+/* temp button*/
+/*a.button {
+	border: 1px solid #ccc;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: .9em;
+	margin: .5em;
+	padding: 3px 5px;
+	width: auto;
+    border-style: solid;
+    border-bottom-color: #333333;
+    border-right-color: #555555;
+    border-left-color: #BBBBBB;
+    border-top-color: #DDDDDD;
+	}
+*/
+a.viewall{
+    clear: both;
+	display: block;
+}
+#messagerecipientselect .viewall { display: none; }
+a.newmessages {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_messages.gif) right center no-repeat;
+	padding-right: 20px;
+}
+.random_button, .shareitbutton {
+	background: #fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/big_box.gif) 0px 0 no-repeat;
+	display: block;
+   	float: right;
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: .8em .8em 0 0;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	/*width: 250px;*/
+	}
+	.shareitbutton				{ margin: .8em 0 -4px 0; }
+.random_button 					{ margin-top: .3em; margin-left:.3em; }
+/*.quizpage .random_button { margin-top: -4.7em; } HIDES QUIZ HUB RANDOM BUTTON */
+* html .quizpage .random_button { margin-top: .3em; }
+*+html .quizpage .random_button { margin-top: .3em; }
+.random_button a, .shareitbutton a{
+	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/big_box.gif) bottom right no-repeat;
+    color: #187682;
+	display: block;
+	line-height: 1.9em;
+	padding: 0 .9em;
+	}
+	.shareitbutton a.open { background-position: right -450px; }
+.random_button a:hover, .shareitbutton a:hover 	{ color: #990000; }
+
+/*  h2 are currently displayed as black blocks.
+	we insert a span with JS so that we can create expando boxes if the user resizes the text.
+	just below, we're overriding the black boxes in certain instances where h2s make sense but
+	they should get the same graphic treatment.
+	*/
+h2 {
+	background: #000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/628_header_bg_top.jpg) 0 0 no-repeat;
+	color: #fff;
+	font-size: 130%!important;
+   	line-height: 1.1;
+	margin-bottom:.4em;
+	padding: 9px 0 0 0;
+	text-transform: uppercase;
+	text-shadow: 0 0 0 #000;
+}
+.profiledisplay h2 { background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/620_header_bg_top.jpg); }
+h2 span {
+	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/628_header_bg_bottom.gif) left bottom no-repeat;
+	display:block;
+	padding: 0 4px 8px 14px; /* updated right padding from 0 to wrap a little earlier */
+	}
+	.toptagsbytype h2 span { padding: 2px 0 6px 14px; }
+	* html .toptagsbytype h2 span { padding: 0 0 6px 14px; }
+	*+html .toptagsbytype h2 span { padding: 0 0 6px 14px; }
+	.profiledisplay h2 span { background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/620_header_bg_bottom.gif); }
+#secondary h2, #primary .column h2 {  background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/302_header_bg_top.jpg) 0 0 no-repeat;	}
+#secondary h2 span, #primary .column h2 span {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/302_header_bg_bottom.gif) left bottom no-repeat; }
+#profilemaincontent h2 		{ background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/429_header_bg_top.jpg); }
+#profilemaincontent h2 span { background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/429_header_bg_bottom.gif); }
+h2.clean, .searchresults #primary h2, h2.alert, .hentry h2, .hentry #profilemaincontent h2  {
+    background: none;
+	border: none;
+	color: #187682;
+	font-size: 1.5em;
+	line-height:1.1;
+	padding: 0 0 .7em 0;
+	text-transform: none;
+	}
+	h2.clean span, .searchresults  #primary h2 span, h2.alert span, .hentry h2 span,  .hentry h2, .hentry #profilemaincontent h2 span { background: transparent; padding: 0; }
+
+h2.alert {
+	border: 1px solid #990000;
+	clear: left;
+    color: #990000;
+	padding: 4px;
+}
+.hentry h2 			{ margin: 1em 0 0 0; }
+#creator h2 		{ background-color: #777; background-image: none; }
+#creator h2 span 	{ background-color: #777; background-image: none; display: inline;  }
+h2 small {
+	display: block;
+	color: #000;
+	font-size: .7em;
+	}
+/*
+.tabbedlisting h4{
+	border-top: 1px solid #ccc;
+	clear: both;
+	font-size: 1.3em;
+	padding-top: 1em;
+	}
+*/
+.entry-content h2, .entry-content h2 span {background:#fff!important;padding:0px;}
+
+/* Generic global Style for meta infomation */
+.meta, .metadata {font-size: 90%; /*font-style: italic;*/}
+* html #secondary .metadata		{ padding-bottom: .8em; }
+.meta ul, .metadata ul {list-style-type: none;}
+
+/* make lists lists again inside the mainContent div */
+#maincontent ul, #maincontent ol {margin:10px 0 10px 1.5em;}
+#maincontent ul li {list-style-type: disc; margin: .2em 0 0 0;}
+
+/* For quicklinks and navigation. */
+ul.links, ul.links ul, ul.links ul ul, #content ul.links li, #nav, #subnav, .metadata ul, .archivelisting ul, .friendsjournals ul { list-style-type: none;}
+.archivelisting ul, .friendsjournals ul, .mystuffmenu ul { margin-bottom: 1em; }
+.quidget ul.links { list-style:none; }
+.footer_control{width:602px;text-align:center;} /* new */
+#footer ul li{
+    display: inline;
+	line-height: 3em;
+	text-align: center;
+	}
+
+#footer ul.footer_nav li{
+    display: inline;
+	line-height: 1.2em;
+	text-align: center;
+	margin-bottom:4px;
+} /*new*/
+
+.searchresults #primary ol  {list-style-type: none;}
+#footer p{
+   	border-bottom: 4px solid #d1d2d4;
+	margin: 0 0 -1em -17px;
+	padding: 0 19px 1em 17px;
+	width: 946px;
+	}
+* html #footer p {margin:0 -19px 0 -18px;}
+
+/*-----------------------------------stuff in the header-------------------------*/
+#header h2 {
+    background-color: none;
+	border: none;
+	padding: 0;
+   	position: absolute; top: 10px; left: 5px;
+	}
+#brand{
+	background: #fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/qz_logo_sketchy.gif) left bottom no-repeat;
+	display: block;
+	overflow: hidden;
+	padding-top: 5px;
+	text-indent: -999em;
+	width:205px; height:95px;
+	cursor:pointer;
+	}
+.logo_area {font-size:13px;text-transform:none;font-weight:bold;cursor:default;text-align:center;background:#fff;color:#006c74;line-height:30px;} /* style for tagline */
+#header .banner a {
+	/*background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/728x90_placeholder.jpg);*/
+	display: block;
+	float: right;
+	height: 90px;
+	margin-left:218px; /* neccessary for IE6+7 to push search form down below banner ... no, clearing creates a measurement bug in both IEs. */
+	margin-top: 1em;
+	text-indent: -9999em;
+	width: 728px;
+	}
+#qad {display:block;z-index:0;height:90px;width:728px;position:relative;top:11px;left:220px;margin-bottom:11px;overflow:hidden;clip: rect(0px,728px,90px,0px);} /* new */
+
+/* closing block for wrapper, provides grey bar for bottom of white box */
+.close_wrapper {
+	background: #000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_n_header.gif) 0 0 repeat-y;
+	color:#fff;
+	margin: 0em auto;
+	padding: 0;
+	width: 996px;
+}
+.close_wrapper p {
+	border-bottom: 4px solid #d1d2d4;
+	margin: 0 6px 0 7px;
+	padding: 0 12px 0 9px;
+}
+
+          /*
+--=.._/(        Navigation      )\_..=--
+    	  */
+#nav{
+	z-index:100;
+	border: none;
+	float: left;
+	height: 2em;
+	position: absolute;
+	top:10.7em;/*header height*/
+	}
+* html #nav { /*ie6 mismeasures the div and hides the last menu unless reset to full width of container.  this requires special positioning too.*/
+	margin: 0 -25px;
+	left:50px;
+	width:996px;
+	}
+#nav a, #nav li {
+	z-index:100;
+	display: block;
+	float: left;
+	font-size: 1.3em;
+	height:62px;
+	text-decoration: none;
+	}
+#nav a {
+	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/nav_3state2.gif) 0 0 no-repeat;
+	overflow: hidden; /*keep firefox from showing the silly line to the end of the page. */
+   /*	padding-right: 20px;*/
+	text-indent:-999em;
+	}
+#wrapper #nav li ul a {/* submenu a links */
+	background:none;
+	text-indent:0;
+	padding-right: 10%; /* leave room for the arrow */
+	width: 85% !important; /* the actual width is based on the top menu item plus padding.  this brings it in some so the arrow doesn't get cut off. */
+	}
+#wrapper #nav li ul a:hover {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_nav_hover_arrow.gif) right center no-repeat !important; /* not a hack ;-) increased specificity below overrides background position here and hides arrow.  !important prevents override */
+	}
+* html #wrapper #nav li ul a:hover {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_nav_hover_arrow.gif) right center no-repeat; /* same effect as above, but for ie6, for which !important does not work.  so this IS a hack. */
+	}
+
+
+/*
+.over is for IE
+body.whatevs is to make it active one on a page with body class
+body.whavevs plus:hover a is to make sure the bordered version wins when on that page.
+*/
+	#nav li#quizzes-menu a { background-position:0 0; width:127px; }
+	#nav li#quizzes-menu:hover a, body.quizpage #nav li#quizzes-menu:hover a,
+		#nav li#quizzes-menu.over a, body.quizpage #nav li#quizzes-menu.over a{	background-position:0 -62px; }
+	body.quizpage #nav li#quizzes-menu a, #nav li#quizzes-menu a.current {background-position:0 -124px;  }
+
+	#nav li#stories-menu a { background-position:-134px 0;width:125px; }
+	#nav li#stories-menu:hover a, body.storypage #nav li#stories-menu:hover a,
+		#nav li#stories-menu.over a, body.storypage #nav li#stories-menu.over a { background-position:-134px -62px; }
+	body.storypage #nav li#stories-menu a, #nav li#stories-menu a.current {background-position:-134px -124px;  }
+
+	#nav li#polls-menu a { background-position:-259px 0; width:110px; }
+	#nav li#polls-menu:hover a, body.pollpage #nav li#polls-menu:hover a,
+		#nav li#polls-menu.over a, body.pollpage #nav li#polls-menu.over a { background-position:-259px -62px; }
+	body.pollpage #nav li#polls-menu a, #nav li#polls-menu a.current {background-position:-259px -124px;  }
+
+	#nav li#poems-menu a { background-position:-369px 0; width:110px; }
+	#nav li#poems-menu:hover a, body.poempage #nav li#poems-menu:hover a,
+		#nav li#poems-menu.over a, body.poempage #nav li#poems-menu.over a	{ background-position:-369px -62px; }
+	body.poempage #nav li#poems-menu a, #nav li#poems-menu a.current  {background-position:-369px -124px;  }
+
+	#nav li#lyrics-menu a { background-position:-479px 0; width:117px; }
+	#nav li#lyrics-menu:hover a, body.lyricspage #nav li#lyrics-menu:hover a,
+		#nav li#lyrics-menu.over a, body.lyricspage #nav li#lyrics-menu.over a { background-position:-479px -62px; }
+	body.lyricspage #nav li#lyrics-menu a, #nav li#lyrics-menu a.current  {background-position:-479px -124px;  }
+
+	#nav li#games-menu a { background-position:-596px 0; width:125px; }
+	#nav li#games-menu:hover a, body.gamepage #nav li#games-menu:hover a,
+		#nav li#games-menu.over a, body.gamepage #nav li#games-menu.over a { background-position:-596px -62px; }
+	body.gamepage #nav li#games-menu a, #nav li#games-menu a.current {background-position:-596px -124px;  }
+
+	#nav li#mystuff-menu a { background-position:-724px 0; width:125px;}
+	#nav li#mystuff-menu:hover a, body.mystuffpage #nav li#mystuff-menu:hover a,
+		#nav li#mystuff-menu.over a, body.mystuffpage #nav li#mystuff-menu.over a { background-position:-724px -62px; }
+	body.mystuffpage #nav li#mystuff-menu a, #nav li#mystuff-menu a.current {background-position:-724px -124px;  }
+
+	#nav li#help-menu a { background-position:-849px 0; width:117px; }
+	#nav li#help-menu:hover a, body.helppage #nav li#help-menu:hover a { background-position:-849px -62px; }
+		#nav li#help-menu.over a, body.helppage #nav li#help-menu.over a { background-position-y:-62px; }
+	body.helppage #nav li#help-menu a, #nav li#help-menu a.current{background-position:-849px -124px;  }
+
+#nav li {
+	padding: 0;
+  	position: relative;
+	z-index:100;
+	}
+	* html #nav li{width: auto;  }
+#nav li ul {
+	background:#dfe8ea url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_menu.gif) 0 0 repeat-x;
+	border:1px solid #7f8082;
+	border-width:0px 3px 4px 3px;
+  	display: block;
+	padding:0;
+	position: absolute;
+	left: -9999em;
+	top: 62px; /*nav height*/
+	}
+/* separate treatment for each inner ul.  width dependant on main graphic. */
+	#nav li#quizzes-menu ul { width:121px; }
+	#nav li#stories-menu ul { width:119px; }
+	#nav li#polls-menu ul { width:104px; }
+	#nav li#poems-menu ul { width:104px; }
+	#nav li#lyrics-menu ul { width:111px; }
+	#nav li#games-menu ul { width:119px; }
+	#nav li#mystuff-menu ul { width:119px; }
+	#nav li#help-menu ul { width:111px; }
+
+
+#nav li li {
+	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_nav_li.gif) left top repeat-x;
+	float:none;
+	font-size:.9em;
+	height:auto;
+	padding:.25em .2em;
+	}
+ #nav li ul a {
+	color: #8b2c32;
+	float:none;
+  	font-size: .9em;
+	height:auto;
+	line-height: 1.2;
+	margin:0;
+	text-transform: none;
+	padding: .25em .2em;
+	}
+#nav li li { }
+	*+html #nav ul li { padding:.25em 0; }
+	* html #nav li li { float:left; height:1.2em; padding:.2em 0 .3em; width:100%; }
+
+
+#nav ul a:hover { color:#000; }
+	*+html #nav ul li { width:100%; }
+	* html #nav ul li { display: inline; }
+
+/*show sub nav on hover*/
+#nav li:hover ul, #nav li.over ul{	left:0;	}
+
+/* some stuff for menu iframes - to cover selects in IE6 */
+.selectfix {
+	background:red;
+	position:absolute;
+	left:0; top:62px;
+	z-index:-1;
+}
+#quizzes-menu .selectfix { width:127px; }
+#stories-menu .selectfix { width:125px; }
+#polls-menu .selectfix   { width:110px; }
+#poems-menu .selectfix   { width:110px; }
+#lyrics-menu .selectfix  { width:117px; }
+#games-menu .selectfix   { width:125px; }
+#mystuff-menu .selectfix { width:125px;}
+#help-menu .selectfix    { width:117px; }
+
+
+/*-----------------------------------tabby stuff-------------------------*/
+.tabs-nav li{
+	background:#000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_tabs_li.gif) 0 0 no-repeat;
+	float: left;
+	font-size:1.25em;
+	font-weight:bold;
+	list-style-type: none;
+	margin:0 .3em 0 0;
+	text-transform: uppercase;
+	}
+.tabs-nav li a:link,
+.tabs-nav li a:visited {
+	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_tabs_a.gif) 100% 0 no-repeat;
+	color:#fff;
+  float:left;
+	height:36px;
+	line-height:36px;
+	padding:0 .8em;
+	text-shadow: 0 0 0 #000;
+	}
+.tabs-nav li a:hover { color:#067681; }
+div ul.tabs-nav{ /* overrides general quidget innard indentation selector*/  
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom no-repeat;
+  margin: 0 0 0 -2px; /* make sure first tab lines up properly with border below. */
+	overflow:hidden;
+	}
+	* html div ul.tabs-nav { height: 1%; width:100%; padding-right:2px; } /* fix bottom border not showing up */
+	*+html div ul.tabs-nav { height: 1%; width:100%; padding-right:2px;} /* also fix side border appearing */
+	
+li.tabs-selected { background-position:0 100%; }
+li.tabs-selected a:link, li.tabs-selected a:visited {
+	background-position:100% 100%;
+	color:#067681;
+	cursor:default;
+}
+.tabs-hide {    display: none;	}
+.tabs-container {
+	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_big_container_bottom.gif) left bottom no-repeat;
+	padding: 5px;
+	position: relative;
+	}
+
+          /*
+--=.._/(        Forms      )\_..=--
+    	  */
+/*some generic form settings - overwritten for specific instances. */
+label, input, select, textarea{
+	display: block;
+	/*margin: .3em 0;*/
+    margin-bottom: 1.5em;
+}
+	input[type="file"] 			{ border: none; }
+	*+html input[type="file"] 	{ border: 1px solid #333; }
+
+textarea { font-family: Arial, Helvetica, sans-serif; }
+label{
+    clear: left;
+	margin-right: .5%;
+	margin-bottom: 0;
+	}
+input:focus {background-color: #F1F6F7; border:1px solid #007681;}
+button{
+	cursor: pointer;
+	/*temp*/
+	border: 1px solid #aaa;
+	clear: left;
+	float: left;
+	font-family: 'Trebuchet MS', Trebuchet, Tahoma, Arial, sans-serif; 
+	padding: 2px;
+	}
+
+.messagepage .buttonwrap {font-size:78%!important;}
+.messagepage .modaldialog .buttonwrap, .messagepage .sendbuttons .buttonwrap {font-size:1em!important;}
+
+.buttonwrap {
+	background: #fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/big_box.gif) 0 0 no-repeat;
+	display: block;
+	float: left;
+	margin: 10px .8em 10px 0;
+	text-align: center;
+	}
+	* html .modalwrap .buttonwrap { position: relative; }
+	* html #addimage .buttonwrap, * html #invitefriendformwrap .buttonwrap, * html #confirmsent .buttonwrap, * html #reportitform .buttonwrap, * html #reportitform select, * html #removeimage .buttonwrap, * html #editimage .buttonwrap  { position:static; }/* ie6 thinks .buttonwrap is positioned relatively in some contexts, which causes layout errors. */ 
+	* html #reportitcontainer .buttonwrap {margin-top:40px;position:relative;}
+	* html #reportitcontainer #bwrap {margin-left:30px;}
+	* html #messagerecipientselect .right, * html #confirmsent .right	{ position: relative;}
+	* html #messagerecipientselect .modalwrap, * html #confirmsent .modalwrap { padding-bottom: 1.5em; float: right; }
+	.buttonwrap button, .buttonwrap a.button {
+		background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/big_box.gif) bottom right no-repeat;
+		border: 0;
+		color: #187682;
+		cursor: pointer;
+		display: block;
+		font-size: 1.3em;
+		font-weight:bold;
+		line-height: 1.8em;
+		margin:0;
+		padding: .15em .5em;
+		text-transform: uppercase;
+		}
+		.buttonwrap button, x:-moz-any-link 	{ padding: .3em .5em;}
+		* html .buttonwrap button { overflow:visible; padding: .3em .5em; width:auto; }
+		*+html .buttonwrap button { overflow:visible; padding: .3em .5em; width:auto; }
+		#primary .buttonwrap a.button 			{ padding: 2px .5em;}
+		* html .buttonwrap button { line-height: 1;/* margin: 0;*/ }
+		*+html .buttonwrap button { line-height: 1; }
+		.metadata .buttonwrap .addtomyfavorites { clear: left; float: left;font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;}
+		.metadata .buttonwrap { margin-left:.8em; }
+		* html .metadata .buttonwrap			{ margin-left: .4em; margin-bottom: .4em; }
+		/*.quizdisplay .buttonwrap 				{ float: right; } flips pos of submit button */
+		body.createtheme #secondary .buttonwrap	{ margin-right: 8px; }
+		#contactform .buttonwrap				{ clear: both; }
+
+
+
+ul.nav a.button,
+div.metadata a.button, .watcheduser .buttonwrap a.button {
+  font-size: 1em!important;
+}
+div.metadata dl{    overflow: hidden; margin-left: .7em;}
+div.metadata dt, div.metadata dd{ display: block; float: left; margin-bottom: .1em;}
+div.metadata dt {clear: left; margin-right: .2em;font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;}
+* html div.metadata dt{white-space: nowrap; width: auto;}
+* html div.metadata dd{width: 65%}
+*+html div.metadata dt{white-space: nowrap; width: auto;}
+*+html div.metadata dd{width: 65%}
+
+.journalentry#comments {display:block;}
+
+#report_comments {    width: 80%;}
+#report_comments:focus {background-color: #F1F6F7; border:1px solid #007681;}
+	
+	/* these rules are 'isolated' with extra selectors to ensure that a.button colors are not overridden by the user style sheet */
+	body * a.button { color: #187682; }
+	.buttonwrap button:hover, body * .buttonwrap a.button:hover { color: #990000; }
+
+	/*.jqmWindow .buttonwrap a.button {line-height: 1em;}*/
+	/*#secondary .buttonwrap{margin: 10px 0 10px .7em;}
+	* html #secondary .buttonwrap{margin-left: .35em;}
+	#secondary .buttonwrap button, #secondary .buttonwrap a.button {
+		background-color: transparent;
+		font-weight:normal;
+		font-size: 1em;
+		line-height: 1.5em;
+		padding:.4em .7em .3em;
+		}*/
+	* html #post_comment .buttonwrap				{ margin-top: 7px; }
+	.createtheme #secondary .createthemebutton { float: none; width: 11.6em }
+	.createtheme #secondary .createthemebutton a { width: 8em; }
+
+button.disabled { cursor: default; }
+#header button	{ float: left;}
+.gobutton {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/btn_go.gif) 0 0 no-repeat;
+	border: none;
+	clear: none;
+	/*float: none;*/
+	display: block;
+	height: 24px;
+	margin-top: -3px;
+	text-indent: -999em;
+	width: 34px;
+	}
+
+.cancelbutton {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/btn_cancel.gif) 0 0 no-repeat !important;
+	border: none;
+	display: block;
+	height: 24px;
+	text-indent: -999em;
+	width: 64px;
+	}
+	
+.addtheimage {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/addimg.gif) 0 0 no-repeat !important;
+	border: none!important;
+	display: block;
+	height: 24px;
+	text-indent: -999em;
+	width: 94px!important;
+	}
+
+/* some special case buttons here */
+.invitefriend .gobutton { margin:0 0 .7em .7em; }
+
+/* .checkradiowrap is on a fieldset or div surrounding a collection of input type="radio" or "checkbox".  the label/input
+size for these is the opposite for most form elements.  this saves us from classing each label and input.  if ie was less not awesome,
+we could use an attribute selector. */
+form .checkradiowrap input{
+	border: none;
+	clear: left;
+	float: left;
+	margin-right: 0;
+   	width: 15px;
+	}
+form .checkradiowrap label{
+    clear: none;
+	float: left;
+	text-align: left;
+	width: 38%;
+	}
+/* different for tests */
+.testdisplay .checkradiowrap label{
+    clear: none;
+	text-align: left;
+	width:100%;
+}
+
+#preview_testdisplay {width:605px;}
+	
+	* html #themepreview #themequiz form .checkradiowrap label { float: none; }
+form .checkradiowrap {
+	display: block;
+	float: left;
+	margin-bottom: 1em; /*same as inputs/labels not in the wrap*/
+	width: 60%;
+	}
+.quizdisplay form .checkradiowrap {width: 95%;}
+.invitefriend label{
+	clear: left;
+	float: left;
+	margin: .7em 1% 0 0;
+	text-align: right;
+	width: 40%;
+	}
+.invitefriend input, .invitefriend textarea{
+    float: left;
+	margin-top: .7em;
+	width: 58%;
+	}
+.entry-content form input{/*always radio or checkbox */
+	border: none;
+	clear: left;
+	float: left;
+	margin: 2px 3px .5em 0   !important; /* overrides css for create.preview */
+   	width: 15px;
+	}
+	* html .entry-content form input {margin: -3px 3px .7em 0;}
+.entry-content button{
+	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/btn_submit.gif);
+	height: 29px;
+    text-indent: -9999em;
+	width: 74px;
+}
+/* IE has a button bug which is being overridden by setting width:auto in  * html (IE6) and *+html(IE7) filters.  since this is an image button, the width here must be explicitly overridden in those same filters or the button will not display. */
+* html .entry-content button{ width:74px; }
+*+html .entry-content button{ width:74px; }
+.quizdisplay, .storydisplay, .polldisplay, .poemdisplay, .lyricsdisplay, .profiledisplay { padding: 8px; }
+.flashquizdisplay {padding-right:0px;}
+.profiledisplay { padding-right: 0; }
+
+/* preview basics */
+.previewcontent form .checkradiowrap label 	{ width: 100%; }
+.previewcontent form .checkradiowrap 	   	{ margin: 0 20px 1em 20px; }
+.previewcontent form .checkradiowrap input 	{ margin: 0 5px 0 0; }
+.previewcontent form button					{ float: none; }
+
+/* register */
+#agreements 		{ clear: left; width:90%; }
+#agreements label 			{ width: 360px; display: block; margin-bottom: 1em; }
+* html #agreements label 	{ margin-bottom:1.5em; padding-top:4px; }
+*+html #agreements label 	{ margin-bottom:1.5em; padding-top:4px; }
+
+/* fix margin collapse */
+* html #contactform #topic, * html #contactform #email, * html #contactform #usermame	{ float: left; margin-bottom: 1.4em; }
+#contactform #message 	{ height: 120px; width: 340px; }
+
+#usagepolicy, #contentpolicy, #postingrules {
+	background:#fff;
+	border: 1px solid #ccc;
+	clear: left;
+    height: 10em;
+	margin: .5em 0 0 0;
+	overflow-y: scroll;
+	padding: .3em;
+	width: 380px;
+	}
+#contentpolicyagree, #usagepolicyagree, #postingrules   { clear: left; margin-right: 4px; }
+
+#registrationform br { display:none; } /* ie6 can't apply margin under #email input without this break in the html */
+* html #registrationform br { display:block; height:0; line-height:1px; }
+
+#registrationformwrapper {margin-left:100px;width:400px;border:1px solid #000;padding:20px;background:#E1EBED;}
+#registrationform label {display:inline;}
+* html #registrationform input {clear:both;}
+#registrationform table td {vertical-align:top;}
+#registrationform table td input#email, #registrationform table td input#passwordconfirm, #registrationform table td input#username, 
+	#registrationform table td input#password1{width:150px;float:right;}
+#registrationform table td.tl{vertical-align:top;text-align:left;}
+#registrationform table td.w240{width:240px;}
+#registrationform table td.w240 div {clear:both;padding-bottom:10px;}
+#registrationform table td.tri{vertical-align:top;text-align:right;}
+#registrationform table td input#bd_year{width:60px;}
+
+#bdaytable .error {width:100px;}
+input#usagepolicyagree, input#contentpolicyagree, input#postingrulesagree {float:left;border:0px;}
+#birthdaywrap { display:block; min-height:42px; overflow:hidden; position:relative;}
+* html birthdaywrap {margin-top:0px;}
+
+#birthdaywrap select { clear: none; display: block; float: left; margin-right: 6px; width: 90px; float:right;}
+#birthdaywrap select#bd_day { width: 50px; }
+#birthdaywrap input#bd_year { margin-left:155px;width: 60px; height:20px;margin-top:0px;}
+* html #birthdaywrap { height:42px; } /* prevents error messages in this container being cut off by overflow */
+* html #birthdaywrap label { clear:none; }
+#registrationform button{ margin-left: 520px; }
+#reggo {margin-left:470px;}
+#registrationform input#gender_male, #registrationform input#gender_female {border:0px;margin:0px;clear:none;display:inline !important;}
+
+
+
+label.error{
+	background-color: red;
+	border: 1px solid red;
+	color: #fff;
+	margin-bottom: 2em;
+	padding: 4px 0;
+}
+form label.valid { color: #3f3; }
+input.error, select.error, textarea.error{
+	border: 1px solid red;
+	color: red;
+	float: right;
+}
+fieldset#changepassword input{
+	margin-top:1px;
+	float:none;
+	clear:both;
+}
+fieldset#changepassword input.error{
+	float:none;
+	clear:both;
+}
+#contactform input.error, #contactform textarea.error{float:left;}
+#invitethisfriend input.error, #invitethisfriend textarea.error{float:left;}
+form em.error{
+   	background-color: red;
+	border: 1px solid red;
+	color: #fff;
+	display: block;
+	float: left;
+	font-style:normal ;
+	margin: -1px 0 0 4px;
+	padding: 2px 4px;
+	width: 250px;
+}
+
+form#invitethisfriend em.error{
+   	background-color: red;
+	border: 1px solid red;
+	color: #fff;
+	display: block;
+	float: right;
+	font-style:normal;
+	margin: 0px 0 0 4px;
+	padding: 2px 4px;
+	width: 190px;
+}
+
+fieldset#changepassword em.error{
+   	background-color: red;
+	border: 1px solid red;
+	color: #fff;
+	clear:both;
+	display: block;
+	font-style:normal;
+	margin: 0px 0 3px 188px;
+	padding: 2px 4px;
+	width: 290px;
+}
+
+* html fieldset#changepassword em.error {
+	margin-left:94px;
+}
+
+
+form#registrationform em.error{
+   	background-color: red;
+	border: 1px solid red;
+	color: #fff;
+	display: block;
+	font-style:normal;
+	margin-top:-15px;
+	margin-bottom:20px;
+	text-align:center;
+	padding: 2px 4px;
+}
+
+form#registrationform td.errorfix em.error{
+	width:310px;
+   	background-color: red;
+	border: 1px solid red;
+	color: #fff;
+	display: block;
+	font-style:normal;
+	margin:0px 0px 10px 20px;
+	text-align:center;
+	padding: 2px 4px;
+}
+
+
+	form #agreements em.error { width: 250px; margin-top: 0; }
+* html form #birthdaywrap { height:42px; }
+p.error { /* generally for server side validation return errors */
+   	background-color: red;
+	border: 1px solid red;
+	color: #fff;
+	padding: 4px;
+}
+
+/* login styles */
+
+.loginfieldset {width:290px;} /* new to fix IE7 display bug */
+* html #secondary label.accessibility {display: none;}
+#loginform input {
+	float: left;
+	margin: 0 7px 10px 0;
+	width: 150px;
+	}
+	* html #loginform input {    margin-left: -4px;}
+	* html #loginform label.rememberme input {    margin-left: 0;}
+
+#loginform label 		{ display:inline; float:left;}
+#loginform button 		{ float:left; margin-right: 7px;}
+#loginform p {    float: left;}
+#loginform .rememberme	{ clear: left; display: block;  text-align: left; width: 10em; }
+#loginform .rememberme input { width: 15px; margin-right: 2px; border: none;}
+	* html #loginform .rememberme input { margin-top: -4px}
+#login img  { float: right; margin: 0 15px;}
+	* html #login img { margin: 0 7px;}
+/* changepass */
+/*#changepass label { float: left; text-align: right; width: 40%; }*/
+#changepass input { margin: 0 0 10px 6px; }
+#changepass button { clear: both;  margin: 0 0 8px 75%;}
+
+/* simple_search styles */
+#searchform, #inlinesearchform, #tagsearch { display:inline; float:right; margin: .5em 0 2em 0; padding: .2em 5px .2em 5px;}
+#inlinesearchform {float:none;}
+	#tagsearch { margin-top: 1.5em; }
+	.tagsearch #tagsearch { margin-top: 0; }
+	* html #searchform, * html #tagsearch {margin-bottom:0;}
+	* html #searchform fieldset, * html #tagsearch fieldset {display:inline; padding:2px 0;}
+#contentSelectId select, #searchform input, #inlinesearchform input, #tagsearch input { float: left; font-size: 1.2em; margin: 0 3px 0 0; width: 16em;}
+#contentSelectId label, #searchform label, #inlinesearchform label, #tagsearch label {
+	clear: none;
+	color: #007681;
+	display: inline;
+	float:left;
+	font: bold 130%/1.1em "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif;
+	margin: 0;
+	text-align: left;
+	text-transform: uppercase;
+	width: 4em;
+	}
+#searchform label.search_type {width:55px;text-transform:none;font-weight:normal;font-size:110%;margin-top:2px;}
+#tagsearch label { width: 7em; } 	
+#searchform p 		{ margin-left: 5em; }
+
+#searchform input.radio {border:0px;width:14px;margin-top:2px;}
+* html #searchform input.radio {margin-top:0px;}
+*+html #searchform input.radio {margin-top:0px;}
+
+/* search_advanced styles */
+#advancedsearch label, #advancedsearch h3 {
+	display: block;
+	float: left;
+	width: 116px;
+}
+#advancedsearch input, #advancedsearch select { margin-bottom: .4em; }
+#advancedsearch fieldset fieldset {
+	border: 1px solid #ccc;
+	border-width: 1px 0;
+	margin-top: -1px;
+	overflow: hidden;
+	padding: 1em 0;
+}
+#advancedsearch label {
+	color: #187682;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+#searchterm {
+	float: left;
+	margin-right: 10px;
+	padding: 2px;
+	width: 242px;
+}
+	* html #searchterm { margin-right: 5px; }
+#searchtermsettings { float: left; }
+	* html #searchtermsettings {
+		margin-left: 188px;
+		margin-top: -2.2em; 
+	}
+
+.searchsections div, .searchwrittenby div {
+	float: left;
+	margin-top: 6px;
+	width: 130px;
+}
+	#advancedsearch .searchsections label, #advancedsearch .searchwrittenby label {
+		color: #333;
+		font-weight: normal;
+		font-size: 1em;
+		margin: -1.4em 0 0 20px;
+		width: auto;
+	}
+		* html #advancedsearch .searchsections label, * html #advancedsearch .searchwrittenby label { margin-top: -1.7em; margin-left: 10px; } 
+		*+html #advancedsearch .searchsections label, *+html #advancedsearch .searchwrittenby label { margin-top: -1.7em; } 
+		#advancedsearch .searchwrittenby .byauthor label {
+			margin: 0;	
+		}
+	#advancedsearch .searchsections input, #advancedsearch .searchwrittenby input {
+		margin: 0 0 .4em 0;
+	}	
+		* html #advancedsearch .searchsections input, * html #advancedsearch .searchwrittenby input { border-width: 0; }
+		* html #advancedsearch .searchwrittenby .byauthor input { border-width: 1px; }
+		*+html #advancedsearch .searchsections input, *+html #advancedsearch .searchwrittenby input { border-width: 0; }
+		*+html #advancedsearch .searchwrittenby .byauthor input { border-width: 1px; }
+		#advancedsearch .searchwrittenby .byauthor input {
+			margin-left: 72px;
+			width: 152px;
+		}
+			* html #advancedsearch .searchwrittenby .byauthor input { margin-top: -1.3em; }
+			*+html #advancedsearch .searchwrittenby .byauthor input { margin-top: -1.3em; }
+		#advancedsearch .searchwrittenby .byauthor label { margin-top: .1em; }
+#timewritten, #searchtaggedas, #taghelp, #advancedsearch div.rating {
+	margin-left: 116px;
+}
+#searchtaggedas { width: 242px; }
+#advancedsearch div.rating .star { margin-top: -1.1em; }
+	*+html #advancedsearch div.rating .star { margin-top: -1.6em; }
+	* html #advancedsearch div.rating .star { margin-top: -1.6em; position: relative; }
+#advancedsearch .gobutton {
+	float: right;
+	margin: 1em 25px 0 0;
+}
+	* html #advancedsearch .gobutton { margin-right: 12px; }
+
+/* pagination search styles */
+#lowersearch {margin-left:200px;}
+* html #lowersearch {width:330px;}
+*+html #lowersearch {margin-left:200px;width:350px;}
+#inlinesearchform {	margin: 12px auto;width: 15.2em;}
+#inlinesearchform label { display: block; line-height:20px;}
+#inlinesearchform button, #inlinesearchform input  { float: left; }
+* html #inlinesearchform button {margin-top:-1px;height:45px;width:40px;}
+#inlinesearchform input { margin-right: 4px; }
+
+/* .............................. /forms    */
+
+
+
+/* search results */
+.searchresults h1, #primary .sponsoredresults  {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom no-repeat;
+	padding: 0 0 10px 0;
+}
+
+/*.home #primary .sponsored  {background: none;}*/
+.sponsoredresults { margin-bottom: 1em; }
+	.sponsoredresults h3 { color: #000; margin-bottom: 1em; }
+	.sponsoredresults ol { list-style: none; }
+	.sponsoredresults li { margin-bottom: 1.2em; }
+	#secondary .sponsoredresults li { margin-left: 12px; }
+	.sponsoredresults p  { margin-bottom: 0; }
+	#secondary .sponsoredresults p { margin-left: 0; }
+
+ol.searchresults {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom no-repeat;
+	list-style: none;
+	margin-bottom: 1em;
+	padding: 0 0 10px 0;
+}
+	ol.searchresults li 	{ margin: 0 0 1em 0; }
+	ol.searchresults p { margin: 0; }
+	ol.searchresults span {
+		display: block;
+		margin-left: 80px;
+		padding-top: .4em;
+	}
+	* html ol.searchresults span 					{ margin-top:-1em; height: 1%; padding-top: .3em;  }
+	* html ol.searchresults span.ratingdisplay  	{ height: 30px;}
+	* html ol.searchresults span.ratingdisplay span { height: 30px; } 
+	*+html ol.searchresults span 					{ margin-top:-1em; padding-top: .3em; }
+	ol.searchresults span span { margin: 1px 0 0 1px; }
+	ol.searchresults .ratingdisplay {
+		float: left;
+		margin: 0;
+		padding-top: 0;
+	}
+	ol.searchresults .result {
+		font-size: 1.2em;
+		font-weight: bold;
+		line-height: 1.2;
+	}
+	
+#resultssort 	{ font-size: 110%; font-weight: bold; overflow: hidden; padding-bottom: 1em; padding-top:10px;}
+#resultssort h4 { float: left; margin-top:5px; width: 80px; }
+#resultssort ul { list-style: none; margin-left: 80px; }
+#resultssort li { display: inline; padding-right: 20px;  }
+#resultssort li.active	{ padding-right: 6px; }
+#resultssort li.active a { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_arrow_sort.gif) right 5px no-repeat; color: #000; padding-right: 14px; }
+#resultssort li.active a.asc { background-position: right -46px; }
+
+/*tag search results*/
+.tagpage ol.searchresults {
+	background:none;
+	padding:0;
+}
+	.tagpage .contentresults {
+		background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom no-repeat;
+		margin-bottom:1em;
+		padding-bottom:.5em;
+	}
+	.tagpage .tagresults ul {
+		list-style:none;
+		margin:0 0 1em 1em;
+	}
+	.tagpage h2 {clear:both;}
+	.tagpage .tagsearch {
+		float:right;
+		margin-top:-3.5em;
+	}
+	.tagsearch input {
+		font-size: 1.2em;
+		margin:0 3px 0 0;
+		width:11em;
+	}
+
+/*temp - this should match the display css for any quiz on the front*/
+#quizpreview .checkradiowrap, div.quizdisplay .checkradiowrap {	margin: 0 0 2em 2%;}
+* html #quizpreview .checkradiowrap, * html div.quizdisplay .checkradiowrap { float: none; margin-left: 1%; }
+#quizpreview label, div.quizdisplay label{
+	clear: left;
+    width: 94%;
+	margin: 0;
+	}
+#quizpreview h3, div.quizdisplay h3{ /* just h3.aquestion ? */
+    clear: left;
+	margin: 0 0 .5em 0;
+	}
+
+          /*
+--=.._/(        quidgets      )\_..=--
+    	  */
+.quidget{
+	clear: both; /*clear whatever was before it*/
+	margin-bottom: 1em; /*keep the spacing even site wide*/
+	overflow: hidden; /*contain the floats within. */
+	}
+* html .quidget {
+	height:1%; /* ie6 not reacting to overflow:hidden in at least one context (.sponsored) */
+	padding-bottom:1px; /* forces ie6 to render bottom margin on last contained element */
+}
+/* to add 'padding' to containers with out messing with container widths.  */
+.quidget form, .quidget p, .quidget h3, .quidget h4, .quidget img, .quidget ul,
+.quidget div.metacrumb { margin-left: .7em; margin-right: .7em;	}
+.quidget h1 {
+	clear: left;
+    margin-left: .25em;
+}
+
+.quidget td p{margin-left: 0;}
+.quidget.ad img{margin: 0;}
+
+#secondary .quidget {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;width:300px;_width:300px;background-color: #E1EBED;} /* added width to fix ie6 display bug */
+#quidgetad {position:relative;z-index:0;background-color: #E1EBED;height:250px;overflow:hidden;clip: rect(0px,300px,250px,0px);}
+/* set specific ones back to transparent */
+#secondary .favoritelisting, #secondary .sponsored,
+#secondary .tagcloud, #secondary .beacon { background-color: transparent; }
+.tabbedlisting img { float: left; margin: 0 .7em 1em 0; }
+
+/* the sidebar promo */
+#secondary .promo100 {
+	/*background:#fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_promo100.jpg) 0 0 no-repeat;*/
+	background:#FFF;
+	padding: 5px .5em 5px 0px;  /* left used to be 160 (for bg img??) */
+}
+.promo {
+	border: 2px solid #111111;
+}
+	#secondary .promo h2 {
+		background:none;
+		color:#cc3333;
+		line-height:100%;
+	}
+	#secondary .promo h2 span {
+		background:none;
+		padding:0;
+	}
+	.promo p { margin-left:0; }
+
+/* top area quizilla alerts */
+.alertbox { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_big_container_bottom.gif) bottom left no-repeat;	}
+.alertbox h3 {
+    background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_big_container_top.gif) top left no-repeat;
+	margin:0 0 .5em 0;
+	padding:10px 0 0 .7em;
+	}
+
+/* Content Display */
+abbr.updated, abbr.published{
+	border: none;
+    text-decoration: none;
+}
+/* comments */
+.comment {
+    margin-bottom: 1em;
+	padding: .5em;
+	}
+#post_comment label, #post_comment textarea {display: block; padding: 3px; width: 95%; margin-bottom: 0;}
+#post_comment textarea:focus {background-color: #F1F6F7; border:1px solid #007681;}
+/*#submitcomment{margin-left: 450px;}*/
+.commentinvite {
+    clear: left;
+	line-height: 2.5em;
+}
+.commentmeta {
+	font-weight: normal;
+	margin: 0 0 .7em 0;
+}
+
+/* pagination */
+.pagination  {clear: left;}
+.pagination p {
+    margin-bottom: 0;
+	text-align: center;
+}
+.journalpage .pagination { margin-bottom: 1em; }
+.pagination ul {
+	list-style-type: none;
+	margin:0 0 1em 0;
+    padding:0;
+	text-align: center;
+}
+.pagination a {padding:2px;}
+.pagination ul li 	{ display: inline; }
+.navchapter { text-align: center; }
+
+/*
+	made visible per JIRA MTV-137. Then later hidden again per JIRA MTV-235. pf
+	hiding inline author display.  kept in html for microformats goodness.*/
+.hentry .author{ position: absolute; left: -9999em; }
+.hub .quizdisplay .author, .hub .storydisplay .author, .hub .polldisplay .author, .hub .poemdisplay .author, .hub .lyricdisplay .author{ position: static; }
+.journalentry .author { position: absolute; left: -9999em; }
+.chaptermeta h4 {
+    font-size: 1.3em;
+	margin:0 0 .5em 0;
+}
+.tabbedlisting .chaptermeta h4 { margin:0 0 .5em .7em; }
+.chaptermeta label {
+	float: left;
+	line-height: 1.6em;
+    width: 9em;
+}
+.chaptermeta select { float: left; margin-bottom: 0; }
+
+/* metacrumb - this is:, tagged: */
+.metacrumb {margin: 1em 0;}
+.metacrumb dt, .metacrumb dd {    display: inline;}
+.metacrumb dt {font-weight: bold;}
+.story img {float: left; margin: 0 1em .5em 0;}
+
+/* inline byline for all content pages, follows below title.. MTN */
+.inline_byline {
+	font-size: 120%;
+	font-weight: normal;
+	font-style: normal;
+	margin-top:-6px;
+	padding:0px;
+}
+
+/* quiz results */
+#primary #itemresults {
+	border: 1px solid #aaa;
+	float: right;
+	margin: 0 0 1em 20px;
+	padding: 10px;
+	width: 30%;
+}
+	#itemresults ul { list-style: none; }
+	#itemresults li { display: inline; }
+	#itemresults h4 { font-weight: normal; margin-bottom: 4px; }
+	#itemresults .autosaveprompt { clear: left; }
+	#itemresults .buttonwrap { margin:10px 0 10px .6em; }
+
+/* Poll Results */
+.pollresults {
+    overflow: hidden;
+	width: 608px;
+}
+	.pollresults dt{
+		clear: left;
+		display: block;
+		float: left;
+		margin-top: 1em;
+		/*margin-right: 14px;*/
+		padding-bottom: 1em;
+	    width: 100px;
+	}
+	.pollresults dt div{
+	
+	margin-left:20%;
+	
+}	 
+	.pollresults dd{
+	    display: block;
+		float: left;
+		margin-top: 1em;
+		text-align: right;
+		width: 400px;
+	}
+	.pollresults dd span{
+		background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_poll_result_bar.gif) right top no-repeat;
+		border: 1px solid #ccc;
+	    display: block;
+		height: 20px;
+		/*text-indent: -9999em; negative didn't work? */
+		width: 400px;
+	}
+	
+	.pollresult div {
+	
+	text-align:left;
+	
+}
+	.pollresult .percentbar {
+
+		width:450px;
+
+	}
+
+	.pollresult .percenttext {
+
+		float:right;
+
+		padding-top:4px;
+
+	}
+
+	/*using background position for each percentage to move the image over.  css bar graph ftw. */
+	.pollresults .perc0 span	{background-position: -400px  0}
+	.pollresults .perc1 span	{background-position: -396px  0}
+	.pollresults .perc2 span	{background-position: -392px  0}
+	.pollresults .perc3 span	{background-position: -388px  0}
+	.pollresults .perc4 span	{background-position: -384px  0}
+	.pollresults .perc5 span	{background-position: -380px  0}
+	.pollresults .perc6 span	{background-position: -376px  0}
+	.pollresults .perc7 span	{background-position: -372px  0}
+	.pollresults .perc8 span	{background-position: -368px  0}
+	.pollresults .perc9 span	{background-position: -364px  0}
+	.pollresults .perc10 span	{background-position: -360px  0}
+	.pollresults .perc11 span	{background-position: -356px  0}
+	.pollresults .perc12 span	{background-position: -352px  0}
+	.pollresults .perc13 span	{background-position: -348px  0}
+	.pollresults .perc14 span	{background-position: -344px  0}
+	.pollresults .perc15 span	{background-position: -340px  0}
+	.pollresults .perc16 span	{background-position: -336px  0}
+	.pollresults .perc17 span	{background-position: -332px  0}
+	.pollresults .perc18 span	{background-position: -328px  0}
+	.pollresults .perc19 span	{background-position: -324px  0}
+	.pollresults .perc20 span	{background-position: -320px  0}
+	.pollresults .perc21 span	{background-position: -316px  0}
+	.pollresults .perc22 span	{background-position: -312px  0}
+	.pollresults .perc23 span	{background-position: -308px  0}
+	.pollresults .perc24 span	{background-position: -304px  0}
+	.pollresults .perc25 span	{background-position: -300px  0}
+	.pollresults .perc26 span	{background-position: -296px  0}
+	.pollresults .perc27 span	{background-position: -292px  0}
+	.pollresults .perc28 span	{background-position: -288px  0}
+	.pollresults .perc29 span	{background-position: -284px  0}
+	.pollresults .perc30 span	{background-position: -280px  0}
+	.pollresults .perc31 span	{background-position: -276px  0}
+	.pollresults .perc32 span	{background-position: -272px  0}
+	.pollresults .perc33 span	{background-position: -268px  0}
+	.pollresults .perc34 span	{background-position: -264px  0}
+	.pollresults .perc35 span	{background-position: -260px  0}
+	.pollresults .perc36 span	{background-position: -256px  0}
+	.pollresults .perc37 span	{background-position: -252px  0}
+	.pollresults .perc38 span	{background-position: -248px  0}
+	.pollresults .perc39 span	{background-position: -244px  0}
+	.pollresults .perc40 span	{background-position: -240px  0}
+	.pollresults .perc41 span	{background-position: -236px  0}
+	.pollresults .perc42 span	{background-position: -232px  0}
+	.pollresults .perc43 span	{background-position: -228px  0}
+	.pollresults .perc44 span	{background-position: -224px  0}
+	.pollresults .perc45 span	{background-position: -220px  0}
+	.pollresults .perc46 span	{background-position: -216px  0}
+	.pollresults .perc47 span	{background-position: -212px  0}
+	.pollresults .perc48 span	{background-position: -208px  0}
+	.pollresults .perc49 span	{background-position: -204px  0}
+	.pollresults .perc50 span	{background-position: -200px  0}
+	.pollresults .perc51 span	{background-position: -196px  0}
+	.pollresults .perc52 span	{background-position: -192px  0}
+	.pollresults .perc53 span	{background-position: -188px  0}
+	.pollresults .perc54 span	{background-position: -184px  0}
+	.pollresults .perc55 span	{background-position: -180px  0}
+	.pollresults .perc56 span	{background-position: -176px  0}
+	.pollresults .perc57 span	{background-position: -172px  0}
+	.pollresults .perc58 span	{background-position: -168px  0}
+	.pollresults .perc59 span	{background-position: -164px  0}
+	.pollresults .perc60 span	{background-position: -160px  0}
+	.pollresults .perc61 span	{background-position: -156px  0}
+	.pollresults .perc62 span	{background-position: -152px  0}
+	.pollresults .perc63 span	{background-position: -148px  0}
+	.pollresults .perc64 span	{background-position: -144px  0}
+	.pollresults .perc65 span	{background-position: -140px  0}
+	.pollresults .perc66 span	{background-position: -136px  0}
+	.pollresults .perc67 span	{background-position: -132px  0}
+	.pollresults .perc68 span	{background-position: -128px  0}
+	.pollresults .perc69 span	{background-position: -124px  0}
+	.pollresults .perc70 span	{background-position: -120px  0}
+	.pollresults .perc71 span	{background-position: -116px  0}
+	.pollresults .perc72 span	{background-position: -112px  0}
+	.pollresults .perc73 span	{background-position: -108px  0}
+	.pollresults .perc74 span	{background-position: -104px  0}
+	.pollresults .perc75 span	{background-position: -100px  0}
+	.pollresults .perc76 span	{background-position: -96px  0}
+	.pollresults .perc77 span	{background-position: -92px  0}
+	.pollresults .perc78 span	{background-position: -88px  0}
+	.pollresults .perc79 span	{background-position: -84px  0}
+	.pollresults .perc80 span	{background-position: -80px  0}
+	.pollresults .perc81 span	{background-position: -76px  0}
+	.pollresults .perc82 span	{background-position: -72px  0}
+	.pollresults .perc83 span	{background-position: -68px  0}
+	.pollresults .perc84 span	{background-position: -64px  0}
+	.pollresults .perc85 span	{background-position: -60px  0}
+	.pollresults .perc86 span	{background-position: -56px  0}
+	.pollresults .perc87 span	{background-position: -52px  0}
+	.pollresults .perc88 span	{background-position: -48px  0}
+	.pollresults .perc89 span	{background-position: -44px  0}
+	.pollresults .perc90 span	{background-position: -40px  0}
+	.pollresults .perc91 span	{background-position: -36px  0}
+	.pollresults .perc92 span	{background-position: -32px  0}
+	.pollresults .perc93 span	{background-position: -28px  0}
+	.pollresults .perc94 span	{background-position: -24px  0}
+	.pollresults .perc95 span	{background-position: -20px  0}
+	.pollresults .perc96 span	{background-position: -16px  0}
+	.pollresults .perc97 span	{background-position: -12px  0}
+	.pollresults .perc98 span	{background-position: -8px  0}
+	.pollresults .perc99 span	{background-position: -4px  0}
+	.pollresults .perc100 span	{background-position: 0  0}
+
+/* make one*/
+.makeone p {
+	background-color: #E1EBED;
+	border: 1px solid #aaa;
+	clear: both;
+    padding: 5px;
+}
+body.quizresultspage .quizresultsdisplay img {position:static;}
+.quizresultsdisplay img {
+    /*float: left; BREAKING IE7? */
+	margin: 0 .8em .5em 0;
+	/*position: relative;*/
+}
+
+/* Save it*/
+.saveit {
+	border-top: 1px dashed #ccc;
+	clear: both;
+	margin-top: 1em ;
+	overflow: auto;
+	padding: 1em;
+	text-align: center;
+	}
+
+/* Add Media */
+/*add image squidget*/
+#content #addmedia {
+	background-color: #f5f5f5;
+	border: 3px solid #333;
+    display: block;
+	clear: left;
+	margin: 0 0 0 -20em;
+	padding: 1em 1%;
+	position: absolute;
+	top: 50%; left: 50%;
+	width: 40em;
+	z-index: 55;
+}
+* html #addmedia { width: 96%; }
+#addmediaform fieldset { 
+	border:none;
+	margin-bottom: 10px;
+	position:relative;
+}
+
+#addmediaform input.radio { /*classed because a generic checkradiowrap would break the secondary inputs */
+	clear: left;
+	margin-right: 3px;
+  width: 15px;
+}
+#addmedia .checkbox, #addmedia .radio { border: none; }
+#addmediaform button {
+	clear: none;
+	float: left;
+	margin: 1em 0 0 18px;
+}
+#addmediaform input, #addmediaform select, #addmediaform label {
+	clear: none;
+	float: left;
+	width: 40%;
+}
+#addmedia #sourceresult							{ display: none; }
+#addmediaform label								{ width: 32%; }
+#addmediaform label#mediafromalbumlabel,
+#addmediaform label#mediafromphotobucketlabel	{ width: 100%; }
+#addmediaform label#mediafromalbumlabel span,
+#addmediaform label#mediafromphotobucketlabel span 	{ display: block;padding-left: 18px; }
+
+#addmediaform label.addtomylibrary {
+    clear: left;
+	margin-left: 144px;
+	margin-top: .5em;
+	padding: 0 4px;
+	width: 210px;
+}
+	* html #addmediaform label.addtomylibrary { margin-left: 66px; }
+#addmediaform label.addtomylibrary input {
+	margin-right: 4px;
+    width: 15px;
+}
+#addmediaform #albumcategory { width: 6em; }
+#accountphoto {
+	border: 1px solid #222;
+	clear: both;
+	height: 140px;
+	margin: 0 0 0 18px;
+	overflow: auto;
+	width: 450px;
+}
+	#accountphoto ul {
+		list-style: none;
+		margin:12px;
+		overflow: hidden;
+	}
+		#accountphoto li 	{ float: left; }
+			#accountphoto a {
+				border: 5px solid #eee;
+				display: block;
+				margin: 0 8px 8px 0;
+			}
+			#accountphoto a:hover 	{ border-color: #c7d9de; }
+			#accountphoto a.active 	{ border-color: #8ac1cc; }
+				#accountphoto img 	{
+					display: block;
+					margin: 0;
+					padding: 0;
+				}
+#photobucketwrapper {
+	/*all temp for place holder*/
+	background-color: #eee;
+	border: 1px solid #222;
+	clear: both;
+	color: #ccc;
+	font-size: 2em;
+	height: 235px;
+	line-height: 1em;
+	margin: 0 0 0 18px; /*line up with labels w/o a radio input*/
+	width: 450px;
+}
+p.signupforphotobucket { margin-left: 18px; margin-bottom: 0; }
+.addmedialink {clear: left; margin-left: 33%} /* margin left same width as labels + label margin*/
+
+
+/*tag it*/
+ul.tagadd li, ul.tags li {display: inline;}
+#tagit label {width: 10%}
+#tagit {
+	border-top: 1px solid #ccc;
+    margin: 1em 0;
+	padding: 1em 0;
+	}
+#tagit textarea { margin-left: 3em; }
+textarea#categories { width: 100%; }
+
+/* share it*/
+#shareit {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_big_container_bottom.gif) right bottom no-repeat;
+    margin: 0 0 2em 0;
+	padding:0 0 2em 15px;
+	}
+#shareit h2.clean{
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bigger_box.gif) left top no-repeat;
+	padding: 10px 0 0 10px;
+	margin-left: -15px;
+	}
+* html #shareit h2.clean{
+	padding:20px 0 0 20px;
+	height: 1px;
+	}
+*+html #shareit h2.clean{
+	padding:20px 0 0 20px;
+	height: 1px;
+	}
+ul.sharemessaging{
+    margin-top: 2em;
+	}
+#shareit ul li{
+	display: block;
+	float: left;
+	list-style-type: none;
+	margin-bottom: 2em;
+	text-align: center;
+    width: 5em;
+	}
+#shareit ul li a{
+	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_email.gif) center bottom no-repeat ;
+    display: block;
+   	padding-bottom: 32px;
+	height: 1%; /*oh, ie.*/
+	}
+#shareit ul li.shareyahoo a{	background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_yim.gif);}
+#shareit ul li.shareaim a{	background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_aim.gif);}
+	#shareit .ac_results ul { margin: 0; }
+		#shareit .ac_results ul li { margin: 0; float: none; text-align: left; width: auto; }
+	
+
+p.sharelink {
+	border: 1px solid #ccc;
+	float: left;
+    padding: 2px;
+	width: 566px;
+	}
+#shareit h4 {
+	clear: left;
+    /*float: left;*/
+	margin: 0 .4em 0 .7em;
+	}
+#shareit h4.noclear { margin-left: 1em;	}
+#shareit .gigya{
+	clear: left;
+	float: left;
+    margin: 1.5em 0 0 .7em;
+	z-index: 5000;
+	}
+	.plusone { height: 201px; }
+#shareit #composemessage, .gigya { clear: both; }
+
+/*code copy */
+.codecontainer {
+	border: 1px solid #bbd;
+	color: #777;
+	float: left;
+	font-size: 8pt;
+	height: 7em;
+	overflow-y: scroll;
+    padding: 2px;
+	width: 566px;
+	/*width: 14em; side by side width*/
+	}
+form#codeshare 			{ clear: left; }
+form#codeshare label 	{ margin-top: 3em; }
+
+#quizpublish h5{clear: left;} /* temp */
+
+/* themeit*/
+div.themeit {
+  border-top: 2px solid #ccc;
+	margin-top: 30px;
+	padding-top: 20px;
+	}
+	.postpublish .themeit {
+		border:none;
+		margin:2em 0;
+		padding:0;
+	}
+.themeset{
+	float: left;
+	margin-top: 1em;
+    width: 47%;
+	}
+.themeit dt, .themeit dd{
+    float: left;
+	width: 17%;
+	}
+.themeit dt{
+    clear: left;
+	width: 62%;
+	}
+
+/*tag cloud*/
+/* IE6 hides portions on tab switch */
+* html .colwrap { height:1%; }
+/* IE7 hides portions onload */
+*+html .colwrap { overflow:hidden; }
+
+.tagcloud select, .tagcloud label {
+    display: inline;
+	margin: 0;
+	text-align: left;
+}
+	.tagcloud h2 select { margin: 0 3px 3px 3px; vertical-align: middle; }
+label.tagview {
+	display: block;
+	margin: 0 6px 1em 6px;
+}
+.quidget .tagselect, 
+li .tagselect {
+	clear: left;
+	margin: 0 0 1em 6px;
+	overflow: auto;
+}
+.tagselect li {	display: inline; }
+	.tagselect li a {
+		background: #333;
+		border: 3px solid #fff;
+		display: block;
+		float: left;
+		height: 16px;
+		margin: 0 5px 0 0;
+		overflow: hidden;
+		text-indent: -999em;
+		width: 36px;
+	}
+	.tagselect li a:focus { outline: none; }
+	.tagselect li.graph a { color: #f2f2f2; text-align: center; text-indent: 0; width: 16px; }
+		.tagselect li.graph a span { display: none; }
+		.tagselect li.red a 	{ background: #ce2637; }
+		.tagselect li.blue a 	{ background: #0e767f; }
+		.tagselect li.green a 	{ background: #779e4f; }
+		.tagselect li.purple a 	{ background: #64278e; }
+		.tagselect li.yellow a 	{ background: #fdc228; }
+		.tagselect li.brown a 	{ background: #6a5739; }
+	.tagselect li a.on { border-color: #b9bdbe; }
+
+.taglist { clear: left; text-align: left; margin-bottom: 1em; }
+.taglist li {
+	border-right: 1px solid #ccc;
+	display: inline;
+	padding: 0 3px 0 5px;
+	}
+.graph li {
+	border: none;
+	display: block;
+	margin-bottom: 1px;
+}
+	.graph li a {
+		background: #eee;
+		display: block;
+		overflow: visible;
+		padding-left: 3px;
+		width: 30px;
+	}
+.taglist a {
+	text-decoration: none;
+	line-height: 1.6em;
+}
+	.size a { line-height: 1.2em; }
+
+/* hub */
+#globaltagstyle { padding-bottom: 20px; }
+* html #globaltagstyle { height: 1%; }
+#globaltagstyle ul {
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+}
+	#globaltagstyle li { float: left; }
+	#globaltagstyle li.selected { color: #c33; font-weight: bold; }
+	#globaltagstyle a.tagbtn {
+		background: #fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/btn_tagstyle.gif) 0 0 no-repeat;
+		display: block;
+		height: 75px;
+		margin: 0 50px 20px 0;
+		overflow: hidden;
+		text-indent: -999em;
+		width: 150px;
+	}
+		#globaltagstyle li a#tagsbysize  { background-position: -2px      0; }
+		#globaltagstyle li a#tagsbycolor { background-position: -2px  -75px; }
+		#globaltagstyle li a#tagsbygraph { background-position: -2px -150px; }	
+
+/* default is size */
+.size .rank-1	{font-size: 75%} 
+.size .rank-2	{font-size: 90%}
+.size .rank-3	{font-size: 100%}
+.size .rank-4	{font-size: 110%}
+.size .rank-5	{font-size: 120%}
+.size .rank-6	{font-size: 130%}
+.size .rank-7	{font-size: 140%}
+.size .rank-8	{font-size: 150%}
+.size .rank-9	{font-size: 170%}
+.size .rank-10	{font-size: 190%}
+
+.red .rank-1	{color:#fe8a8a;}
+.red .rank-2	{color:#fe8a8a;}
+.red .rank-3	{color:#e44b4b;}
+.red .rank-4	{color:#e44b4b;}
+.red .rank-5	{color:#d51616;}
+.red .rank-6	{color:#d51616;}
+.red .rank-7	{color:#ab1b1b;}
+.red .rank-8	{color:#ab1b1b;}
+.red .rank-9	{color:#751515;}
+.red .rank-10 	{color:#751515;}
+
+.blue .rank-1	{color:#6cdbe5;}
+.blue .rank-2	{color:#6cdbe5;}
+.blue .rank-3	{color:#3dabb4;}
+.blue .rank-4	{color:#3dabb4;}
+.blue .rank-5	{color:#0e767f;}
+.blue .rank-6	{color:#0e767f;}
+.blue .rank-7	{color:#227496;}
+.blue .rank-8	{color:#227496;}
+.blue .rank-9	{color:#154877;}
+.blue .rank-10	{color:#154877;}
+
+.green .rank-1	{color:#a5e564;}
+.green .rank-2	{color:#a5e564;}
+.green .rank-3	{color:#7ecb60;}
+.green .rank-4	{color:#7ecb60;}
+.green .rank-5	{color:#45a62f;}
+.green .rank-6	{color:#45a62f;}
+.green .rank-7	{color:#2f821c;}
+.green .rank-8	{color:#2f821c;}
+.green .rank-9	{color:#165009;}
+.green .rank-10	{color:#165009;}
+
+.purple .rank-1		{color:#bc7be9;}
+.purple .rank-2		{color:#bc7be9;}
+.purple .rank-3		{color:#8b45bb;}
+.purple .rank-4		{color:#8b45bb;}
+.purple .rank-5		{color:#64278e;}
+.purple .rank-6		{color:#64278e;}
+.purple .rank-7		{color:#542078;}
+.purple .rank-8		{color:#542078;}
+.purple .rank-9		{color:#320750;}
+.purple .rank-10	{color:#320750;}
+
+.yellow .rank-1		{color:#f9e03b;}
+.yellow .rank-2		{color:#f9e03b;}
+.yellow .rank-3		{color:#eaba3d;}
+.yellow .rank-4		{color:#eaba3d;}
+.yellow .rank-5		{color:#fdc228;}
+.yellow .rank-6		{color:#fdc228;}
+.yellow .rank-7		{color:#f9e03b;}
+.yellow .rank-8		{color:#f9e03b;}
+.yellow .rank-9		{color:#eb9212;}
+.yellow .rank-10	{color:#eb9212;}
+
+.brown .rank-1	{color:#d6b37d;}
+.brown .rank-2	{color:#d6b37d;}
+.brown .rank-3	{color:#a98d61;}
+.brown .rank-4	{color:#a98d61;}
+.brown .rank-5	{color:#6a5739;}
+.brown .rank-6	{color:#6a5739;}
+.brown .rank-7	{color:#6e4c16;}
+.brown .rank-8	{color:#6e4c16;}
+.brown .rank-9	{color:#412b07;}
+.brown .rank-10	{color:#412b07;}
+
+.graph .rank-1	{background-color:#e5edf0;width:10%;}
+.graph .rank-2	{background-color:#dce7eb;width:20%;}
+.graph .rank-3	{background-color:#d2e1e6;width:30%;}
+.graph .rank-4	{background-color:#ccdee2;width:40%;}
+.graph .rank-5	{background-color:#c4d7dd;width:50%;}
+.graph .rank-6	{background-color:#bed3d8;width:60%;}
+.graph .rank-7	{background-color:#b6cdd3;width:70%;}
+.graph .rank-8	{background-color:#aec7cc;width:80%;}
+.graph .rank-9	{background-color:#a7c4ca;width:90%;}
+.graph .rank-10	{background-color:#a1bec4;width:100%;}
+/* fix for ie6 overflow cutoff. requires tag cloud be on a white background */
+* html .graph li a 		{background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_tags_graph.gif); background-repeat: repeat-y;}
+* html .graph .rank-1	{background-position:30px 0;}
+* html .graph .rank-2	{background-position:59px 0;}
+* html .graph .rank-3	{background-position:89px 0;}
+* html .graph .rank-4	{background-position:119px 0;}
+* html .graph .rank-5	{background-position:148px 0;}
+* html .graph .rank-6	{background-position:178px 0;}
+* html .graph .rank-7	{background-position:208px 0;}
+* html .graph .rank-8	{background-position:237px 0;}
+* html .graph .rank-9	{background-position:567px 0;}
+* html .graph .rank-10	{background-position:300px 0;width:99%;}
+
+.graph a:hover { background-color: #8eb8c1; }
+dl.tags 				{ margin: .7em; }/* inline tags for content items */
+dl.tags dt, dl.tags dd 	{ display: inline; }
+
+/*
+form removed for now
+.quiz.sponsored form { float: left;   width: 65%}
+.quiz.sponsored .footer { clear: both; float: left; width: 65%;}
+.quiz.sponsored button {    clear: left; float: left;}
+.sponsored label{
+	font-weight: bold;
+	width: 95%;
+	}
+.sponsored .checkradiowrap label{
+    clear: left;
+	font-weight: normal;
+	display: block;
+	text-align: left;
+	width: 95%;
+	}
+.sponsored .checkradiowrap{width: 90%}
+*/
+
+/* generic sponsored container*/
+.sponsored .sponsoredcontent{
+    float: left;
+	margin-top: .25em;
+	width: 65%;
+	_width: 64%
+	}
+	* html .sponsoredcontent		{ width: 64%; }	
+.tabbedlisting .sponsoredcontent 	{ width: 360px; }
+.column  .sponsoredcontent 			{ width: 170px; }
+.sponsored .sponsoredcontent .checkradiowrap{
+    float: left;
+	width: 99%;
+	}
+.sponsored .sponsoredcontent .checkradiowrap label { width: 85%; }
+.sponsored .sponsoredby {
+    float: left;
+	margin-left: 3%;
+	text-align: center;
+	width: 29%;
+	}
+.tabbedlisting .sponsoredby 	{ width: 234px; }
+.column .sponsoredby 			{ width: 120px; }
+* html .sponsored .sponsoredby 	{ margin-left: 1%; }
+.sponsoredby h3 {
+	color: #cc3333;
+	font-weight: normal;
+	font-size: 90%;
+	}
+.sponsored label { padding: 0 3px; text-align: left;}
+.sponsored .sponsoredby img {
+	cursor:pointer;
+	float: none;
+	margin: 0;
+}
+* html .tabs-container .sponsored {	height: 1%; }
+
+/* list tables (ultimate list style) */
+.listtable {
+	border-collapse: collapse;
+	clear: left;
+	font-size: 100%;
+	margin-left: 2%;
+	width: 96%;
+}
+.hub .listtable { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) center top no-repeat; margin-top: 4px; }
+.topical .listtable { background: none ;}
+	* html .topical .listtable { position: relative; left: 12px;  } /*oh dear.*/
+.listtable td, .listtable th {line-height: 120%;}
+	#secondary .listtable td, #secondary .listtable th 	{ line-height: 120%; padding-top: .6em; padding-bottom: .6em; }
+.hub .listtable thead th { padding-top: 4px; }
+/*.listtable th.content_type {text-indent: -999em; }*/
+.listtable th {text-align: left; }
+	.listtable th a {
+		background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_arrow_sort.gif) right 40px no-repeat;
+		color: #333;
+		padding-right: 14px;
+	}
+.contentHub {background:transparent!important;width:625px;margin-left:0px;}
+#chubMore {margin-top:5px;}
+.contentHubClear {margin-top:10px;}
+
+.listtable .date_column {width:80px;}
+.listtable .favremove {width:50px;text-align:center;}
+td.favremove {font-size:.9em;padding-right:5px;}
+		.listtable th a:hover { color: #900; }
+		.listtable th a.ascend	{ background-position: right 4px; }
+		.listtable th a.descend { background-position: right -46px; }
+.listtable .content_type {width: 40px; }
+.listtable .title_column {width: 220px;}
+.listtable .title_column_pgvw {width: 280px;}/* width for fullpage lists */
+.listtable .author_column{width: 90px; }
+.listtable .author_column_pgvw {width: 140px; } /* width for fullpage lists */
+.listtable .times_column {width: 40px; text-align:center;}
+.listtable .ratingdisplay_column {width:72px;}
+.listtable .published_column {width: 60px;}
+	.home .listtable .content_type {width: 8%;}
+	.home .listtable .title_column {width: 47%; }
+	.home .listtable .author_column	{width: 17%; }
+	.home .listtable .times_column {width: 10%; }
+	.home .listtable .published_column {width: 14%; }
+.listtable .title_cell 	{ font-size: 1.1em; line-height:120%}
+.listtable a.title_cell {
+	display:block;
+	line-height:120%;
+	padding:.6em 0;
+}
+#profilemaincontent  .listtable a.title_cell { padding:6px 0 0 0; }
+.listtable .rsscell {   padding-left: 50px;}
+#secondary .listtable th {
+    text-indent: -8888em;
+	line-height: 1px;
+	padding: 0;
+}
+.alternaterow 		{ background-color:#E0EBED;}
+tfoot .alternaterow {    background-color: #fff;}/*trs in the tfoot are getting striped as well.  we say no! */
+
+.listtable td.type_quiz, .listtable td.type_story, .listtable td.type_poll, .listtable td.type_test,
+.listtable td.type_poem, .listtable td.type_lyrics, 
+.listtable td.type_quiz_locked, .listtable td.type_story_locked, .listtable td.type_poll_locked, .listtable td.type_test_locked,
+.listtable td.type_poem_locked, .listtable td.type_lyrics_locked {text-indent: -999px; 	background-position: center center; width:40px;}
+
+/*  set generically so they can be used in other spots.  */
+.type_quiz, .type_story, .type_poll, .type_poem, .type_lyrics, .type_test,
+.type_quiz_locked, .type_story_locked, .type_poll_locked, .type_poem_locked, .type_lyrics_locked, .type_test_locked {	background-repeat: no-repeat;}
+.type_quiz {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_quiz_sm.gif);}
+.type_test {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_test_sm.gif);}
+.type_story {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_story_sm.gif);}
+.type_poll {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_poll_sm.gif);}
+.type_poem {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_poem_sm.gif);}
+.type_lyrics {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_lyrics_sm.gif);}
+
+/* new types for locked items */
+.type_quiz_locked {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_quiz_locked.gif);}
+.type_test_locked {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_test_locked.gif);}
+.type_story_locked {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_story_locked.gif);}
+.type_poll_locked {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_poll_locked.gif);}
+.type_poem_locked {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_poem_locked.gif);}
+.type_lyrics_locked {	background-image:url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_lyrics_locked.gif);}
+
+
+.home .messagelist 	{ border: 1px solid #bbb; padding: 2%;}
+caption				{ display: none;}/* safari leaves space if just move off page, so hide it. */
+* html caption { display: none; }
+*+html caption { display: none; }
+.relatedlisting		{ margin-top: 2em;}
+.relatedlisting h3	{ margin-left: 0;}
+
+/* star rating */
+div.rating {
+	clear:both;
+	cursor:pointer;
+	display:block;
+	margin:.5em .7em;
+	height:1%;
+	}
+.rating:after {
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0pt;
+	visibility: hidden;
+	width: 0pt;
+	}
+.rating .cancel, .rating  .star {
+	cursor: pointer;
+	float: left;
+	height: 15px;
+	overflow: hidden;
+	text-indent: -999em;
+	width: 17px;
+	}
+.rating .cancel, .rating .cancel a 	{ background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/delete.gif) no-repeat scroll 0pt -16px; }
+.rating .star, .rating .star a 		{ background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/star.gif) no-repeat scroll 0pt 0px; }
+.rating .cancel a, .rating .star a {
+	background-position: 0pt 0px;
+	display: block;
+	height: 100%;
+	width: 100%;
+	}
+div.rating div.on a { background-position: 0pt -31px; }
+div.rating div.hover a, div.rating div a:hover { background-position: 0pt -15px; }
+div.rating div.voted a { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/star.gif) no-repeat scroll 0pt -31px; cursor:default;} /* new for star on state no interaction */
+.ratingnotloggedin	{ margin-left: .7em; }
+.ratingnotloggedin .ratingdisplay span { height: 24px; }
+
+/*  --- rating display (not rateable)
+	smoke and mirrors.  one background image moved around inside of classed containers ('sprites')
+	.ratingdisplay is the cell, gets a bg of all 5 stars, empty
+	.ratingsdisplay span gets a bg of all 5 stars, filled
+	depending on the .rated# container, the span displays more or fewer stars via width
+	partial stars are achieved by moving the bg.
+	seeing the image helps.
+*/
+.ratingdisplay {
+	background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/starrating.gif);
+	background-position: 0 -49px;
+	background-repeat: no-repeat;
+	width: 76px;
+	vertical-align: top;
+}
+	.ratingdisplay span {
+		background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/starrating.gif) left top no-repeat;
+		display: block;
+		height: 28px;
+		text-indent: -999em;
+	}
+	dd.ratingdisplay  span { margin: 1px 0 0 1px; }
+	.rated0 span { width: 14px; }
+	.rated1 span { width: 28px; }
+	.rated2 span { width: 42px; }
+	.rated3 span { width: 56px; }
+	.rated4 span, .rated5 span { width: 70px; }
+	
+	.part0 span { background-position: right -121px; }
+	.part00 span { background-position: right -121px; }
+	.part25 span { background-position: right -192px; }
+	.part50 span { background-position: right -263px; }
+	.part75 span { background-position: right -334px; }
+	.rated5 span { background-position: right -405px; }
+
+
+	/* new 
+	.part0 span { background-position: right -321px; }
+	.part00 span { background-position: right -321px; }
+	.part25 span { background-position: right -492px; }
+	.part50 span { background-position: right -663px; }
+	.part75 span { background-position: right -834px; }
+	.rated5 span { background-position: right -1005px; }*/
+
+
+/* related listing */
+.relatedlisting .ratingdisplay {
+	float: left;
+	margin-top: -2.8em;
+    width: 76px;
+	}
+.relatedlisting dt, .relatedlisting .meta { margin-left: 80px; }
+.relatedlisting dt {
+    clear: left;
+	margin-top: 1em;
+	}
+#title_createit {
+	clear: left;
+	font-size: 1.3em;
+	margin-right: 5px;
+	padding-left: 2px ;
+	float: left;
+	width: 13em;
+	}
+/*temp*/
+#createitform input, #createitform select 	{ margin-bottom: .3em;}
+#createitform button  						{ margin-top: -1px;}
+* html #createitform input { display: inline; margin-left: -9px; }
+*+html #createitform input { margin-left: -9px; }
+
+/* partners list*/
+#partners {
+	/*border: 2px solid #111;*/
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bigger_box.gif) left top no-repeat;
+	margin: 1em 0;
+	overflow: auto;
+    /*padding: 0 14px;*/
+	width: 628px;
+	}
+#partners h4 {
+    float: left;
+	font-size: 110%;
+	display:inline; /* defeat ie6 double margin bug */
+	margin: 1.1em .3em 0 1em;
+	padding: 0 20px 0 0;
+	text-transform: uppercase;
+	}
+#partners ul {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bigger_box.gif) bottom right no-repeat;
+	float: none;
+   	font-size: 120%;
+	text-align:center;
+	}
+/* temp */
+#beacon img {
+	float: left;
+	border: 5px solid #0e7680;
+	margin: 5px 14px 10px 10px;
+}
+/* .........Content Display  */
+
+
+/* ----------------------------------------------------- help ---- */
+.text {
+	display: block;
+	float: left;
+	padding-top: 2.1em;
+}
+	* html .text { padding-left: 5px; }
+/* elements that require help icon */
+.gethelp { padding-right: 8px; position: relative; }
+	.icon {
+		background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_help_question.gif) no-repeat;
+		cursor: help;
+		display: block;
+		float: left;
+		height: 14px;
+		overflow: hidden;
+		text-indent: -999em;
+		width: 9px;
+	}
+	.addquestion a.icon { margin: -14px 0 0 8px; float: right; }
+	.gethelp .icon { float: none; position: absolute; right: 0; top: 3px; }
+
+/* games hub */
+.gameslisting .gamethumb{
+    float: left;
+	width: 30%;
+	margin: -1.5em 0 1.4em;
+}
+.gameslisting .gamethumb a span {text-indent: -9998em; display: block;}
+.gameslisting dt {
+    clear: left;
+	color: #187682;
+	font-size: 1.4em;
+	margin: 2em 0 .3em 30%;
+}
+#gamearea {width:610px;text-align:center;margin:auto;}
+
+.gamepage .colwrap{
+    clear: left;
+	float: left;
+}
+#returntogames {
+    float: right;
+    overflow: hidden;
+}
+
+/* topical hub */
+.topical h1 {
+	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) 0 100% repeat-x;
+	margin-bottom:.6em;
+	padding-bottom:.3em;
+}
+.topical .eventwelcome 	{ margin-bottom:2em; }
+.eventwelcome img { float:right; }
+
+/*---------------- edit profile */
+/* forms updated to match IAv6 p49: labels on left, input on right. MTV-245 */
+#edit_profile label {
+	display: block;
+	float: left;
+	padding: .2em 6px 0 0;
+	text-align: right;
+	width: 180px;
+}
+
+#composemessage label {
+	display: block;
+	float: left;
+	padding: .2em 6px 0 0;
+	text-align: right;
+	width: 100px;
+}
+
+fieldset#changepassword label{float:none;} // change for edit password layout
+	#composemessage label { width: 100px; }
+	#edit_profile .static label { padding-top: 0; }
+	#edit_profile .radio label 	{ padding: 0 12px 0 6px; width: auto; }
+#edit_profile input, #edit_profile select, #edit_profile textarea, #edit_profile p.notice { margin: 0 0 .5em 188px; } 
+fieldset#changepassword input {margin-top:-17px;}
+
+/* SOME REARRANGING FOR IE6 & IE7 ERROR DISPLAY FOR PASSWORD BLOCK */
+* html #edit_profile fieldset#changepassword {border:none;}
+*+html #edit_profile fieldset#changepassword {border:none;}
+* html #edit_profile #cp_border {border-top:1px solid #E1EBED;border-bottom:1px solid #E1EBED;}
+*+html #edit_profile #cp_border {border-top:1px solid #E1EBED;border-bottom:1px solid #E1EBED;}
+* html #edit_profile fieldset#changepassword input {margin-top:-17px;}
+*+html #edit_profile fieldset#changepassword input {margin-top:-17px;}
+
+#composemessage input, #composemessage select, #composemessage textarea, #composemessage p.notice  { margin: 0 0 .5em 108px; }
+	#edit_profile p.notice, #p.notice 		{ margin-bottom: 1.5em; }
+	#edit_profile .radio input 	{ margin: 4px 0 0 0; }
+#edit_profile #changepassword {
+	border: 1px solid #e1ebed;
+	border-width: 1px 0;
+	margin: 1.5em 0;
+	padding: 1.5em 0 1em 0;
+}
+#edit_profile #profileimage 	{ margin: 0 0 .6em 188px; position: relative; top: -11px; }
+#edit_profile #profileimage img { border: 5px solid #eee; }
+#edit_profile #profileimage .buttonwrap { float: none; margin: 0 0 4px 60px; width: 8em; }
+#edit_profile #profileimage .addimage { margin-left: 0; }
+#edit_profile .radio { margin-bottom: 1em; }
+#edit_profile #newmessages { padding-top: .5em; }
+.editprofile fieldset.myinfo, .editprofile fieldset.profilepreferences, .editprofile fieldset.deleteaccount { padding: .7em; }
+.editprofile input { width:20em; }
+.editprofile textarea, input#userheadline { width: 65%; }
+.editprofile #changepassword input { width:auto; }
+
+.static {
+	background-color:#e1ebed;
+	margin:0 0 1em;
+	padding:.2em;
+}
+.static label, .static span.membersince {
+	display:inline;
+	font-weight:normal;
+}
+.static span#username, .static span#birthday {
+	display:block;
+	font-weight:bold;
+	line-height:1.8em;
+}
+.myinfo fieldset select{ margin-top: 0; } /* remove doubling up of innerfieldset + select margins*/
+.myinfo #profileimage {
+	margin:0 0 1.5em;
+	overflow:hidden;
+}
+#profileimage .buttonwrap { margin-top:0; }
+#profileimage img { 
+	float:left;
+	margin:0 1em 0 0;
+}
+	/* fix the radio buttons so they layout nicely. also remove the width + borders. 
+	#newmessages, #saveresults {
+		clear:left;
+		overflow:hidden;
+	}*/
+	fieldset.radio {overflow:hidden;}
+	fieldset.radio input, fieldset.radio label, fieldset.radio input, fieldset.radio label {
+		border:none;
+		clear:none;
+		display:inline;
+		float:left;
+		margin:.3em .2em 0 0;
+		padding-bottom:1em;
+		width:auto;
+	}
+	fieldset.radio input, fieldset.radio input {margin-right:1em;}
+	fieldset.radio + label {float:none;}
+.editprofile fieldset.deleteaccount { padding-bottom: 0; }
+* html .editprofile fieldset.deleteaccount { padding-bottom: 1.5em; }
+#deleteaccount .buttonwrap { margin-bottom:1.5em; }
+
+/*----------------- my stuff/profile page*/
+/* mystuff page */
+/* expandatables */
+.listtable td.stuffmeta ul {
+	font-weight:bold;
+	line-height:150%;
+	margin:0 0 .5em 19px;
+}
+.listtable td.stuffmeta ul a { font-weight:normal; }
+
+/*profile page*/
+.profilepage h1 {
+	float: left;
+	margin-right: .25em;
+    width: auto;
+}
+*+html .profilepage h1 {line-height:110%;} /* ie 7s reading the header wrong */
+.profilepage .editprofile {
+    float: left;
+	padding-top: 1.5em;
+	clear:right;
+}
+
+.profilepage .membertagline{
+    clear: left;
+	font-style: italic;
+}
+#secondary #changepassword input{  margin: 0 0 .3em 0; }
+
+/*upper columns*/
+#profilemeta {
+	clear: left;
+    float: left;
+	width: 179px;
+}
+#profilemaincontent {
+    float: left;
+	margin-left: 10px;
+	width: 429px;
+	}
+	
+/* meta info side*/
+#profilemeta dt, #profilemeta dd	{ display: block; float: left; margin-right: 3px;}
+#profilemeta dt						{ clear: left;}
+* html #profilemeta dt {width:80px;}
+*+html #profilemeta dt {width:80px;}
+* html #profilemeta dd {float:right;width:85px;}
+*+html #profilemeta dd {float:right;width:85px;}
+#profilemeta dd {    font-style: italic;}
+#profilemeta dl {
+    background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom no-repeat;
+	float: left;
+	padding-bottom: 1em;
+	width: 99.8%
+	}
+#profilemeta #aboutme{
+    background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom  no-repeat;
+    clear: left;
+	padding: 1.5em 0 1em 0;
+	width:178px;
+	overflow:hidden;
+
+	}
+#profilemeta .memeberinteraction	{ margin-top: 1.5em;}
+#profilemeta .nav li 				{ overflow:hidden;}
+#profilemeta .buttonwrap, .watcheduser .buttonwrap			{ clear:both; margin:0 0 1em;}
+.watcheduser .buttonwrap 			{ margin: 3px auto 1em 19px; }
+* html .watcheduser .buttonwrap		{ margin-left: 10px; }
+
+/* horoscope */
+.horoscope 			{ margin-top:5px;clear: left; }/*position: relative; removed to fix ie6 h2 border MTV-172*/  /*clear is for profile page.  can be specified. */
+.profiledisplay .horoscope h3		{ margin: .8em 0 .3em 106px;}
+.horoscope .nav 	{ float: right; margin: .5em 0;} /*yesterday,today,tommorrow*/
+.horoscope .nav li {    display: inline;cursor:pointer;border-right:1px solid #000;padding-right:5px;padding-left:5px;} /*yesterday,today,tommorrow*/
+.horoscope p 		{ margin-left: 106px; } /*leave room for the sign logo*/
+.horoscope a.fullhoroscope, .horoscopelogo {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/pisces.gif) 0 0 no-repeat;
+    display: block;
+	float:left;
+	height: 78px;
+	margin: 1em 0 .4em 6px;
+	/*position: absolute; top: 60px; right: 30px;*/
+	width: 78px;
+	text-indent: -9999em;
+}
+	.fullhoroscopewindow .horoscopelogo { margin-top: 0; position: relative; }
+/* wrapper container div.horoscope has this class added. changes the bg image on the lightbox link.  one for each month*/
+.pisces a.fullhoroscope, .pisces .horoscopelogo 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/pisces.gif); }
+.aries a.fullhoroscope, .aries .horoscopelogo 				{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/aries.gif); }
+.taurus a.fullhoroscope, .taurus .horoscopelogo 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/taurus.gif); }
+.gemini a.fullhoroscope, .gemini .horoscopelogo 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/gemini.gif); }
+.cancer a.fullhoroscope, .cancer .horoscopelogo 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/cancer.gif); }
+.leo a.fullhoroscope, .leo .horoscopelogo 					{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/leo.gif); }
+.virgo a.fullhoroscope, .virgo .horoscopelogo 				{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/virgo.gif); }
+.libra a.fullhoroscope, .libra .horoscopelogo 				{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/libra.gif); }
+.scorpio a.fullhoroscope, .scorpio .horoscopelogo 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/scorpio.gif); }
+.sagittarius a.fullhoroscope, .sagittarius .horoscopelogo	{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/sagittarius.gif); }
+.capricorn a.fullhoroscope, .capricorn .horoscopelogo 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/capricorn.gif); }
+.aquarius a.fullhoroscope, .aquarius .horoscopelogo 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/horoscopes/aquarius.gif); }
+/* style the detail modal a bit */
+.fullhoroscopewindow h4 { clear: none; font-size: 110%; margin: 3em 0 .3em 106px; text-transform: uppercase; }
+.fullhoroscopewindow #togglehoroscope { display: block; margin: 0 0 0 106px; }
+
+.fullhoroscopewindow .buttonwrap { float: right; margin-right: 0; }
+
+#completehoroscope, #horoscopelist {
+	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left top no-repeat;
+	clear: left;
+	display: none;
+	padding-top: 10px;
+}
+#horoscopelist {display:block;}
+	.horoscopecontent, .horoscopelistcontent { 
+		height: 300px;
+		overflow: auto;
+	}
+
+/* "stuff" list on mystuff landing page */
+.stuff dd {padding:1px 12px;}
+.stuff .listtable {margin:0 0 5px;width:100%;}
+.stuff .listtable td {clear:left;}
+.stuff .listtable .content_type {width: 8%; }
+.stuff .listtable .title_column {width:auto;}
+.stuff .listtable .control_column {text-indent: -9367em; }
+.stuff .listtable .title_cell {
+	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_closed.gif) no-repeat scroll 5px 50%;
+	cursor:pointer;
+	padding:0 0 0 19px;
+}
+.stuff .listtable .open { background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_opened.gif) no-repeat scroll 5px 50%; }
+	.stuff .listtable .title_cell ul {
+		background-color:#fff;
+		font-size:.9em;
+		line-height:1.2;
+		list-style:none;
+		padding:.5em 0 .5em .5em;
+	}
+	.stuff .listtable ul.closed {display:none;}
+.stuff .listtable .alternaterow {background-color:#e0ebed;}
+.listtable .control_cell {font-size:.9em; width:19%;}
+	.control_cell ul {
+		float:left;
+		list-style:none;
+		line-height:1.2;
+		margin:0 1em 0 0;
+		padding:0;
+	}
+	.control_cell ul.last { margin:0; }
+		.control_cell ul li { padding:.25em 0; }
+.stuff .ratingdisplay {width:16%;}
+
+/*friends list*/
+.friendslist {    overflow: hidden;} /* contain the floats */
+.modalwrap .friendslist { height: 350px; width: 385px; overflow:auto; }
+* html .modalwrap .friendslist { margin: 0; }
+.friendslist li{
+    float: left;
+	list-style-type: none;
+	margin: 4px 5px;
+   overflow: hidden;	/*  temp to keep names from falling over each other */
+	text-align: center;
+	width: 74px;
+	}
+.onlinefriend {    background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_friend_soundwave.gif) 0 20px no-repeat;}
+.friendslist img {  margin:0 5px; border: 5px solid #fff;}
+.friendslist a.selected img { border-color: #cc3333; }
+.friendslist a.selected:hover img { border-color: #990000; }
+.onlinefriend img {    border: 5px solid #c7d9de;}
+.friendslist a:hover img			{ border: 5px solid #8AC1CC; padding: 0;}
+
+/* journal entry */
+.journalpage .journalentry {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) bottom left no-repeat;
+    margin: 1em 0;
+	padding-bottom: 1em;
+	}
+.journalentries 	{ background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) top left no-repeat; clear: both; padding-top: .5em; }
+.journalentry h3, #preview .journalentry h3	{ /* this breaks journal entries. where's it needed? margin-left: 9px !important; */ margin-top: .2em; font-size: 1.6em;}
+	#preview .journalentry h3 { margin-left: 9px; }
+.journalentry h3.mood 	{ background-position: left center; background-repeat: no-repeat; padding-left: 20px; padding-top: 1px; }
+.journalentry h4 		{ margin-bottom: 0; }
+	#preview .journalentry h4 { margin-bottom: .4em; }
+.journalentry .posted						{ margin-bottom: -5px;}
+.journalpage .buttonwrap 				{ float: right; margin-top: 0; margin-right: 0; }
+.journalpage .journalheader .buttonwrap { margin-top: .5em; margin-right: 0; }
+.journalpage #post_comment .buttonwrap 	{ float: left; margin-top: 10px; }
+.entry-content 			{ overflow: hidden; }
+#preview .entry-content 				{ margin-top: 1em; padding-top: 4px; }
+* html .entry-content 						{ height: 1%; overflow: visible; }
+.journalentry .entry-content img { float: right; margin: 0 0 1em 20px; }
+
+/*newestcreations table*/
+.newestcreations th{display: none;}/* safari leaves space if just move off page, so hide it. */
+.newestcreations table td, .newestcreations table th {line-height:150%;}
+.newestcreations td br { display: none; }
+.newestcreations td.type_quiz, .newestcreations td.type_poem, .newestcreations td.type_lyrics, .newestcreations td.type_poll, .newestcreations td.type_story,
+.newestcreations td.type_quiz_locked, .newestcreations td.type_poem_locked, .newestcreations td.type_lyrics_locked, .newestcreations td.type_poll_locked, .newestcreations td.type_story_locked {width:40px;}
+
+
+/* favorites table */
+.favorites {width:295px; !important}
+.favorites td.type_poll {width:40px; !important}
+.favorites th.title_column {width:140px; !important}
+.favorites th.published_column {width:40px; !important}
+
+
+/* 
+
+
+	moods 
+	class element with mood (provides padding and background positioning) + mood (sets proper icon)
+*/
+.angel 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/angel.gif); }
+.birthday 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/birthday.gif); }
+.blush			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/blush.gif); }
+.brightidea		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/brightidea.gif); }
+.cheerful		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/cheerful.gif); }
+.clown			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/clown.gif); }
+.confused 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/confused.gif); }
+.cool 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/cool.gif); }
+.crying			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/crying.gif); }
+.evilgrin		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/evilgrin.gif); }
+.excited		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/excited.gif); }
+.furious		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/furious.gif); }
+.heart			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/heart.gif); }
+.hungry 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/hungry.gif); }
+.indifferent 	{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/indifferent.gif); }
+.love	 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/love.gif); }
+.mad			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/mad.gif); }
+.sad	 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/sad.gif); }
+.scared			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/scared.gif); }
+.scaredtodeath 	{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/scaredtodeath.gif); }
+.shocked		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/shocked.gif); }
+.sick 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/sick.gif); }
+.sleepy			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/sleepy.gif); }
+.spin 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/spin.gif); }
+.tongue			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/tongue.gif); }
+.upset 			{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/upset.gif); }
+.whistling		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/whistling.gif); }
+.winking 		{ background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/moods/winking.gif); }
+
+.journalentry h3.none			{ margin-left: -12px; padding-top:4px;padding-bottom:4px;}
+.journalentry h3.angel			{ padding-left: 24px; }
+.journalentry h3.birthday		{ padding-top: 1px; padding-left: 92px; }
+.journalentry h3.brightidea		{ padding: 15px 0 18px 22px;}
+.journalentry h3.evilgrin		{ padding-left: 26px}
+.journalentry h3.excited		{ padding: 10px 0 14px 30px;}
+.journalentry h3.hungry			{ padding-left: 45px; }
+.journalentry h3.love 			{ padding-left: 28px; }
+.journalentry h3.scaredtodeath	{ padding-left: 22px; }
+.journalentry h3.shocked		{ padding-left: 34px; }
+.journalentry h3.sick			{ padding-left: 28px; }
+.journalentry h3.whistling		{ padding-left: 38px; }
+
+/* my messages*/
+.mymessages input 	{ margin: 0 0 0 4px; }
+.unread td 			{ font-weight: bold; }
+.messagenav { clear: both; }
+* html table.mymessages input {border: none;}
+*+html table.mymessages input {border: none;}
+.mymessages th 		{ border-bottom: 1px solid #666; }
+#primary .senderinfo {
+	clear: left;
+	margin: 1em 0 1em 30%;
+	}
+.senderinfo .button {
+	clear: none;
+	float: left;
+	margin-right: 200px;
+	}
+.senderinfo a  		{ float: left; }
+.messagenavtop 		{ float: right; margin-top: 2em; }
+.messagenavbottom 	{ clear: both; text-align: right; }
+dl.message {
+	border: 1px solid #e1ebed;
+	border-width: 1px 0;
+	clear: both;
+	margin-bottom: .6em;
+	overflow: hidden;
+	padding: 6px 0 1.5em 0;
+}
+	* html dl.message { height: 1%; }
+dl.message dd, dl.message dt {
+    float: left;
+	margin: .5em 0;
+	width: 80%;
+}
+	dl.message .divide { border-bottom: 1px solid #e1ebed; overflow: hidden; padding-bottom: 1em }
+		dl.message .divide .buttonwrap {
+			float: none;
+			margin: 0 0 6px 100px;
+			width: 12em;
+		}
+	.message dd span.onlinefriend {
+		display: block;
+		float: left;
+	}
+	.message dd a.friend {
+		display: block;
+		float: left;
+		text-align: center;
+		width:74px;
+		overflow: hidden;
+	}
+		.message dd a.friend img 							{ border: 5px solid #fff; }
+		.message dd span.onlinefriend a.friend img 			{ border-color: #c7d9de;	}
+		.message dd span.onlinefriend a.friend:hover img 	{ border-color: #8ac1cc; }
+dl.message dt{
+    clear: left;
+	font-weight: bold;
+	margin-right: 1%;
+	text-align: right;
+	width: 18%;
+	}
+
+/* compose message */
+#composemessage textarea {
+    margin-bottom: 0;
+	padding: 3px;
+	width: 400px;
+}
+	#composemessage #messageto 		{ margin-bottom: .2em; width: 406px; }
+	#composemessage #messagesubject { width: 406px; }
+#composemessage .charactersremaining{
+	text-align: right;
+	width: 515px;
+}
+.sendbuttons {
+	float: right;
+	margin-right: 102px;
+}
+	* html .sendbuttons { margin-right: 45px; }
+	#shareit .sendbuttons { margin-right: 70px; }
+		* html #shareit .sendbuttons { margin-right: 30px; }
+
+/* favorites listable*/
+.favoritelisting .listtable .title_cell {font-size:1em;}
+
+/* theme listing ul */
+.themelisting ul {
+	list-style: none;
+	margin: 4px 20px 1em 9px;
+}
+
+/* watchedlist */
+#watchedlist { clear: left; }
+.watcheduser {
+	border-top: 1px solid #ccc;
+    clear: left;
+	padding: 1em 0;
+}
+.watcheduser h3 	{ float: left; width: auto; }
+.watcheduser .text  { padding-top: .3em; margin-left: .5em; }
+.watcheduser .viewall {
+	clear: left;
+	display: block;
+	margin: 1em 0;
+    padding: .5em 0;
+	}
+#watchedlist, #watchedlist ul, #watchedlist ol {clear: left; list-style-type: none;}
+/*uses shared class for icon display but requires different positioning */
+#watchedlist .type_quiz, #watchedlist .type_test, #watchedlist .type_story, #watchedlist .type_poll, #watchedlist .type_poem, #watchedlist .type_lyrics,
+#watchedlist .type_quiz_locked, #watchedlist .type_test_locked, #watchedlist .type_story_locked, #watchedlist .type_poll_locked, #watchedlist .type_poem_locked, #watchedlist .type_lyrics_locked {
+	background-position: 0 50%;
+	line-height: 20px;
+	padding:5px 10px 5px 37px;
+	}
+	
+#watchedlist .user {
+	float: left;
+	text-align: center;
+    width: 100px;
+	}
+#watchedlist .watchedstuff { float: left; }
+
+/* my images */
+/* ??? need to determine thumbnail height and set the li height based on that or the floats will break when they wrap */
+.myimages dd li{
+    display: block;
+	float: left;
+	height: 120px; /* temp */
+	margin: 1em;
+	position: relative;
+	text-align: center;
+	width: auto;
+	}
+.myimages dd li img	{ display: block; }
+.myimages .add 		{ clear: left; }
+/* these once were one form, now split, but should be combined.    */
+#addeditimage, #addimage, #editimage {
+	border: 1px solid #ccc;
+    width: 300px;
+	padding: 1.5em;
+	}
+#addeditimage ul, #addimage ul, #editimage ul{
+	margin: 0;
+	}
+#addeditimage img, #addimage img, #editimage img {margin-left: 100px;}
+
+/* my results */
+/* my results "all results" pop up */
+#allresultscontainer .modalwrap { padding:0 0 0 10px; }
+#allresults {
+	height:375px;
+	overflow:auto;
+}
+#allresults h2.clean {
+	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom no-repeat;
+	margin: .7em 0 .5em;
+}
+* html #allresults .quidget {overflow:visible;}
+* html #allresults img { position:static; }
+* html #allresults .buttonwrap { position:static; }
+
+/* Squeezebox - faqs, myimages, mystuff */
+.squeezebox{
+	clear: both;
+    margin: 1em 1em 2em 1em;
+	border-bottom: 1px solid #aaa;
+}
+.squeezebox dt{
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_closed.gif) 0 50% no-repeat;
+	border-top: 1px solid #aaa;
+	clear: left; /* for myimages */
+	cursor: pointer;
+	font-weight: bold;
+	padding: 5px 14px;
+}
+
+.faqs dt{color:#CC3333;}
+
+.squeezebox dt.selected { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_opened.gif) 0 50% no-repeat; }
+.squeezebox dl dl dt 	{ border: none; }
+.squeezebox dd{
+	overflow: hidden;
+    padding: 1px 20px;
+}
+
+/* featured topics have been removed from the IA */
+.featuredtopics{
+   	border: 1px solid #aaa;
+	overflow: hidden;
+}
+* html .featuredtopics { float: left; }
+.featuredtopics li{
+	float: left;
+	list-style-type: none;
+	margin-right: 1%;
+	width: 32%;
+}
+
+/* alphabetical search nav  */
+.alphasearch {
+    border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 7px;
+	text-align: center;
+}
+.alphasearch li  {
+	display: inline;
+	list-style-type: none;
+	padding: 2px;
+	text-transform: uppercase;
+	}
+
+/* ..............theme creator ......*/
+#createtheme fieldset{
+	border-bottom: 1px solid #ccc;
+	padding: 1em 0;
+}
+#createtheme fieldset fieldset{
+	border: none;
+	padding: 0;
+}
+#createtheme legend{
+    border: none;
+	font-size: 1.5em;
+	padding: .5em 0;
+}
+#createtheme input, #createtheme select, #createtheme label{
+    float: left;
+	margin: 4px 2px 4px 0;
+	width: 150px;
+}
+#createtheme input { width: 128px; }
+	#createtheme #header-background-image, #createtheme #body-background-image, #createtheme #submit-button { width: 118px; }
+#createtheme label {
+    clear: left;
+	text-align: right;
+	width: 110px;
+}
+#createtheme a{
+    float: left;
+	margin: 4px 2px 4px 0;
+}
+#createtheme fieldset .mediacontrol a.removemedia, #createtheme fieldset .mediacontrol a.addimage { float: none; }
+.mediacontrol { display: block; float: left; padding: 6px 0 0 2px; width: 104px; }
+#createtheme a.cp-sample{
+	border: 1px solid #ccc;
+	display: block;
+	float: left;
+	height: 1.2em;
+	width: 1.2em;
+}
+#createtheme #body-background-image-positioning{
+	float: left;
+	margin: 6px 0 8px 0;
+    width: 78px; /* a little wide for IE's sake. */
+}
+	*+html #createtheme #body-background-image-positioning { width: 84px; }
+* html #createtheme #body-background-image-positioning { float: none; margin-top: -12px;width: 100px; }
+*+html #createtheme #body-background-image-positioning { margin-top: -12px; }
+#createtheme #body-background-image-positioning input{
+	border: none;
+	float: left;
+	height: auto;
+	margin: 0 8px 8px 0;
+	width: auto;
+}
+#imagepositionlabel { position: relative; }
+/* theme creator tag_it resets */
+#createtheme #tagit{
+	border: none;
+	border-bottom: 1px solid #ccc;
+	margin-top: 0;
+}
+#createtheme #tagit a{
+    float: none;
+	margin: 0;
+}
+#createtheme #tagit fieldset{
+	border-bottom: 0;
+	margin:0;
+	padding:0;
+	}
+#createtheme #tagit label{ text-align: left; }
+#createtheme #tagit legend{
+    margin:0;
+    padding:0;
+}
+#createtheme #tagit textarea {
+	margin-bottom: 0;
+	width: 300px;
+}
+#creator textarea { margin-bottom: 0; }
+#createtheme #tagit .formhelp, #creator #tagit .formhelp { margin: .2em 0 1em 2.5em; }
+#creator #tagit .formhelp { margin-left: 3.8em; }
+/* theme preview area */
+#themepreview { clear: left; }
+/*
+#previewswitcher {
+    border-bottom: 2px solid #222;
+	overflow: hidden;
+}*/
+
+#previewswitcher ul li {
+    display: inline;
+	list-style-type: none;
+}/*
+#previewswitcher ul, #previewswitcher h3{
+	background: transparent;
+	float: left;
+}*/
+#previewswitcher .tabs-nav li a { text-indent: 0; /*padding: 4px 10px;*/ }
+.previewcontent					{ clear: left; }
+.previewcontent .tabs-container { background-image: none; }
+
+/* for profile preview.  allows us to show the entire profile w/out changing layout - it is too wide but will disapear at the edge of the preview area */
+.previewcontent .profileresultsdisplay 	{ overflow: hidden; }
+.previewcontent .profilepage 			{ width:620px; }
+.sitemap ul {
+	list-style-type: none;
+	margin-left: 2em;
+}
+.sitemap li {
+	font-size: 1.3em;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+.sitemap li li {
+	font-size: .8em;
+	font-weight: normal;
+}
+/* modal dialogs*/
+.jqmOverlay {
+	overflow:hidden;
+	background-color: #000;
+	filter:alpha(opacity=75);
+	-moz-opacity: 0.75;
+	opacity: 0.75;
+}
+.jqmWindow{
+    position: fixed;
+    top: 17%;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    background-color: #fff;
+    color: #333;
+    padding: 14px;
+	display: none;
+}
+.share-content { top: 60px; width: 650px; margin-left: -325px; }
+.share-content embed { postition: relative; }
+.messagepage .jqmWindow { width: 450px; margin-left: -225px; }
+* html .jqmWindow {
+     position: absolute;
+	 /*width: 372px;*/
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+.jqmWindow select{    position: relative;}
+.modalwrap {
+	background-color: #fff;
+	border: 1px solid #000;
+	overflow: hidden;
+	padding: 0 10px 10px 10px;
+	z-index: 3000;
+	position: relative;
+}
+	* html .modalwrap{	padding-bottom: 45px; }/*hack for short dialogs.*/
+.jqmWindow .jqmHeader{
+    background-color: #dfe7e9;
+	padding: 4px 14px 4px 4px;
+	text-align: right;
+	margin: 0 -10px 1em -10px;
+}
+	* html #allresultscontainer .jqmWindow .jqmHeader {	margin: 0 0 0 -10px; }/* this was commented out.  adding back.  keeps header inside the modal display in this context (where there may be a scrollbar)*/
+
+
+          /*
+--=.._/(        Randoms/dev utility styles      )\_..=--
+    	  */
+/* for items we want only non visual user agents to see (like screen readers and bots) */
+.accessibility		{height: 0; left: -9999em;  line-height: 0; margin: 0; padding: 0; position: absolute; text-indent: -9999em; width: 0; }
+span.accessibility {text-indent: -9999em; position: static;}
+.column{
+	display: inline;
+    float: left;
+	width: 302px;
+	margin-right: 10px;
+	}
+ul.nav {list-style-type: none;}/* generic navigation class. just hide the bullets.  oh, html5, wont you come quickly. */
+.hide {display: none;}
+.left {float: left; margin: 10px 5px 10px 0;}
+h1.left { line-height: 1.1; }
+* html .left {margin-right: 0;}
+.right {float: right;}
+.clear {clear: both;}
+.clearleft {clear: left;}
+.clearright {clear: right;}
+.noclear {clear: none !important;}
+.error, .red {color: red;}
+.small {width: 25%;}
+.medium {width: 48%;}
+.large {width: 90%;}
+.separated { background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) center bottom no-repeat; padding-bottom: .5em; }
+/*these next two are set with more specificity to help override other styles.  */
+body #wrapper #content .noborderplease, input.noborderplease 	{border:none;}
+body #wrapper #content .borderplease {border-width: 1px; border-style: solid;}
+.pagemessage {
+	margin-top: 4em;
+	text-align: center;
+}
+
+          /*
+--=.._/(        (Graphic) Design Pattern Styles      )\_..=--
+    	  */
+/* @design pattern : morsels.  temporary stand-in name for lists of "things" like saved quiz results or journal entries.  just a design requirement, not a semantic class. */
+.morsels {
+background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) no-repeat scroll left top;
+clear:both;
+padding-top:0.5em;
+}
+.morsel {
+background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) no-repeat scroll left bottom;
+margin:1em 0pt;
+padding-bottom:1em;
+}
+.morsels .morsel img {
+	float:left;
+	margin:.5em .5em .5em 0;
+}
+
+/* ------------------------ autocomplete */
+.ac_results {
+	padding: 0px;
+	border: 1px solid WindowFrame;
+	background-color: Window;
+	overflow: hidden;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results iframe {
+	display:none;/*sorry for IE5*/
+	display/**/:block;/*sorry for IE5*/
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	filter:mask();
+	width:3000px;
+	height:3000px;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	font: menu;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.ac_loading {
+	background : Window url('/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/css/indicator.gif') right center no-repeat;
+}
+
+.ac_over {
+	background-color: Highlight;
+	color: HighlightText;
+}
+
+
+/* login css (new) */
+.logu {background:#fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/username.gif) no-repeat;}
+.logp {background:#fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/password.gif) no-repeat;}
+
+/* entire list link (new) */
+.entirelist {margin:15px;}
+
+/* YAHOO AD STYLES */
+#yahooads {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;border:2px solid #E1EBED!important;;width:620px!important;;padding-top:6px!important;;padding-left:8px!important;;}
+#sponsoredlinks {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;text-align:right!important;;width:615px!important;;font-size:11px!important;;}
+.searchyahooads {width:620px!important!important;!important;padding-top:6px!important;padding-left:8px}
+.searchyahooads h3 {width:600px!important;text-align:right!important;color:#117b84!important;}
+.searchyahooright {width:298px!important;border:2px solid #E1EBED!important;margin-bottom:10px!important;}
+.searchyahooright h3 {width:280px!important;text-align:right!important;color:#117b84!important;}
+.searchyahooright .yblock {padding-left:12px!important;width:280px!important;}
+.ylink {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;width:190px!important;float:left!important;padding-right:11px!important;}
+a.ylinkdesc:link {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;color:#000!important;font-size:12px!important;}
+a.ylinktitle {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;color:#0E7680!important;font-weight:bold!important;font-size:15px!important;}
+a.ylinkspottitle {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;color:#0E7680!important;font-weight:bold!important;font-size:11px!important;}
+a.ysitelink {font-family:"Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;}
+/* Poll Results */
+.fp_pollresults {
+    overflow: hidden;
+	width: 284px;
+	margin-left:0.7em;
+}
+	.fp_pollresults dt{
+		clear: left;
+		display: block;
+	    width: 283px;
+	}
+	.fp_pollresults dd{
+		margin-left:0px;
+	    display: block;
+		text-align: right;
+		width: 282px;
+	}
+	.fp_pollresults dd span{
+		
+		background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_fp_poll_result_bar280.gif) right top no-repeat;
+		border: 1px solid #ccc;
+	    display: block;
+		height: 15px;
+		width: 280px;
+	}
+
+	/*using background position for each percentage to move the image over.  css bar graph ftw. */
+	.fp_pollresults .perc0 span	{background-position: -280px  0}
+	.fp_pollresults .perc1 span	{background-position: -277px  0}
+	.fp_pollresults .perc2 span	{background-position: -274px  0}
+	.fp_pollresults .perc3 span	{background-position: -271px  0}
+	.fp_pollresults .perc4 span	{background-position: -268px  0}
+	.fp_pollresults .perc5 span	{background-position: -265px  0}
+	.fp_pollresults .perc6 span	{background-position: -262px  0}
+	.fp_pollresults .perc7 span	{background-position: -259px  0}
+	.fp_pollresults .perc8 span	{background-position: -256px  0}
+	.fp_pollresults .perc9 span	{background-position: -253px  0}
+	.fp_pollresults .perc10 span	{background-position: -250px  0}
+	.fp_pollresults .perc11 span	{background-position: -247px  0}
+	.fp_pollresults .perc12 span	{background-position: -244px  0}
+	.fp_pollresults .perc13 span	{background-position: -241px  0}
+	.fp_pollresults .perc14 span	{background-position: -238px  0}
+	.fp_pollresults .perc15 span	{background-position: -235px  0}
+	.fp_pollresults .perc16 span	{background-position: -232px  0}
+	.fp_pollresults .perc17 span	{background-position: -229px  0}
+	.fp_pollresults .perc18 span	{background-position: -226px  0}
+	.fp_pollresults .perc19 span	{background-position: -223px  0}
+	.fp_pollresults .perc20 span	{background-position: -220px  0}
+	.fp_pollresults .perc21 span	{background-position: -217px  0}
+	.fp_pollresults .perc22 span	{background-position: -214px  0}
+	.fp_pollresults .perc23 span	{background-position: -211px  0}
+	.fp_pollresults .perc24 span	{background-position: -208px  0}
+	.fp_pollresults .perc25 span	{background-position: -205px  0}
+	.fp_pollresults .perc26 span	{background-position: -202px  0}
+	.fp_pollresults .perc27 span	{background-position: -199px  0}
+	.fp_pollresults .perc28 span	{background-position: -196px  0}
+	.fp_pollresults .perc29 span	{background-position: -193px  0}
+	.fp_pollresults .perc30 span	{background-position: -190px  0}
+	.fp_pollresults .perc31 span	{background-position: -187px  0}
+	.fp_pollresults .perc32 span	{background-position: -184px  0}
+	.fp_pollresults .perc33 span	{background-position: -181px  0}
+	.fp_pollresults .perc34 span	{background-position: -178px  0}
+	.fp_pollresults .perc35 span	{background-position: -175px  0}
+	.fp_pollresults .perc36 span	{background-position: -173px  0}
+	.fp_pollresults .perc37 span	{background-position: -170px  0}
+	.fp_pollresults .perc38 span	{background-position: -167px  0}
+	.fp_pollresults .perc39 span	{background-position: -164px  0}
+	.fp_pollresults .perc40 span	{background-position: -161px  0}
+	.fp_pollresults .perc41 span	{background-position: -159px  0}
+	.fp_pollresults .perc42 span	{background-position: -156px  0}
+	.fp_pollresults .perc43 span	{background-position: -153px  0}
+	.fp_pollresults .perc44 span	{background-position: -150px  0}
+	.fp_pollresults .perc45 span	{background-position: -148px  0}
+	.fp_pollresults .perc46 span	{background-position: -146px  0}
+	.fp_pollresults .perc47 span	{background-position: -144px  0}
+	.fp_pollresults .perc48 span	{background-position: -142px  0}
+	.fp_pollresults .perc49 span	{background-position: -141px  0}
+	.fp_pollresults .perc50 span	{background-position: -140px  0}
+	.fp_pollresults .perc51 span	{background-position: -139px  0}
+	.fp_pollresults .perc52 span	{background-position: -137px  0}
+	.fp_pollresults .perc53 span	{background-position: -135px  0}
+	.fp_pollresults .perc54 span	{background-position: -132px  0}
+	.fp_pollresults .perc55 span	{background-position: -129px  0}
+	.fp_pollresults .perc56 span	{background-position: -126px  0}
+	.fp_pollresults .perc57 span	{background-position: -123px  0}
+	.fp_pollresults .perc58 span	{background-position: -120px  0}
+	.fp_pollresults .perc59 span	{background-position: -117px  0}
+	.fp_pollresults .perc60 span	{background-position: -114px  0}
+	.fp_pollresults .perc61 span	{background-position: -111px  0}
+	.fp_pollresults .perc62 span	{background-position: -108px  0}
+	.fp_pollresults .perc63 span	{background-position: -105px  0}
+	.fp_pollresults .perc64 span	{background-position: -102px  0}
+	.fp_pollresults .perc65 span	{background-position: -98px  0}
+	.fp_pollresults .perc66 span	{background-position: -95px  0}
+	.fp_pollresults .perc67 span	{background-position: -93px  0}
+	.fp_pollresults .perc68 span	{background-position: -90px  0}
+	.fp_pollresults .perc69 span	{background-position: -87px  0}
+	.fp_pollresults .perc70 span	{background-position: -85px  0}
+	.fp_pollresults .perc71 span	{background-position: -83px  0}
+	.fp_pollresults .perc72 span	{background-position: -80px  0}
+	.fp_pollresults .perc73 span	{background-position: -77px  0}
+	.fp_pollresults .perc74 span	{background-position: -74px  0}
+	.fp_pollresults .perc75 span	{background-position: -71px  0}
+	.fp_pollresults .perc76 span	{background-position: -69px  0}
+	.fp_pollresults .perc77 span	{background-position: -66px  0}
+	.fp_pollresults .perc78 span	{background-position: -63px  0}
+	.fp_pollresults .perc79 span	{background-position: -61px  0}
+	.fp_pollresults .perc80 span	{background-position: -59px  0}
+	.fp_pollresults .perc81 span	{background-position: -56px  0}
+	.fp_pollresults .perc82 span	{background-position: -53px  0}
+	.fp_pollresults .perc83 span	{background-position: -50px  0}
+	.fp_pollresults .perc84 span	{background-position: -47px  0}
+	.fp_pollresults .perc85 span	{background-position: -44px  0}
+	.fp_pollresults .perc86 span	{background-position: -41px  0}
+	.fp_pollresults .perc87 span	{background-position: -39px  0}
+	.fp_pollresults .perc88 span	{background-position: -36px  0}
+	.fp_pollresults .perc89 span	{background-position: -33px  0}
+	.fp_pollresults .perc90 span	{background-position: -30px  0}
+	.fp_pollresults .perc91 span	{background-position: -27px  0}
+	.fp_pollresults .perc92 span	{background-position: -24px  0}
+	.fp_pollresults .perc93 span	{background-position: -21px  0}
+	.fp_pollresults .perc94 span	{background-position: -18px  0}
+	.fp_pollresults .perc95 span	{background-position: -15px  0}
+	.fp_pollresults .perc96 span	{background-position: -12px  0}
+	.fp_pollresults .perc97 span	{background-position: -9px  0}
+	.fp_pollresults .perc98 span	{background-position: -6px  0}
+	.fp_pollresults .perc99 span	{background-position: -3px  0}
+	.fp_pollresults .perc100 span	{background-position: 0px  0}
+	
+/* CAPTCHA STYLES */
+#captcha_content {width:300px;}
+#captcha input {width:20px;}
+#captcha_copy {float:left;}
+#captcha_img{padding:0px;margin-top:0px;float:right;margin-left:100px;}
+
+/* OMINTURE */
+#om {display:none;}
+
+.hub_main {padding-bottom:.5em;}
+#login_buttons {list-style:none;margin-bottom:14px;width:220px;}
+	#login_buttons li {float:left;}
+#login_extras li {list-style:none;clear:both;}
+
+/* ERRORS */
+.std_error_msg {background:#ffe1e8;color:#ff0040;padding:5px;margin-top:10px;margin-bottom:10px;border:1px solid #ff0040;min-width:100px;clear:both;max-width:570px;}
+.error_nav {list-style:none;}
+
+/* System Messages */
+#system-message { margin-bottom: 10px; padding: 0;}
+#system-message dt { font-weight: bold; }
+#system-message dd { background:#ffe1e8;color:#ff0040;padding:5px;margin-bottom:10px;border:1px solid #ff0040;min-width:100px;}}
+#system-message dd ul {
+    list-style:none;}
+
+/* System Standard Messages */
+#system-message dt.message { display: none; }
+#system-message dd.message {  }
+#system-message dd.message ul { list-style:none;}
+
+/* System Error Messages */
+#system-message dt.error { display: none; }
+#system-message dd.error { display: none; }
+#system-message dd.error ul {display: none;background:#ffe1e8;color:#ff0040;padding:5px;margin-top:10px;margin-bottom:10px;border:1px solid #ff0040;min-width:100px;list-style:none;}
+
+/* System Notice Messages */
+#system-message dt.notice { display: none; }
+#system-message dd.notice {  }
+#system-message dd.notice ul { background:#ffe1e8;color:#ff0040;padding:5px;margin-top:10px;margin-bottom:10px;border:1px solid #ff0040;min-width:100px;list-style:none;}
+
+
+
+
+/* CONTENT PAGES */
+.entry-content {margin-top:10px;margin-bottom:10px;line-height:normal;}
+.entry-content h2 {color:#000;}
+/*.entry-content p {margin-bottom:3px;}*/
+
+/* STATIC PAGES */
+.static_page_content {margin-bottom:20px;width:600px;}
+.static_page_content .st_header {font-weight:bold;font-size:+1;color:#0E7680;margin-top:10px;margin-bottom:10px;}
+.static_page_content ul {margin-left:20px;}
+.static_page_content ul.lipad li {padding-bottom:10px;}
+.static_page_content ol {margin-left:40px;}
+.static_page_content ol.nodent {margin-left:30px;margin-right:20px;}
+.static_page_content ol.nodent li {padding-bottom:10px;}
+.static_page_content .adbar { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) center top no-repeat; margin-top: 4px; height:15px; }
+
+.graphicbar { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) center top no-repeat; margin-top: 4px; height:5px; }
+.storydisplay h4 {font-size:130%;}
+
+
+/* CONTENT DESCRIPTION FOR MODULES */
+.mod_description {margin-left:10px;}
+
+/* NUMBER ALIGN */
+td.tdcnt {text-align:center;width:85px;}
+
+
+/* LOGGED OUT USER RATING STYLES */
+.display_u_msg {float:right;clear:both;margin-top:-20px;}
+.fake_login_link {color:#cc3333;}
+
+.ratingdisplay_ulo {
+	float:left;
+	margin-left:7px;
+	_margin-left:3px;
+	background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/starrating.gif);
+	background-position: 0 -50px;
+	background-repeat: no-repeat;
+	width: 150px;
+	vertical-align: top;
+}
+
+* html .ratingdisplay_ulo{width:205px!important}
+*+html .ratingdisplay_ulo{width:205px!important}
+
+	.ratingdisplay_ulo span {
+		background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/starrating.gif) left top no-repeat;
+		margin-left:1px;
+		display: block;
+		height: 28px;
+		text-indent: -999em;
+	}
+		dd.ratingdisplay_ulo  span { margin: 1px 0 0 1px; }
+	.rated0_ulo span { width: 14px; }
+	.rated1_ulo span { width: 28px; }
+	.rated2_ulo span { width: 42px; }
+	.rated3_ulo span { width: 56px; }
+	.rated4_ulo span, .rated5_ulo span { width: 70px; }
+	
+	.part0_ulo span { background-position: right -121px; }
+	.part00_ulo span { background-position: right -121px; }
+	.part25_ulo span { background-position: right -192px; }
+	.part50_ulo span { background-position: right -263px; }
+	.part75_ulo span { background-position: right -334px; }
+	.rated5_ulo span { background-position: right -405px; }
+
+
+/* SEARCH PAGE STYLES */
+#searchselect {display:inline;margin-bottom:0px;}
+
+/* HOROSCOPE */
+#currentday {margin-left:97px;padding:10px;}
+
+/* SITE MAP */
+#sitemaplist p.header {font-weight:bold;padding:10px;margin-top:10px;}
+#sitemaplist ul {margin-left:20px;margin-top:-10px;}
+#sitemaplist ul.sublist {margin-top:0px;}
+#sitemaplist ul li {margin-left:30px;}
+
+/* SELECT FOR N PARTNER */
+#nselect {height:0px;width:43px;}
+select#nq {position:relative;top:3px;left:600px;font-size:9px;}
+
+span#qzpartlinks{text-align:left;padding-right:590px;}
+span#qzpartlinks a:link, span#qzpartlinks a:active, span#qzpartlinks a:visited {font-weight:bold;color:#B7B6B6;}
+span#qzpartlinks a:hover {color:#fff;}
+
+/* NO SCRIPT? */
+div.ns_error {border:1px solid #FF0040;color:#FF0040;background:#FFE1E8;padding:5px;margin-bottom:10px;}
+div.ns_error ul {margin-left:20px;padding:10px;}
+div.ns_error ul li {padding:3px;}
+
+/* TAGS BY TYPE */
+#tagtypeselect {text-transform:capitalize;}
+
+/* UNPUBLISHED HEADER FOR MYSTUFF */
+.unpubheader {color:#187682;font-size:13px;font-weight:bold;display:block!important;margin-top:10px;margin-bottom:10px;clear:both;}
+
+/* EXTRA BIT FOR REPORT IT */
+#copyalert {margin-top:-10px;padding-bottom:10px;width:370px;}
+
+/* SPACE FOR JOURNAL LINK */
+.journalentry p.journallink {margin-top:5px;}
+
+/* MY IMAGES ADD IMAGE BLOCK */
+#addimage form#addmediaform input#uploadfile {width:270px;}
+#addimage form#addmediaform #categories {margin-bottom:0px;}
+#addimage form#addmediaform .secondarylabel {width:100%;margin-bottom:5px;}
+
+/* IE BEHAVIOR FOR CHAPTER SELECTOR */
+* html #chapterselector {width:150px;}
+
+/* IMG CONTRL */
+.quizdisplay img {max-width:600px;}
+.storydisplay img {max-width:600px;}
+.lyricsdisplay img {max-width:600px;}
+.poemdisplay img {max-width:600px;}
+
+* html .quizdisplay img {width:expression( (this.width>600)?"600px":this.width );}
+* html .storydisplay img {width:expression( (this.width>600)?"600px":this.width );}
+* html .lyricsdisplay img {width:expression( (this.width>600)?"600px":this.width );}
+* html .poemdisplay img {width:expression( (this.width>600)?"600px":this.width );}
+
+
+/* STD MSG BREAK */
+.stdmsg {clear:both;width:600px;}
+
+/* WATCHLIST STYLES */
+#wl_list{width:620px;height:300px;overflow:auto;}
+#wl_friends{width:620px;height:300px;overflow:auto;}
+a.wl_remove{font-size:80%;}
+
+/* VIEW POLL RESULTS */
+#vpollr {width:500px; margin-left: 100px; text-align:right; padding-top:20px; }
+* html #vpollr {width:500px; margin-left: 100px; padding-top:20px; text-align:right; }
+
+
+
+/* GAMEPONY HEADER UPDATE */
+#partofthen {margin:0em auto;padding:0px;font:12px normal "Trebuchet MS", Trebuchet, Tahoma, Arial, sans-serif!important;background:#000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_n_header.gif) 0 0 repeat-y;color:#fff;margin: 0em auto;text-align: right;width: 996px;}
+#greybar {position:relative;margin:0em auto;height:4px;background: #d1d2d4;width:983px;margin-left:7px;}
+#gamesnav {width:540px;text-align:left;float:left;padding-top:2px;padding-left:23px;height:23px;}
+
+#g_logo {display:inline;float:left;vertical-align:center;padding-right:5px;height:20px;}
+#g_logo img {display:in-line;margin-top:-2px;float:left;padding-right:2px;}
+* html #g_logo img {height:25px;margin-top:0px;}
+* html #gamesnav {padding-top:0px;padding-left:20px;width:550px;border-bottom: 0px solid #d1d2d4;}
+
+#gamesnav a:link, #gamesnav a:visited, #gamesnav a:active {text-transform:uppercase;color:#fff!important;font-size:.9em!important;font-weight:normal!important;letter-spacing:.1em;padding:1px 7px;}  
+#gamesnav a:hover {color:#000!important;background:yellow;text-decoration:none;}
+#g_logo a:link, #g_logo a:visited, #g_logo a:active {text-transform:lowercase;color:#fff!important;letter-spacing:.1em;padding:0px;}  
+#g_logo a:hover {text-transform:lowercase;color:#fff!important;letter-spacing:.1em;padding:0px;background:#000!important;}
+
+#gamesnav a.g_on:link, #gamesnav a.g_on:active, #gamesnav a.g_on:visited {color:#000!important;background:yellow;text-decoration:none;}
+#gamesnav a.g_on:hover {color:#000!important;background:yellow;text-decoration:none;}
+
+* html #partofthen {padding:0px;height:21px;}
+
+#partofthen p {
+       background: #000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/n_logo_header.gif) 880px center no-repeat  ;
+        margin: 0 6px 0 7px;
+        padding: 0 12px 0 9px;
+        height:25px;
+}
+
+* html #partofthen p {background:#000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/n_logo_header.gif) 305px -2px no-repeat;}
+*+html #partofthen p {background:#000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/n_logo_header.gif) 320px -2px no-repeat;}
+
+#partofthen a:link, #partofthen a:active, #partofthen a:visited {font-weight:bold;color:#B7B6B6;line-height: 2em;}
+#partofthen a:hover {color:#fff;}
+
+.lpad60 {padding-left:60px;}
+
+/* CONTENT HUBS */
+#contentHubDescription p.hasimg {float:left;width:475px;}
+#sm_image_block {float:right;width:150px;}
+
+h1.contenthub {
+	background: #000 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/628_header_bg_top.jpg) 0 0 no-repeat;
+	color: #fff;
+	font-size: 130%!important;
+   	line-height: 1.1;
+	margin-bottom:.4em;
+	padding: 9px 0 0 0;
+	text-transform: uppercase;
+	text-shadow: 0 0 0 #000;
+}
+
+h1.contenthub span {
+	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/628_header_bg_bottom.gif) left bottom no-repeat;
+	display:block;
+	padding: 0 4px 8px 14px; /* updated right padding from 0 to wrap a little earlier */
+	}
+/* mama bar */	
+div.brand-mamabar {
+	position: relative;
+	height: 18px;
+	_height: 16px;
+	border-bottom: 2px solid #f1f1f1;
+	background-color: #fff;
+	text-align: center;
+	z-index: 10000;
+}
+div.brand-mamabar-wrapper {
+	position: relative;
+	width: 984px;
+	height: 18px;
+	margin: 0 auto;
+	text-align: left;
+}
+img.brand-mamabar-logo { float: right; }
+ul.brand-mamabar-list {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.brand-mamabar-list li {
+	float: left;
+	display: inline;
+	margin-right: 15px;
+}
+ul.brand-mamabar-list a {
+	display: block;
+	line-height: 18px;
+	color: #9a9a9a;
+	font-size: 11px;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+ul.brand-mamabar-list a:hover { text-decoration: underline; }
+ul.brand-mamabar-list a.brand-mamabar-active {
+	color: #ff9540;
+	cursor: default;
+}
+ul.brand-mamabar-list a.brand-mamabar-active:hover { text-decoration: none; }
+li.brand-mamabar-more-link { 
+	position: relative;
+	cursor: pointer;
+	margin-left: -5px;
+}
+li.brand-mamabar-more-link * { cursor: pointer; }
+a.brand-mamabar-more-a {
+	padding-left: 5px;
+	display: block;
+	height: 16px;	
+}
+li.brand-mamabar-more-link-hover a.brand-mamabar-more-a {
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/mb_tab_left.gif) no-repeat top left;
+	text-decoration: none !important;
+	color: #fff;
+}
+a.brand-mamabar-more-a span {
+	display: block;
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/mb_tab_right.gif) no-repeat top right;
+	padding-right: 20px;
+	height: 16px;
+}
+li.brand-mamabar-more-link-hover a.brand-mamabar-more-a span { background-position: 100% -29px; }
+li.brand-mamabar-more-link div.brand-mamabar-more-wrapper ul {
+	padding: 7px 0 10px 10px;
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/mb_topbar.gif) no-repeat top left;
+}
+li.brand-mamabar-more-link div.brand-mamabar-more-wrapper { 
+	clear: both;
+	display: none;
+	position: absolute;
+	width: 138px;
+	left: -83px;
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/mb_bottombar.png) no-repeat bottom left;
+	_background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/mb_bottombar_ie.gif);
+	_margin-top: -2px;
+}
+li.brand-mamabar-more-link-hover div.brand-mamabar-more-wrapper { display: block; }
+li.brand-mamabar-more-link div.brand-mamabar-more-wrapper li {
+	float: none;
+	display: block;
+}
+/* Nick Footer */
+div#nick-footer {
+	background: #e4e5e7 url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/nick_footer_top.gif) no-repeat top left;
+	margin: 15px auto;
+	margin-left:-20px;
+	width: 983px;
+}
+
+div#nick-footer-bottom {
+	padding: 0px 6px 10px 6px;
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/nick_footer_bottom.gif) no-repeat bottom left;
+}
+
+div#nick-footer h4 {
+	line-height: 32px;
+	font-size: 12px;
+	color: #000;
+	text-transform: uppercase;
+	padding-left: 8px;
+}
+
+div#nick-footer-container {
+	background-color: #fff;
+	width: 946px;
+	margin-top: 4px;
+	padding: 15px 10px 10px 15px;
+}
+
+div#nick-footer-container div.nick-footer-siteblock {
+	float: left;
+	width: 157px;
+	margin-bottom: 20px;
+}
+
+div#nick-footer-container div.nick-footer-siteblock h5,
+div#nick-footer-container div.nick-footer-siteblock h5 a {
+	font-size: 11px;
+	color: #ff7f00;
+	letter-spacing: 1px;
+	text-decoration: none;
+}
+
+div#nick-footer-container div.nick-footer-siteblock h5 a:hover { 
+	color: #c1272d;
+	text-decoration: underline;
+}
+
+div#nick-footer-container div.nick-footer-siteblock ul li {	line-height: 18px; list-style:none;}
+
+div#nick-footer-container div.nick-footer-siteblock ul li a {
+	font-size: 10px;
+	text-decoration: none;
+	color: #555;
+	padding-left: 10px;
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_footer_bullet.gif) no-repeat center left;
+}
+
+div#nick-footer-container div.nick-footer-siteblock ul li a:hover { text-decoration: underline; }
+
+div#nick-footer-text {
+	clear: both;
+	padding-top: 20px;
+	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/footer_divider.gif) no-repeat top center;
+}
+
+div#nick-footer-text h3 { margin-bottom: 10px; }
+
+div#nick-footer-text p {
+	margin: 0 0 10px 0;
+	font-size: 10px;
+	color: #555;
+}
+
+ul#nick-footer-menu { padding-bottom: 10px; }
+
+ul#nick-footer-menu li {
+		list-style:none;
+	float: left;
+	border-right: 1px solid #555;
+}
+
+ul#nick-footer-menu li a {
+	padding: 0 5px;
+	color: #555;
+	font-weight: bold;
+	font-size: 11px;
+	text-decoration: none;
+	text-transform: uppercase;
+
+}
+
+ul#nick-footer-menu li a:hover { text-decoration: underline; }
+
+ul#nick-footer-menu li.last { border-right: 0; }
+ul#nick-footer-menu li.first a { padding-left: 0; }
+
+span#nick-footer-copyright {
+	clear: both;
+	float: left;
+	display: block;
+	font-size: 10px;
+	line-height: 32px;
+	color: #555;
+}
+
+img#comscore-logo {
+	float: right;
+}
+#footer_footer {clear:both;height:50px;}
+#nick-footer-wrap {
+background:#FFFFFF url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_wrapper.gif) repeat-y scroll 0pt;
+margin:auto;
+padding:0pt 25px;
+position:relative;
+width:946px;
+}
+/* End Nick Footer */
+
+/*
+     FILE ARCHIVED ON 00:15:26 Jan 05, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:11:03 Oct 04, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 45.021 (3)
+  esindex: 0.008
+  captures_list: 132.893
+  CDXLines.iter: 18.863 (3)
+  PetaboxLoader3.datanode: 47.179 (4)
+  exclusion.robots: 0.18
+  exclusion.robots.policy: 0.166
+  RedisCDXSource: 1.225
+  PetaboxLoader3.resolve: 4515.926
+  load_resource: 4536.025
+*/
