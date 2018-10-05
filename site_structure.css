@@ -4,7 +4,7 @@
     	  */
 
 #wrapper {
-	background: #fff url(/web/20100105005407im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_wrapper.gif) 0 0 repeat-y;
+	background: #fff url(https://github.com/Quiziller/roleplayzilla-official/blob/master/bg_wrapper.gif) 0 0 repeat-y;
 	margin: auto;
 	position: relative;
     width: 946px;
@@ -67,25 +67,3 @@ body.createtheme #secondary {
 	#siteutilities {
 		overflow:hidden;
 	}
-
-/*
-     FILE ARCHIVED ON 00:54:07 Jan 05, 2010 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 21:11:07 Oct 04, 2018.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  LoadShardBlock: 7767.24 (3)
-  esindex: 0.01
-  captures_list: 7917.1
-  CDXLines.iter: 32.192 (3)
-  PetaboxLoader3.datanode: 116.593 (4)
-  exclusion.robots: 0.187
-  exclusion.robots.policy: 0.176
-  RedisCDXSource: 2.964
-  PetaboxLoader3.resolve: 8620.279 (3)
-  load_resource: 1004.549
-*/
