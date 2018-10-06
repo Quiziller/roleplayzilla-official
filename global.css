@@ -339,10 +339,10 @@ ul.links, ul.links ul, ul.links ul ul, #content ul.links li, #nav, #subnav, .met
 body.whatevs is to make it active one on a page with body class
 body.whavevs plus:hover a is to make sure the bordered version wins when on that page.
 */
-	#nav li#quizzes-menu a { background-position:0 0; width:127px; }
-	#nav li#quizzes-menu:hover a, body.quizpage #nav li#quizzes-menu:hover a,
-		#nav li#quizzes-menu.over a, body.quizpage #nav li#quizzes-menu.over a{	background-position:0 -62px; }
-	body.quizpage #nav li#quizzes-menu a, #nav li#quizzes-menu a.current {background-position:0 -124px;  }
+	#nav #quizzes-menu a { background-position:0 0; width:127px; }
+	#nav #quizzes-menu:hover a, body.quizpage #nav #quizzes-menu:hover a,
+		#nav #quizzes-menu.over a, body.quizpage #nav #quizzes-menu.over a{	background-position:0 -62px; }
+	body.quizpage #nav #quizzes-menu a, #nav #quizzes-menu a.current {background-position:0 -124px;  }
 
 	#nav li#stories-menu a { background-position:-134px 0;width:125px; }
 	#nav li#stories-menu:hover a, body.storypage #nav li#stories-menu:hover a,
@@ -396,14 +396,14 @@ body.whavevs plus:hover a is to make sure the bordered version wins when on that
 	top: 62px; /*nav height*/
 	}
 /* separate treatment for each inner ul.  width dependant on main graphic. */
-	#nav li#quizzes-menu ul { width:121px; }
-	#nav li#stories-menu ul { width:119px; }
-	#nav li#polls-menu ul { width:104px; }
-	#nav li#poems-menu ul { width:104px; }
-	#nav li#lyrics-menu ul { width:111px; }
-	#nav li#games-menu ul { width:119px; }
-	#nav li#mystuff-menu ul { width:119px; }
-	#nav li#help-menu ul { width:111px; }
+	#nav #quizzes-menu ul { width:121px; }
+	#nav #stories-menu ul { width:119px; }
+	#nav #polls-menu ul { width:104px; }
+	#nav #poems-menu ul { width:104px; }
+	#nav #lyrics-menu ul { width:111px; }
+	#nav #games-menu ul { width:119px; }
+	#nav #mystuff-menu ul { width:119px; }
+	#nav #help-menu ul { width:111px; }
 
 
 #nav li li {
@@ -474,7 +474,7 @@ body.whavevs plus:hover a is to make sure the bordered version wins when on that
 	}
 .tabs-nav li a:hover { color:#067681; }
 div ul.tabs-nav{ /* overrides general quidget innard indentation selector*/  
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom no-repeat;
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/bg_bottom_edge_rough.gif) left bottom no-repeat;
   margin: 0 0 0 -2px; /* make sure first tab lines up properly with border below. */
 	overflow:hidden;
 	}
@@ -489,7 +489,7 @@ li.tabs-selected a:link, li.tabs-selected a:visited {
 }
 .tabs-hide {    display: none;	}
 .tabs-container {
-	background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_big_container_bottom.gif) left bottom no-repeat;
+	background:transparent url(/ce/github/get/roleplayzilla-official/master/bg_big_container_bottom.gif) left bottom no-repeat;
 	padding: 5px;
 	position: relative;
 	}
@@ -540,7 +540,7 @@ button{
 	* html #messagerecipientselect .right, * html #confirmsent .right	{ position: relative;}
 	* html #messagerecipientselect .modalwrap, * html #confirmsent .modalwrap { padding-bottom: 1.5em; float: right; }
 	.buttonwrap button, .buttonwrap a.button {
-		background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/big_box.gif) bottom right no-repeat;
+		background: url(/ce/github/get/roleplayzilla-official/master/big_box.gif) bottom right no-repeat;
 		border: 0;
 		color: #187682;
 		cursor: pointer;
@@ -605,7 +605,7 @@ div.metadata dt {clear: left; margin-right: .2em;font-family:"Trebuchet MS", Tre
 button.disabled { cursor: default; }
 #header button	{ float: left;}
 .gobutton {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/btn_go.gif) 0 0 no-repeat;
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/btn_go.gif) 0 0 no-repeat;
 	border: none;
 	clear: none;
 	/*float: none;*/
@@ -617,7 +617,7 @@ button.disabled { cursor: default; }
 	}
 
 .cancelbutton {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/btn_cancel.gif) 0 0 no-repeat !important;
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/btn_cancel.gif) 0 0 no-repeat !important;
 	border: none;
 	display: block;
 	height: 24px;
@@ -626,7 +626,7 @@ button.disabled { cursor: default; }
 	}
 	
 .addtheimage {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/addimg.gif) 0 0 no-repeat !important;
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/addimg.gif) 0 0 no-repeat !important;
 	border: none!important;
 	display: block;
 	height: 24px;
@@ -691,7 +691,7 @@ form .checkradiowrap {
 	}
 	* html .entry-content form input {margin: -3px 3px .7em 0;}
 .entry-content button{
-	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/btn_submit.gif);
+	background: url(/ce/github/get/roleplayzilla-official/master/btn_submit.gif);
 	height: 29px;
     text-indent: -9999em;
 	width: 74px;
@@ -1005,7 +1005,7 @@ p.error { /* generally for server side validation return errors */
 
 /* search results */
 .searchresults h1, #primary .sponsoredresults  {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom no-repeat;
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/bg_bottom_edge_rough.gif) left bottom no-repeat;
 	padding: 0 0 10px 0;
 }
 
@@ -1019,7 +1019,7 @@ p.error { /* generally for server side validation return errors */
 	#secondary .sponsoredresults p { margin-left: 0; }
 
 ol.searchresults {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom no-repeat;
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/bg_bottom_edge_rough.gif) left bottom no-repeat;
 	list-style: none;
 	margin-bottom: 1em;
 	padding: 0 0 10px 0;
@@ -1052,7 +1052,7 @@ ol.searchresults {
 #resultssort ul { list-style: none; margin-left: 80px; }
 #resultssort li { display: inline; padding-right: 20px;  }
 #resultssort li.active	{ padding-right: 6px; }
-#resultssort li.active a { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_arrow_sort.gif) right 5px no-repeat; color: #000; padding-right: 14px; }
+#resultssort li.active a { background: transparent url(/ce/github/get/roleplayzilla-official/master/bg_arrow_sort.gif) right 5px no-repeat; color: #000; padding-right: 14px; }
 #resultssort li.active a.asc { background-position: right -46px; }
 
 /*tag search results*/
@@ -1061,7 +1061,7 @@ ol.searchresults {
 	padding:0;
 }
 	.tagpage .contentresults {
-		background:transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) left bottom no-repeat;
+		background:transparent url(/ce/github/get/roleplayzilla-official/master/bg_bottom_edge_rough.gif) left bottom no-repeat;
 		margin-bottom:1em;
 		padding-bottom:.5em;
 	}
@@ -1124,9 +1124,9 @@ ol.searchresults {
 .tabbedlisting img { float: left; margin: 0 .7em 1em 0; }
 
 /* top area quizilla alerts */
-.alertbox { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_big_container_bottom.gif) bottom left no-repeat;	}
+.alertbox { background: transparent url(/ce/github/get/roleplayzilla-official/master/bg_big_container_bottom.gif) bottom left no-repeat;	}
 .alertbox h3 {
-    background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_big_container_top.gif) top left no-repeat;
+    background: transparent url(/ce/github/get/roleplayzilla-official/master/bg_big_container_top.gif) top left no-repeat;
 	margin:0 0 .5em 0;
 	padding:10px 0 0 .7em;
 	}
@@ -1244,7 +1244,7 @@ abbr.updated, abbr.published{
 		width: 400px;
 	}
 	.pollresults dd span{
-		background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_poll_result_bar.gif) right top no-repeat;
+		background: url(/ce/github/get/roleplayzilla-official/master/bg_poll_result_bar.gif) right top no-repeat;
 		border: 1px solid #ccc;
 	    display: block;
 		height: 20px;
@@ -1510,12 +1510,12 @@ textarea#categories { width: 100%; }
 
 /* share it*/
 #shareit {
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_big_container_bottom.gif) right bottom no-repeat;
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/bg_big_container_bottom.gif) right bottom no-repeat;
     margin: 0 0 2em 0;
 	padding:0 0 2em 15px;
 	}
 #shareit h2.clean{
-	background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bigger_box.gif) left top no-repeat;
+	background: transparent url(/ce/github/get/roleplayzilla-official/master/bigger_box.gif) left top no-repeat;
 	padding: 10px 0 0 10px;
 	margin-left: -15px;
 	}
@@ -1539,14 +1539,11 @@ ul.sharemessaging{
     width: 5em;
 	}
 #shareit ul li a{
-	background: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_email.gif) center bottom no-repeat ;
+	background: url(/ce/github/get/roleplayzilla-official/master/icon_email.gif) center bottom no-repeat ;
     display: block;
    	padding-bottom: 32px;
 	height: 1%; /*oh, ie.*/
 	}
-#shareit ul li.shareyahoo a{	background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_yim.gif);}
-#shareit ul li.shareaim a{	background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/icon_aim.gif);}
-	#shareit .ac_results ul { margin: 0; }
 		#shareit .ac_results ul li { margin: 0; float: none; text-align: left; width: auto; }
 	
 
@@ -1693,7 +1690,7 @@ li .tagselect {
 	#globaltagstyle li { float: left; }
 	#globaltagstyle li.selected { color: #c33; font-weight: bold; }
 	#globaltagstyle a.tagbtn {
-		background: #fff url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/btn_tagstyle.gif) 0 0 no-repeat;
+		background: #fff url(/ce/github/get/roleplayzilla-official/master/btn_tagstyle.gif) 0 0 no-repeat;
 		display: block;
 		height: 75px;
 		margin: 0 50px 20px 0;
@@ -1794,7 +1791,7 @@ li .tagselect {
 .graph .rank-9	{background-color:#a7c4ca;width:90%;}
 .graph .rank-10	{background-color:#a1bec4;width:100%;}
 /* fix for ie6 overflow cutoff. requires tag cloud be on a white background */
-* html .graph li a 		{background-image: url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_tags_graph.gif); background-repeat: repeat-y;}
+* html .graph li a 		{background-image: url(/ce/github/get/roleplayzilla-official/master/bg_tags_graph.gif); background-repeat: repeat-y;}
 * html .graph .rank-1	{background-position:30px 0;}
 * html .graph .rank-2	{background-position:59px 0;}
 * html .graph .rank-3	{background-position:89px 0;}
@@ -1819,7 +1816,7 @@ dl.tags dt, dl.tags dd 	{ display: inline; }
 	margin-left: 2%;
 	width: 96%;
 }
-.hub .listtable { background: transparent url(/web/20100105001526im_/http://quizilla.teennick.com/templates/QZ2/images/dev/bg_bottom_edge_rough.gif) center top no-repeat; margin-top: 4px; }
+.hub .listtable { background: transparent url(/ce/github/get/roleplayzilla-official/master/bg_bottom_edge_rough.gif) center top no-repeat; margin-top: 4px; }
 .topical .listtable { background: none ;}
 	* html .topical .listtable { position: relative; left: 12px;  } /*oh dear.*/
 .listtable td, .listtable th {line-height: 120%;}
