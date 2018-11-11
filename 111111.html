@@ -1,0 +1,241 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <!-- generator meta tag -->
+    <!-- leave this for stats and Silex version check -->
+    <meta name="generator" content="Silex v2.2.7">
+    <!-- End of generator meta tag -->
+    <script type="text/javascript" src="https://editor.silex.me/static/2.7/jquery.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://editor.silex.me/static/2.7/jquery-ui.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://editor.silex.me/static/2.7/pageable.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://editor.silex.me/static/2.7/front-end.js" data-silex-static=""></script>
+    <link rel="stylesheet" href="https://editor.silex.me/static/2.7/normalize.css" data-silex-static="">
+    <link rel="stylesheet" href="https://editor.silex.me/static/2.7/front-end.css" data-silex-static="">
+
+    <style type="text/css" class="silex-style">.body-initial {background-color: rgba(255,255,255,1);}.silex-id-1478366444112-1 {top: 100px; background-color: transparent; min-width: 1200px;}.silex-id-1478366444112-0 {min-height: 168px; background-color: transparent; width: 1200px; top: 15px; left: 100px;}.silex-id-1541961657096-0 {width: 1404px; background-color: rgb(255, 255, 255); min-height: 197px; top: -15px; left: -105px;}.silex-id-1474394621033-3 {top: 5px; left: 0px;}.silex-id-1474394621032-2 {min-height: 600px; background-color: transparent; width: 1200px;}.silex-id-1541962007639-2 {width: 631px; background-color: rgb(255, 255, 255); min-height: 212px; top: -6px; left: -61px;}.silex-id-1541961922476-1 {width: 335px; background-color: rgb(255, 255, 255); min-height: 631px; top: -16px; left: 964px;}.silex-id-1478366450713-3 {top: 100px; background-color: transparent;}.silex-id-1478366450713-2 {min-height: 100px; background-color: transparent; width: 1200px;}.silex-id-1442914737143-3 {min-height: 53px; width: 349px; top: 29px; left: 430px;}</style>
+    <script type="text/javascript" class="silex-script"></script>
+    <style class="silex-inline-styles" type="text/css"></style>
+    <title></title>
+    <script type="text/json" class="silex-json-styles">[{"desktop":{"body-initial":{"background-color":"rgba(255,255,255,1)"},"silex-id-1474394621033-3":{"top":"5px","left":"0px"},"silex-id-1474394621032-2":{"min-height":"600px","background-color":"transparent","width":"1200px","top":"","left":"","height":""},"silex-id-1474394605264-1":{"min-height":"100px","width":"100px","top":"100px","left":"100px"},"silex-id-1474394605263-0":{"min-height":"100px","background-color":"transparent"},"silex-id-1442914737143-3":{"min-height":"53px","width":"349px","top":"29px","left":"430px","height":""},"silex-id-1478366444112-0":{"min-height":"168px","background-color":"transparent","width":"1200px","top":"15px","left":"100px","height":""},"silex-id-1478366444112-1":{"top":"100px","background-color":"transparent","left":"","height":"","min-width":"1200px"},"silex-id-1478366450713-2":{"min-height":"100px","background-color":"transparent","width":"1200px","top":"","left":"","height":""},"silex-id-1478366450713-3":{"top":"100px","background-color":"transparent"},"silex-id-1541961657096-0":{"width":"1404px","background-color":"rgb(255, 255, 255)","min-height":"197px","top":"-15px","left":"-105px"},"silex-id-1541961922476-1":{"width":"335px","background-color":"rgb(255, 255, 255)","min-height":"631px","top":"-16px","left":"964px"},"silex-id-1541962007639-2":{"width":"631px","background-color":"rgb(255, 255, 255)","min-height":"212px","top":"-6px","left":"-61px"}},"mobile":{},"prodotypeData":{"component":{},"style":{"all-style":{"className":"all-style","templateName":"text","displayName":"All style","styles":{"desktop":{"normal":{"className":"all-style","pseudoClass":"normal"}}}}}}}]</script>
+
+    
+<style class="silex-prodotype-style" type="text/css" data-style-id="all-style">.page-page-1 {display: inherit;}</style><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.2" data-silex-viewport=""><!-- Silex HEAD tag do not remove -->
+    <!-- End of Silex HEAD tag do not remove --></head>
+
+<body data-silex-id="body-initial" class="body-initial all-style enable-mobile silex-runtime" data-silex-type="container">
+    <div class="silex-pages">
+        <div data-silex-type="image" class="editable-style silex-id-hamburger-menu image-element menu-button prevent-draggable prevent-resizable" data-silex-id="silex-id-hamburger-menu">
+            <img alt="open mobile menu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAoCAYAAAC8cqlMAAAB5UlEQVR42u2ZPWvCUBSGM+UfFO3e3dLu/QN+oKj4EUXRQREEJYgoiCAu6qCogyDo7iJ21UUaKqEgCC4iiEMGB3UVgsnpTWj/wfVK2nvhGbKEPJyT996TMMzPGg6H5mKx+GgkyuWyeTQasb8OTDwef4tEIp8+n+/LYIjJZJJHQiwzm81M6OLDarWqNpsNjEYgEJCy2ewT0+/3TagighElNFAnQT6ft1ARKkJFqMgfFvF4PFpuEwFtdrcRqVarIIoirFYrIiyXSxiPx+B2u/GJBINBuF6vQHopigK1Wg2fCMdxcLlciIuoqgqNRgOfiN1uB3Qwg91uB8fjkQiHwwEmkwne1qLxS0VuKKJle71eh06nQ4Rmswk8z+MVcTqdsNlsQJZlotF7Pp8hk8ngE4lGo/qN7xG/vV4Pb0Xm8zlxkdPpBGgMx/+yJxIJKBQKRMjlcuBwOGhq/Q+RcDgMsViMCFrAuFwu/CKDwQC22y1IkkSE/X4PgiDo+xc2Ea0S9zjGa/Hb7Xbxifj9fj0K7yFSqVTwtlY6nYbpdKpPiSRYLBbQarX0PYymFhWhIlSEilCRW6GdyUqlkoVZr9dsKpXiOY6TtW+7BkNBz/7ebrcf9L+6Xq+XRYPMMyrTq5EIhUIvaAjTJb4BBNQ2yhnth0wAAAAASUVORK5CYII=" class="silex-element-content">
+        </div>
+
+        <a id="page-page-1" data-silex-type="page" class="page-element">Page 1</a><a id="page-page-2" data-silex-type="page" class="page-element">Page 2</a></div>
+
+
+
+
+
+
+
+
+
+    <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1478366444112-1 section-element" data-silex-id="silex-id-1478366444112-1" style="">
+        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1478366444112-0 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1478366444112-0"><div data-silex-type="html" class="editable-style silex-id-1541961657096-0 html-element" data-silex-id="silex-id-1541961657096-0" style=""><div class="silex-element-content"><div id="header">
+			<h2 class="logo_area"><a id="brand" title="Quizilla Home Page" href="https://web.archive.org/web/20140915071116/http://quizilla.teennick.com/" alt="Return to Quizilla the home page.">Quizilla</a>Imagine it. Create it. Share it.</h2>
+			<div id="headerbanner" class="banner">
+				<div id="qad">
+					<table align="center" id="adOPA">
+						<tbody><tr>
+							
+							<td>
+<script type="text/javascript">
+	mtvn.btg.config.AdSettings.DoubleClick.enabled=true;
+	mtvn.btg.config.AdSettings.DoubleClick["dartSite"] = 'quizilla.nol';
+	mtvn.btg.config.AdSettings.reloadInterval=30000;
+	mtvn.btg.config.AdSettings.DoubleClick["positionThreshold"] = '3';
+
+	mtvn.btg.Controller.init();
+
+	mtvn.btg.Controller.placeAd(
+	{
+		size:"728x90",
+		contentType:"adi",
+		isReloadable:true,
+		reloadInterval:mtvn.btg.config.AdSettings.reloadInterval,
+		sections:getQuizillaAdSections()
+	}
+	);
+					
+	// document.write('<iframe id="qzBannerAd" width="728" scrolling="no" height="90" frameborder="0" marginwidth="0" marginheight="0" src="/templates/QZ2/ad.html?zone='+Ad_h+'&size=728x90&keyValues=!category=games;!category=hubpage;pos=atf;dcopt=ist;cat=2;ord=209521816957405920;!category=tvshow_all;show=tvshow_all;tile=1;'+istestmode+'" allowtransparency="true" id="ad-728x90IF"><\/iframe>');
+</script>
+							</td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+	        </div>
+		<form method="post" id="searchform" action="/web/20140915071116/http://quizilla.teennick.com/search">
+    		<fieldset>
+		    		<legend class="accessibility">Search Quizilla</legend>
+					<label for="search">Search</label>
+					<input type="text" id="search" name="q">
+					<button value="1" class="gobutton" type="submit">GO</button>
+				</fieldset>
+		    </form>
+		</div>
+		
+		<ul id="nav">
+			<li id="quizzes-menu"><a href="/web/20140915071116/http://quizilla.teennick.com/quizzes">Quizzes</a>
+				<ul>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/quizzes/type">Create</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/quizzes/ultimate">Ultimate</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/quizzes/top">Top Rated</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/quizzes/popular">Most Popular</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/quizzes/newest">Newest</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/quizzes">Quizzes</a></li>
+				</ul>
+			</li>
+			<li id="stories-menu"><a href="/web/20140915071116/http://quizilla.teennick.com/stories">Stories</a>
+				<ul>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/stories/create">Create</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/stories/top">Top Rated</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/stories/popular">Most Popular</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/stories/newest">Newest</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/stories">Stories</a></li>
+				</ul>
+			</li>
+			<li id="polls-menu"><a href="/web/20140915071116/http://quizilla.teennick.com/polls">Polls</a>
+				<ul>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/polls/create">Create</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/polls/top">Top Rated</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/polls/popular">Most Popular</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/polls/newest">Newest</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/polls">Polls</a></li>
+				</ul>
+			</li>
+			<li id="poems-menu"><a href="/web/20140915071116/http://quizilla.teennick.com/poems">Poems</a>
+				<ul>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/poems/create">Create</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/poems/top">Top Rated</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/poems/popular">Most Popular</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/poems/newest">Newest</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/poems">Poems</a></li>
+				</ul>
+			</li>
+			<li id="lyrics-menu"><a href="/web/20140915071116/http://quizilla.teennick.com/lyrics">Lyrics</a>
+				<ul>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/lyrics/create">Create</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/lyrics/top">Top Rated</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/lyrics/popular">Most Popular</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/lyrics/newest">Newest</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/lyrics">Lyrics</a></li>
+				</ul>
+			</li>
+			<li id="games-menu"><a href="https://web.archive.org/web/20140915071116/http://www.teennick.com/games/">Games</a></li>
+			<li id="mystuff-menu"><a href="/web/20140915071116/http://quizilla.teennick.com/my/profile">My Stuff</a>
+				<ul>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/my/profile">Profile</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/my/stuff">Stuff I Made</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/my/messages">Messages </a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/my/journal">Journal</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/my/friends">Friends</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/my/favorites">Favorites</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/my/watchlist">Watch List</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/my/images">My Images</a></li>
+									</ul>
+			</li>
+			<li id="help-menu"><a href="/web/20140915071116/http://quizilla.teennick.com/pages/faq">Help</a>
+				<ul>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/pages/faq">FAQ</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/pages/sitemap">Site Map</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/pages/postingrules">Posting Rules</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/pages/copyright">Copyright Policy</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/pages/resources">Resources</a></li>
+					<li><a href="/web/20140915071116/http://quizilla.teennick.com/pages/contactus">Contact Us</a></li>
+				</ul>
+			</li>
+		</ul></div></div></div>
+    </div>
+    <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element page-page-1 paged-element" data-silex-id="silex-id-1474394621033-3" style="">
+        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1474394621032-2 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1474394621032-2"><div data-silex-type="html" class="editable-style silex-id-1541962007639-2 html-element" data-silex-id="silex-id-1541962007639-2" style=""><div class="silex-element-content"><div id="primary">
+
+									<div class="quidget quiz ">
+		<h2><span>Welcome!</span></h2>
+			<h1><a>Hello, thanks for visiting! I'm still working on this site.</a></h1>
+			<p>
+<em>This is a work in progress.</em></p> 
+		</div></div></div></div><div data-silex-type="html" class="editable-style silex-id-1541961922476-1 html-element paged-element-visible" data-silex-id="silex-id-1541961922476-1" style=""><div class="silex-element-content"><div id="login" class="quidget">
+	<h2><span>Log in</span></h2>
+	<div id="loginformwrap">
+		<form action="http://roleplayzilla.com/register?task=login" method="post" id="loginform" name="logf">
+			<fieldset class="loginfieldset">
+				<legend class="accessibility">Log in</legend>
+	
+				<label class="accessibility" for="login_username">Username</label>
+				<input id="login_username" name="username" type="text" class="logu" maxlength="24" tabindex="1">
+	
+				<p><a href="http://roleplayzilla.com/register/reset" tabindex="5">Forgot Password?</a></p>
+				<br clear="all">
+				<label class="accessibility" for="login_password">Password</label>
+				<input id="login_password" name="password" type="password" class="logp" maxlength="12" tabindex="2">
+	
+				<button type="submit" class="gobutton" value="Go" tabindex="3">Go</button>
+				<p>or <a href="http://roleplayzilla.com/register" tabindex="6">Register</a></p>
+				<label class="rememberme" for="login_rembember">
+					<input id="login_remember" name="remember" type="checkbox" class="logr" value="1" tabindex="4">Remember Me
+				</label>
+				
+			</fieldset>
+		</form>
+	</div>
+	</div>
+	
+	<div class="quidget action" id="createit">
+	<h2><span>Got An Idea?  Get Started!</span></h2>
+	<form name="createit" id="createitform" method="post" action="javascript:createthis();">
+		<fieldset>
+			<legend class="accessibility"></legend>
+			<label class="accessibility" for="createtype">Content Type</label>
+			<select name="select2create" id="createtype"><option value="quizzes">Quiz</option><option value="tests">Test</option><option value="stories">Story</option><option value="polls">Poll</option><option value="poems">Poem</option><option value="lyrics">Lyrics</option></select>			<label class="accessibility" for="title_createit">Title</label>
+			<input type="text" id="title_createit" name="title" value="title">
+			<button class="gobutton" value="Go" onclick="createthis();">Go</button>
+		</fieldset>
+	</form>
+</div>
+	
+	<div class="getstarted quidget">
+	<h2><span>NEW TO ROLEPLAYZILLA?</span></h2>
+	<p>Feel like taking a personality quiz or testing your knowledge? Check out the <a href="http://roleplayzilla.com/quizzes/ultimate">Ultimate List</a>. </p>
+	<p>If you're in the mood for a story, head over to the <a href="http://roleplayzilla.com/stories">Stories Hub</a>.</p>
+	<p>It's easy to find something you're into at Roleplayzilla - just use the search box or browse our <a href="http://roleplayzilla.com/tags">tags</a>.</p>
+	<p>Ready to take the next step? <a href="http://roleplayzilla.com/register">Sign up</a> for an account and start creating your own quizzes, stories, polls, poems and lyrics.</p>
+	<p>Welcome back to your childhood!</p>
+
+</div></div></div></div>
+    </div>
+    <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1478366450713-3 section-element" data-silex-id="silex-id-1478366450713-3" style="">
+        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1478366450713-2 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1478366450713-2">
+
+            <div data-silex-id="silex-id-1442914737143-3" class="editable-style silex-id-1442914737143-3 text-element" data-silex-type="text" style="">
+                <div class="silex-element-content normal">
+                    <br>
+                    <div style="text-align: center;"><a href="//www.silex.me/">Powered by Silex</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
